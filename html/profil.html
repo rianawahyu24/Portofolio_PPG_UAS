@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio | Riana Wahyu</title>
+    <link rel="icon" type="image/x-icon" href="../image/Logo_nobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- ── BACKGROUND FX ── -->
+    <div class="bg-grid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+═════════════════════════════════════════ -->
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="../image/logo2.png" alt="Logo Portfolio">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="artefak.html">Analisis Artefak</a></li>
+            <li><a href="siklus.html">Penilaian Siklus PPL</a></li>
+            <li><a href="model.html">Model Guru</a></li>
+            <li><a href="observasi.html">Observasi</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
+    </nav>
+
+<!-- ════════════════════════════════════════
+     02 · PROFIL MAHASISWA
+═════════════════════════════════════════ -->
+
+     <section id="profil">
+        <div class="container">
+            <div class="reveal">
+                <p class="section-label"> || Profil Mahasiswa</p>
+                <h2 class="section-title">Siapa <span>Saya?</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="profile-grid">
+                <!-- Kiri: Biodata -->
+                <div class="card profile-card reveal">
+                    <div class="profile-avatar">🎓</div>
+                    <h3 class="profile-name">Riana Wahyu Puspitasari</h3>
+                    <p class="profile-role">// Calon Pendidik · PPL I Terbimbing</p>
+                    <p class="profile-bio">
+                        Perkenalkan, nama saya <b>Riana Wahyu Puspitasari</b>, mahasiswa Program Pendidikan Profesi Guru (PPG) 
+                        Prajabatan dari <b>Universitas Pendidikan Indonesia</b> dengan latar belakang keilmuan di bidang Informatika. 
+                    </p>
+                    <p class="profile-bio"> 
+                        Ketertarikan saya untuk menjadi seorang guru berangkat dari <em>pengalaman sederhana, yaitu ketika saya membantu teman memahami materi pelajaran.</em>
+                        Dari situ, saya merasakan bahwa proses berbagi ilmu 
+                        dan berinteraksi dalam pembelajaran merupakan hal yang menyenangkan dan bermakna.
+                    </p>
+                    <p class="profile-bio"> 
+                        Selain itu, saya juga terinspirasi dari <b>sosok guru semasa sekolah.</b> Saat di sekolah dasar, 
+                        saya memiliki guru yang sangat cerdas, baik, dan memiliki cara komunikasi yang lembut sehingga membuat siswa 
+                        merasa nyaman untuk belajar. Kemudian, saat di SMK, saya bertemu dengan guru yang luar biasa karena mampu 
+                        mengajarkan berbagai bidang seperti pemrograman dan desain, meskipun bukan berasal dari jurusan tersebut. 
+                    </p>
+                    <p class="profile-bio"> 
+                       <em>Hal ini menunjukkan bahwa seorang guru tidak hanya dituntut untuk menguasai materi, 
+                        tetapi juga memiliki kemauan untuk terus belajar dan berkembang.</em> 
+                        <b>Pengalaman-pengalaman</b> tersebut memperkuat keyakinan saya bahwa menjadi guru adalah profesi yang tidak hanya mengajar, 
+                        tetapi juga menginspirasi.
+                    </p>
+                </div>
+
+                <div style="display:flex;flex-direction:column;gap:1.5rem;">
+                    <div class="card quote-card reveal">
+                        <div class="quote-icon">"</div>
+                        <p class="quote-text">
+                        “A good education can change anyone. A good teacher changes everything.”
+                        </p>
+                        <p class="quote-text">
+                        “The principal goal of education in the schools should be creating men and women who are capable of doing new things, not simply repeating what other generations have done.”  
+                        </p>
+                        <p class="quote-author">— Jean Piaget · Filosofi mengajar saya</p>
+                    </div>
+                    <div class="card profile-card reveal">
+                        <h4 style="font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:1rem;">🎯 Tujuan Menjadi Guru Profesional</h4>
+                        <ul style="display:flex;flex-direction:column;gap:0.75rem;">
+                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65; text-align: justify;">
+                                <span style="color:var(--accent);flex-shrink:0;margin-top:0.1rem;">▸</span> Menjadi guru yang cerdas dan terus berkembang, baik dalam penguasaan materi maupun dalam kemampuan pedagogik.
+                            </li>
+                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65;text-align: justify;">
+                                <span style="color:var(--accent2);flex-shrink:0;margin-top:0.1rem;">▸</span> Menjadi guru yang mampu memahami kebutuhan peserta didik, baik dari segi akademik maupun karakter.
+                            </li>
+                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65;text-align: justify;">
+                                <span style="color:var(--accent3);flex-shrink:0;margin-top:0.1rem;">▸</span>Menciptakan pembelajaran yang aktif, interaktif, dan menyenangkan, sehingga siswa lebih mudah memahami materi.
+                            </li>
+                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65;text-align: justify;">
+                                <span style="color:var(--warn);flex-shrink:0;margin-top:0.1rem;">▸</span> Mampu mengintegrasikan teknologi dalam pembelajaran, khususnya dalam bidang informatika sesuai dengan perkembangan.
+                            </li>
+                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65;text-align: justify;">
+                                <span style="color:var(--warn);flex-shrink:0;margin-top:0.1rem;">▸</span> Menjadi guru yang mampu menyampaikan dan “mengalirkan” ilmu dengan jelas dan sederhana, sehingga dapat diterima oleh semua siswa.
+                            </li>
+                             <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65; text-align: justify;">
+                                <span style="color:var(--warn);flex-shrink:0;margin-top:0.1rem;">▸</span> Mengembangkan pembelajaran yang tidak hanya berfokus pada pengetahuan.
+                            </li>
+                             <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65; text-align: justify;">
+                                <span style="color:var(--warn);flex-shrink:0;margin-top:0.1rem;">▸</span> Menjadi pendidik yang reflektif, yaitu melakukan evaluasi dan perbaikan dalam setiap proses pembelajaran.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section>
+    
+    <section id="keunikan">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="reveal">
+            <p class="section-label"> || Keunikan Daerah</p>
+            <h2 class="section-title">Pesona <span>Daerah Saya</span></h2>
+            <div class="divider"></div>
+        </div>
+
+        <!-- LAYOUT 2 KOLOM -->
+        <div class="keunikan-layout">
+
+            <!-- KIRI: MAP -->
+            <div class="map-side reveal">
+                <h3 class="map-title">📍 Lokasi Daerah</h3>
+                
+                <iframe 
+                    src="https://www.google.com/maps?q=Batam&output=embed"
+                    width="100%" 
+                    height="350" 
+                    style="border:0;"
+                    loading="lazy">
+                </iframe>
+
+                <a href="https://www.google.com/maps?q=Batam" target="_blank" class="btn-map">
+                    <i class="fas fa-map-marker-alt"></i> Lihat di Google Maps
+                </a>
+            </div>
+
+            <!-- KANAN: KEUNIKAN -->
+            <div class="keunikan-side">
+
+                <div class="keunikan-grid">
+
+                    <div class="keunikan-card reveal">
+                        <img src="../image/ikon_kota.jpg">
+                        <div class="keunikan-content">
+                            <h3>Jembatan Barelang</h3>
+                            <p>Melambangkan kemajuan dan penghubung antar pulau dengan pemandangan laut yang indah.</p>
+                        </div>
+                    </div>
+
+                    <div class="keunikan-card reveal">
+                        <img src="../image/budaya_lokal.jpeg">
+                        <div class="keunikan-content">
+                            <h3>Tari Melayu</h3>
+                            <p>Budaya khas Kota Batam yang masih dilestarikan sebagai bagian penting dari tradisi dan identitas masyarakat Melayu.</p>
+                        </div>
+                    </div>
+
+                    <div class="keunikan-card reveal">
+                        <img src="../image/makanan.jpg">
+                        <div class="keunikan-content">
+                            <h3>Luti Gendang dan Mie Tarempa</h3>
+                            <p>kuliner khas Batam yang menjadi bagian dari budaya Melayu dan identitas masyarakat setempat.</p>
+                        </div>
+                    </div>
+
+                    <div class="keunikan-card reveal">
+                        <img src="../image/pantai_nongsa.jpg">
+                        <div class="keunikan-content">
+                            <h3>Pantai Glory Melur</h3>
+                            <p>Destinasi wisata pantai di Batam yang terkenal dengan suasana alam yang indah dan cocok untuk bersantai bersama keluarga.</p>
+                        </div>
+                    </div>
+                </div>       
+            </div>
+        </div>
+    </div>
+        <div class="video-wrapper reveal">
+            <iframe 
+                src="https://www.youtube.com/embed/rwH65uLYDcM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+</section>
+
+    <!-- ════════════════════════════════════════
+        FOOTER
+    ═════════════════════════════════════════ -->
+        <footer>
+            <p class="footer-name">
+                &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
+            </p>
+        </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

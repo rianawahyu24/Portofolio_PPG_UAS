@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio | Riana Wahyu</title>
+    <link rel="icon" type="image/x-icon" href="../image/Logo_nobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- ── BACKGROUND FX ── -->
+    <div class="bg-grid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+═════════════════════════════════════════ -->
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="../image/logo2.png" alt="Logo Portfolio">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="artefak.html">Analisis Artefak</a></li>
+            <li><a href="siklus.html">Penilaian Siklus PPL</a></li>
+            <li><a href="model.html">Model Guru</a></li>
+            <li><a href="observasi.html">Observasi</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
+    </nav>
+
+
+   
+
+ <div class="container">
+        <div class="reveal">
+            <p class="section-label"> || Keunikan Daerah</p>
+            <h2 class="section-title">Pesona <span>Daerah Saya</span></h2>
+            <div class="divider"></div>
+        </div>
+    </div>
+
+<div class="artifact-grid">
+
+    <!-- ═════════ 1 ═════════ -->
+    <div class="card artifact-card reveal">
+
+        <div class="artifact-icon">⚠️</div>
+
+        <h3 class="artifact-title">
+            1. Kendala dalam Penyusunan Produk Pembelajaran
+        </h3>
+
+        <div class="artifact-text">
+
+            <p>
+                Dalam proses penyusunan perangkat pembelajaran berupa 
+                <strong>modul ajar, LKPD, lembar asesmen, dan bahan ajar</strong>, 
+                kendala utama yang dihadapi adalah heterogenitas karakteristik 
+                Murid pada setiap kelas.
+            </p>
+
+            <p>
+                Terdapat kelas dengan Murid yang aktif dan cepat 
+                memahami materi, kelas yang cenderung pasif namun memiliki 
+                kemampuan akademik baik, serta kelas yang pasif dan masih 
+                membutuhkan pendampingan intensif. Dalam penerapannya, 
+                <b>media pembelajaran juga perlu disesuaikan dengan fasilitas 
+                sekolah dan karakteristik tiap kelas</b>. Hal ini menjadi 
+                pembelajaran penting mengenai pentingnya kontekstualisasi dan 
+                fleksibilitas dalam penyusunan perangkat pembelajaran.
+            </p>
+
+            <p>
+                Selain itu, materi Informatika seperti 
+                <strong>algoritma, flowchart, dan spreadsheet</strong> 
+                membutuhkan kemampuan berpikir logis serta keterampilan 
+                praktik langsung menggunakan perangkat komputer. 
+            </p>
+
+            <p>
+                Kendala lain yang ditemukan adalah pengelolaan waktu 
+                pembelajaran karena aktivitas berbasis proyek dan praktik 
+                sering kali membutuhkan waktu lebih panjang dibandingkan 
+                alokasi yang tersedia. Serta 
+            </p>
+
+            <h4>Contoh Aktual di Kelas</h4>
+
+            <ul>
+                <li>
+                    <b>•</b> Pada kelas X-11, sebagian Murid masih kesulitan 
+                    memahami simbol flowchart sehingga guru memberikan 
+                    demonstrasi ulang secara perlahan.
+                </li>
+
+                <li>
+                    <b>•</b> Pada kelas X-1, Murid cenderung aktif dan cepat 
+                    memahami materi algoritma sehingga guru dapat langsung 
+                    melanjutkan ke tahap penyusunan pseudocode dan flowchart.
+                </li>
+
+                <li>
+                    <b>•</b> Saat praktik fungsi IF di spreadsheet, beberapa peserta 
+                    didik salah menuliskan sintaks rumus sehingga hasil output 
+                    tidak muncul.
+                </li>
+
+                <li>
+                    <b>•</b> Pada pembelajaran proyek algoritma, beberapa kelompok 
+                    membutuhkan waktu lebih lama menyusun logika percabangan.
+                </li>
+            </ul>
+
+            <!-- BUKTI -->
+            <div class="artifact-proof">
+
+                <h4>Bukti Pendukung</h4>
+
+                <div class="proof-grid">
+                    <img src="../image/MODUL.png" alt="">
+                    <img src="../image/LKPD.png" alt="">
+                    <img src="../image/quiz.png" alt="">
+                    <img src="../image/PPT.png" alt="">
+                </div>
+
+                <p class="proof-caption">
+                    <strong>Dokumentasi:</strong> kendala penyusunan produk pembelajaran  
+                    seperti modul ajar, LKPD, lembar asesmen, dan bahan ajar,
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ═════════ 2 ═════════ -->
+    <div class="card artifact-card reveal">
+
+        <div class="artifact-icon">📚</div>
+
+        <h3 class="artifact-title">
+            2. Teori dan Konsep Pedagogi yang Diadopsi
+        </h3>
+
+        <div class="artifact-text">
+
+            <p>
+                Perangkat pembelajaran disusun dengan mengadopsi beberapa 
+                teori dan konsep pedagogi agar pembelajaran lebih bermakna, 
+                kontekstual, dan berpusat pada Murid.
+            </p>
+
+            <h4> | Problem-Based Learning (PBL) | </h4>
+
+            <p>
+                Model PBL diterapkan untuk melatih kemampuan berpikir kritis 
+                dan pemecahan masalah melalui kasus nyata.
+            </p>
+
+            <blockquote>
+                “Murid diberikan studi kasus data penjualan untuk 
+                menentukan kategori laris dan tidak laris.”
+            </blockquote>
+
+            <h4>| Direct-Learning |</h4>
+
+            <p>
+               Guru perlu memberikan penjelasan dan demonstrasi 
+               secara bertahap agar peserta didik memahami konsep dasar 
+               sebelum melakukan praktik mandiri.
+            </p>
+
+            <blockquote>
+                Pada materi fungsi IF di spreadsheet, guru terlebih dahulu 
+                mendemonstrasikan cara menuliskan rumus, menentukan range data, 
+                dan membaca hasil output melalui proyektor.
+            </blockquote>
+
+            <h4>| Constructivism |</h4>
+
+            <p>
+                Guru tidak langsung memberikan definisi algoritma, 
+                tetapi mengawali pembelajaran dengan pertanyaan pemantik seperti:
+            </p>
+
+            <blockquote>
+                “Bagaimana langkah membuat mie instan?”
+                Dari jawaban peserta didik, guru mengarahkan bahwa urutan langkah 
+                tersebut merupakan bentuk sederhana dari algoritma.
+            </blockquote>
+
+            <h4>| Differentiated Instruction |</h4>
+
+            <p>
+                Strategi diferensiasi diterapkan karena kemampuan 
+                dan karakteristik peserta didik pada setiap kelas berbeda.
+            </p>
+            
+            <blockquote>
+                    <li>
+                        Pada kelas aktif, Murid diberikan tantangan 
+                        tambahan membuat flowchart lebih kompleks.
+                    </li>
+
+                    <li>
+                        Pada kelas yang masih kesulitan, guru memberikan 
+                        template pseudocode setengah jadi.
+                    </li>
+            </blockquote>
+
+            <h4>| Scaffolding dan ZPD |</h4>
+
+            <p>
+                Guru memberikan bantuan bertahap kepada Murid 
+                yang belum mampu menyelesaikan tugas secara mandiri.
+            </p>
+
+            <blockquote>
+                "Saat praktik spreadsheet, beberapa peserta didik belum 
+                memahami penggunaan range data pada fungsi AVERAGE. 
+                Guru kemudian memberikan contoh langsung mulai dari 
+                memilih sel hingga menuliskan formula dengan benar.”
+            </blockquote>
+
+            <h4>| Mindful, Meaningful, Joyful Learning |</h4>
+            <blockquote>
+                <ul>
+                    <li>
+                        <b>Meaningful</b> Learning   : Materi algoritma dikaitkan dengan aktivitas sehari-hari seperti login media sosial dan pemesanan online.
+                    </li>
+
+                    <li>
+                        <b>Joyful</b> Learning       : Guru menggunakan game “Flowchart Maze” dan kuis Quizizz sehingga suasana belajar lebih interaktif.
+                    </li>
+
+                    <li>
+                        <b>Mindful</b> Learning      : Murid diajak merefleksikan kesalahan logika algoritma dan memperbaikinya bersama.
+                    </li>
+                </ul>
+            </blockquote>
+            
+
+            <!-- BUKTI -->
+            <div class="artifact-proof">
+
+                <h4>Bukti Pendukung</h4>
+
+                <div class="proof-grid">
+                    <img src="../image/1.jpeg" alt="">
+                    <img src="../image/2.jpeg" alt="">
+                    <img src="../image/3.jpeg" alt="">
+                    <img src="../image/4.jpeg" alt="">
+                </div>
+
+                <p class="proof-caption">
+                    <strong>Dokumentasi:</strong> Penerapan model PBL, Direct-Learning, dan aktivitas diskusi kelompok.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ═════════ 3 ═════════ -->
+    <div class="card artifact-card reveal">
+
+        <div class="artifact-icon">✅</div>
+
+        <h3 class="artifact-title">
+            3. Faktor Keberhasilan Penerapan Produk Pembelajaran
+        </h3>
+
+        <div class="artifact-text">
+
+            <p>
+                Keberhasilan perangkat pembelajaran dipengaruhi oleh penggunaan
+                pendekatan yang kontekstual, aktivitas praktik langsung, serta
+                pemanfaatan media digital yang interaktif.Peserta didik menunjukkan 
+                keterlibatan aktif <em>(student engagement)</em> yang tinggi ketika 
+                pembelajaran dilakukan secara praktik menggunakan komputer masing-masing.
+            </p>
+           
+            <blockquote>
+                <li>
+                    Penggunaan LKPD yang terstruktur membantu Murid memahami
+                    alur pembelajaran secara bertahap dan lebih mandiri.    
+                </li>
+                <li>
+                    Media digital seperti Quizizz, Wordwall, spreadsheet, dan game
+                    interaktif meningkatkan motivasi belajar Murid.   
+                </li>
+            </blockquote>
+            
+            <h4>Contoh Aktual di Kelas</h4>
+            
+            <ul>
+                <li>
+                   <b>•</b>  Murid antusias saat praktik fungsi SUM, MIN, MAX,
+                    dan AVERAGE.
+                </li>
+
+                <li>
+                   <b>•</b>  Game “Flowchart Maze” membuat Murid aktif berdiskusi.
+                </li>
+
+                <li>
+                   <b>•</b>  Kuis Quizizz meningkatkan semangat belajar karena adanya leaderboard.
+                </li>
+
+                <li>
+                   <b>•</b>  LKPD membantu Murid mengulang langkah penggunaan formula.
+                </li>
+            </ul>
+
+            <!-- BUKTI -->
+            <div class="artifact-proof">
+
+                <h4>Bukti Pendukung</h4>
+
+                <div class="proof-grid">
+                    <img src="../image/FLOWCHARTMAZE.png" alt="">
+                    <img src="../image/Excel.png" alt="">
+                    <img src="../image/LAPD.png" alt="">
+                    <img src="../image/HasilFlowchart.png" alt="">
+                </div>
+
+                <p class="proof-caption">
+                    Dokumentasi aktivitas praktik komputer dan penggunaan media digital.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ═════════ 4 ═════════ -->
+    <div class="card artifact-card reveal">
+
+        <div class="artifact-icon">🔄</div>
+
+        <h3 class="artifact-title">
+            4. Komponen yang Dapat Diadaptasi
+        </h3>
+
+        <div class="artifact-text">
+
+            <p>
+                Perangkat pembelajaran perlu bersifat fleksibel agar dapat
+                diterapkan pada kondisi kelas yang berbeda.
+                Adaptasi dilakukan berdasarkan karakteristik peserta didik, 
+                tingkat kesiapan belajar, fasilitas sekolah, serta dinamika pembelajaran di kelas.
+            </p>
+
+            <h4>Strategi Pembelajaran</h4>
+
+            <ul>
+                <li>
+                    <b>➤</b> Pada kelas aktif, guru menggunakan diskusi terbuka
+                    dan presentasi kelompok.
+                </li>
+
+                <li>
+                     <b>➤</b> Pada kelas pasif, guru menggunakan demonstrasi langsung
+                    dan pertanyaan pemantik sederhana.
+                </li>
+            </ul>
+
+            <h4>Tingkat Kompleksitas Tugas</h4>
+
+            <ul>
+                <li>
+                    <b>➤</b> Peserta didik yang cepat memahami materi diberikan 
+                    tantangan membuat algoritma dengan percabangan tambahan.
+                </li>
+
+                <li>
+                     <b>➤</b> Peserta didik yang masih kesulitan diberikan 
+                     kasus sederhana seperti algoritma membuat teh atau login akun.
+                </li>
+            </ul>
+
+            <h4>Alokasi Waktu Pembelajaran</h4>
+
+            <ul>
+                <li>
+                    <b>➤</b> Pada kelas yang cepat memahami materi, guru dapat 
+                    menambahkan aktivitas pengayaan berupa kuis atau tantangan tambahan.
+                </li>
+
+                <li>
+                     <b>➤</b> Pada kelas yang membutuhkan pendampingan lebih, 
+                     guru memperpanjang sesi demonstrasi dan latihan praktik.
+                </li>
+            </ul>
+
+            <h4>Media Pembelajaran</h4>
+
+            <ul>
+                <li>
+                    <b>➤</b> Pada kelas dengan akses komputer penuh,
+                    Murid langsung praktik spreadsheet.
+                </li>
+
+                <li>
+                    <b>➤</b> Jika terdapat kendala perangkat, guru menggunakan simulasi
+                    melalui proyektor dan diskusi kelompok.
+                </li>
+            </ul>
+
+            <h4>Pengembangan Media Digital</h4>
+
+            <p>
+                Ke depan, media pembelajaran direncanakan dikembangkan dalam
+                bentuk website pembelajaran terintegrasi agar seluruh perangkat
+                pembelajaran tersimpan secara sistematis.
+            </p>
+
+            <p>
+                Saat ini materi, LKPD, asesmen, dan link game masih 
+                tersimpan di platform yang berbeda seperti Google Drive, 
+                Canva, dan Quizizz. Oleh karena itu, direncanakan 
+                pengembangan website pembelajaran agar peserta didik 
+                dapat mengakses seluruh materi dalam satu 
+                tempat secara lebih efektif dan terorganisasi.
+            </p>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+           
+        </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════
+        FOOTER
+    ═════════════════════════════════════════ -->
+        <footer>
+            <p class="footer-name">
+                &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
+            </p>
+        </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

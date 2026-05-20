@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio | Riana Wahyu</title>
+    <link rel="icon" type="image/x-icon" href="../image/Logo_nobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- ── BACKGROUND FX ── -->
+    <div class="bg-grid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+═════════════════════════════════════════ -->
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="../image/logo2.png" alt="Logo Portfolio">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="artefak.html">Analisis Artefak</a></li>
+            <li><a href="siklus.html">Penilaian Siklus PPL</a></li>
+            <li><a href="model.html">Model Guru</a></li>
+            <li><a href="observasi.html">Observasi</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
+    </nav>
+
+
+<!-- ════════════════════════════════════════
+     04 · SIKLUS PPL (TIMELINE)
+═════════════════════════════════════════ -->
+    <section id="siklus">
+        <div class="container">
+            <div class="reveal">
+                <p class="section-label">// 02 — Perjalanan PPL I</p>
+                <h2 class="section-title">3 Siklus <span>Pembelajaran</span></h2>
+                <div class="divider"></div>
+                <p style="color:var(--muted);max-width:600px;line-height:1.7;margin-bottom:3rem;font-size:0.93rem;">
+                    Tiga babak yang membentuk karakter dan kemampuan mengajar — dari bimbingan penuh hingga kemandirian total.
+                </p>
+            </div>
+
+            <div class="timeline">
+
+                <!-- Siklus 1 -->
+                <div class="cycle-item">
+                    <div class="cycle-dot"></div>
+                    <div class="card cycle-card">
+                        <div class="cycle-header">
+                            <div>
+                                <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent);margin-bottom:0.3rem;">SIKLUS 01</p>
+                                <h3 class="cycle-title">Belajar Bersama Guru Pamong</h3>
+                            </div>
+                            <span class="cycle-badge badge-s1">Observasi &amp; Kolaborasi</span>
+                        </div>
+                        <p class="cycle-desc">
+                            Guru Pamong aktif mengintervensi jalannya pembelajaran — memberikan arahan langsung, membantu mengelola kelas, dan membimbing saya merespons dinamika siswa. Siklus ini adalah fondasi pemahaman tentang realitas kelas yang sesungguhnya. Saya belajar membaca
+                            situasi dan mengikuti arahan dengan cepat.
+                        </p>
+                        <div class="cycle-stats">
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--accent)">40%</div>
+                                <div class="stat-label">Kemandirian</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--danger)">Tinggi</div>
+                                <div class="stat-label">Intervensi GP</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--warn)">55%</div>
+                                <div class="stat-label">Partisipasi Siswa</div>
+                            </div>
+                        </div>
+                        <div class="progress-row">
+                            <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="background:linear-gradient(90deg,#38bdf8,#818cf8)" data-width="40"></div>
+                            </div>
+                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent)">40%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Siklus 2 -->
+                <div class="cycle-item">
+                    <div class="cycle-dot"></div>
+                    <div class="card cycle-card">
+                        <div class="cycle-header">
+                            <div>
+                                <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent2);margin-bottom:0.3rem;">SIKLUS 02</p>
+                                <h3 class="cycle-title">Mengambil Alih Kendali Kelas</h3>
+                            </div>
+                            <span class="cycle-badge badge-s2">Transisi &amp; Penguatan</span>
+                        </div>
+                        <p class="cycle-desc">
+                            Kemandirian saya mulai terbangun. GP lebih banyak membiarkan saya mengelola kelas — intervensi hanya hadir saat situasi benar-benar kritis. Saya mulai membaca dinamika siswa secara mandiri, merespons pertanyaan dengan percaya diri, dan mengambil keputusan
+                            pedagogis secara real-time.
+                        </p>
+                        <div class="cycle-stats">
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--accent2)">70%</div>
+                                <div class="stat-label">Kemandirian</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--warn)">Sedang</div>
+                                <div class="stat-label">Intervensi GP</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--warn)">72%</div>
+                                <div class="stat-label">Partisipasi Siswa</div>
+                            </div>
+                        </div>
+                        <div class="progress-row">
+                            <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="70"></div>
+                            </div>
+                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent2)">70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Siklus 3 -->
+                <div class="cycle-item">
+                    <div class="cycle-dot"></div>
+                    <div class="card cycle-card">
+                        <div class="cycle-header">
+                            <div>
+                                <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent3);margin-bottom:0.3rem;">SIKLUS 03</p>
+                                <h3 class="cycle-title">Pengajaran Mandiri Penuh</h3>
+                            </div>
+                            <span class="cycle-badge badge-s3">Kemandirian &amp; Refleksi</span>
+                        </div>
+                        <p class="cycle-desc">
+                            Puncak perjalanan PPL I — saya mengajar penuh secara mandiri sementara GP hanya mengamati dari belakang tanpa intervensi. Setiap keputusan kelas sepenuhnya ada di tangan saya. Siklus ini adalah momen transformatif yang mengkonfirmasi kesiapan saya sebagai
+                            calon guru profesional.
+                        </p>
+                        <div class="cycle-stats">
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--accent3)">100%</div>
+                                <div class="stat-label">Kemandirian</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--accent3)">Minimal</div>
+                                <div class="stat-label">Intervensi GP</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" style="color:var(--accent3)">88%</div>
+                                <div class="stat-label">Partisipasi Siswa</div>
+                            </div>
+                        </div>
+                        <div class="progress-row">
+                            <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="background:linear-gradient(90deg,#34d399,#6ee7b7)" data-width="100"></div>
+                            </div>
+                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent3)">100%</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /timeline -->
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     06 · PENILAIAN GURU PAMONG (TERUKUR)
+═════════════════════════════════════════ -->
+    <section id="penilaian">
+        <div class="container">
+            <div class="reveal">
+                <p class="section-label">// 05 — Penilaian Guru Pamong</p>
+                <h2 class="section-title">Instrumen <span>Penilaian</span></h2>
+                <div class="divider"></div>
+                <p style="color:var(--muted);max-width:620px;line-height:1.7;margin-bottom:2rem;font-size:0.93rem;">
+                    Lampiran 7 &amp; 8 — Penilaian terukur dari Guru Pamong berdasarkan rubrik resmi atas rancangan pembelajaran dan praktik mengajar selama 3 siklus PPL.
+                </p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="assess-tabs reveal">
+                <button class="assess-tab" data-tab="lamp7">📋 Lampiran 7 — Perangkat Pembelajaran</button>
+                <button class="assess-tab" data-tab="lamp8">🎤 Lampiran 8 — Praktik Mengajar</button>
+                <button class="assess-tab" data-tab="rekap">📊 Rekap 3 Siklus</button>
+            </div>
+
+            <!-- ── PANEL: LAMPIRAN 7 ── -->
+            <div class="assess-panel reveal" id="panel-lamp7">
+                <div class="assess-grid">
+                    <!-- Rubrik Tabel -->
+                    <div class="card rubric-card">
+                        <div class="rubric-header">
+                            <h3 class="rubric-title">Rubrik Penilaian Perangkat</h3>
+                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);background:rgba(56,189,248,0.08);padding:0.3rem 0.7rem;border-radius:6px;border:1px solid rgba(56,189,248,0.2)">Skala 1–4</span>
+                        </div>
+                        <table class="rubric-table">
+                            <thead>
+                                <tr>
+                                    <th style="width:40%">Indikator</th>
+                                    <th style="width:15%;text-align:center">Skor</th>
+                                    <th style="width:10%;text-align:center">Maks</th>
+                                    <th style="width:35%">Progres</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Kesesuaian KD &amp; Tujuan Pembelajaran</div>
+                                        <div class="indicator-sub">Keselarasan antara KD, IPK, dan tujuan</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s4">88</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" data-width="88"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">88%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Kejelasan Indikator Pencapaian</div>
+                                        <div class="indicator-sub">Operasional dan dapat diukur (ABCD)</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">85</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" data-width="85"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">85%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Pemilihan &amp; Kesesuaian Materi</div>
+                                        <div class="indicator-sub">Relevansi, kedalaman, dan keluasan</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s4">90</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" data-width="90"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">90%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Pemilihan Metode &amp; Pendekatan</div>
+                                        <div class="indicator-sub">Inovatif, kontekstual, berpusat pada siswa</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">87</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" data-width="87"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">87%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Media &amp; Sumber Belajar</div>
+                                        <div class="indicator-sub">Kesesuaian media dengan tujuan &amp; konteks</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">83</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" data-width="83"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">83%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Instrumen Penilaian</div>
+                                        <div class="indicator-sub">Validitas, reliabilitas, kisi-kisi</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">86</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" data-width="86"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">86%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Alokasi Waktu &amp; Langkah Kegiatan</div>
+                                        <div class="indicator-sub">Ketepatan estimasi dan urutan logis</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">84</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" data-width="84"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">84%</span></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Score Summary Lampiran 7 -->
+                    <div class="card score-summary-card">
+                        <h3 class="score-summary-title">📊 Ringkasan Penilaian Perangkat</h3>
+                        <div class="big-score-ring">
+                            <div class="ring-value">86.1</div>
+                            <div class="ring-label">Rata-rata nilai keseluruhan</div>
+                            <div class="ring-grade">A — Sangat Baik</div>
+                        </div>
+                        <div class="score-breakdown">
+                            <div class="breakdown-row">
+                                <span class="breakdown-label">Perencanaan Tujuan</span>
+                                <div class="breakdown-bar-wrap">
+                                    <div class="breakdown-fill" style="background:linear-gradient(90deg,#38bdf8,#818cf8)" data-width="86.5"></div>
+                                </div>
+                                <span class="breakdown-val">86.5</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span class="breakdown-label">Konten &amp; Materi</span>
+                                <div class="breakdown-bar-wrap">
+                                    <div class="breakdown-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="88.5"></div>
+                                </div>
+                                <span class="breakdown-val">88.5</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span class="breakdown-label">Strategi Pembelajaran</span>
+                                <div class="breakdown-bar-wrap">
+                                    <div class="breakdown-fill" style="background:linear-gradient(90deg,#34d399,#6ee7b7)" data-width="85"></div>
+                                </div>
+                                <span class="breakdown-val">85.0</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span class="breakdown-label">Asesmen &amp; Evaluasi</span>
+                                <div class="breakdown-bar-wrap">
+                                    <div class="breakdown-fill" style="background:linear-gradient(90deg,#fbbf24,#f59e0b)" data-width="85"></div>
+                                </div>
+                                <span class="breakdown-val">85.0</span>
+                            </div>
+                        </div>
+                        <div class="catatan-box">
+                            <div class="catatan-label">// Catatan Guru Pamong</div>
+                            <p class="catatan-text">
+                                Perangkat pembelajaran sudah cukup sistematis dan menunjukkan pemahaman kurikulum yang baik. Perlu peningkatan pada variasi instrumen penilaian dan kesesuaian alokasi waktu dengan kompleksitas kegiatan inti.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── PANEL: LAMPIRAN 8 ── -->
+            <div class="assess-panel reveal" id="panel-lamp8">
+                <div class="assess-grid">
+                    <!-- Rubrik Tabel -->
+                    <div class="card rubric-card">
+                        <div class="rubric-header">
+                            <h3 class="rubric-title">Rubrik Praktik Mengajar</h3>
+                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent2);background:rgba(129,140,248,0.08);padding:0.3rem 0.7rem;border-radius:6px;border:1px solid rgba(129,140,248,0.2)">Akumulasi 3 Siklus</span>
+                        </div>
+                        <table class="rubric-table">
+                            <thead>
+                                <tr>
+                                    <th style="width:40%">Aspek yang Dinilai</th>
+                                    <th style="width:15%;text-align:center">Skor</th>
+                                    <th style="width:10%;text-align:center">Maks</th>
+                                    <th style="width:35%">Progres</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Membuka Pembelajaran</div>
+                                        <div class="indicator-sub">Apersepsi, motivasi, orientasi tujuan</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">82</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="82"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">82%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Penguasaan Materi Pembelajaran</div>
+                                        <div class="indicator-sub">Akurasi, keluasan, kemutakhiran</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s4">88</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="88"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">88%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Penggunaan Metode &amp; Model</div>
+                                        <div class="indicator-sub">Kesesuaian metode dengan tujuan &amp; materi</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">85</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="85"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">85%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Pengelolaan &amp; Kondusivitas Kelas</div>
+                                        <div class="indicator-sub">Disiplin, transisi, manajemen waktu</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">80</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="80"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">80%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Interaksi &amp; Keterlibatan Siswa</div>
+                                        <div class="indicator-sub">Pertanyaan, diskusi, respon adaptif</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s4">90</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="90"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">90%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Penggunaan Bahasa &amp; Komunikasi</div>
+                                        <div class="indicator-sub">Kejelasan, intonasi, bahasa tubuh</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">86</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="86"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">86%</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="indicator-name">Menutup Pembelajaran</div>
+                                        <div class="indicator-sub">Simpulan, refleksi, tindak lanjut</div>
+                                    </td>
+                                    <td style="text-align:center"><span class="score-pill s3">84</span></td>
+                                    <td style="text-align:center"><span class="max-label">100</span></td>
+                                    <td>
+                                        <div class="mini-bar-wrap">
+                                            <div class="mini-bar">
+                                                <div class="mini-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="84"></div>
+                                            </div><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--muted)">84%</span></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Score Summary Lampiran 8 -->
+                    <div class="card score-summary-card">
+                        <h3 class="score-summary-title">📊 Ringkasan Praktik Mengajar</h3>
+                        <div class="big-score-ring">
+                            <div class="ring-value">85.0</div>
+                            <div class="ring-label">Rata-rata nilai keseluruhan</div>
+                            <div class="ring-grade">A — Sangat Baik</div>
+                        </div>
+                        <div class="score-breakdown">
+                            <div class="breakdown-row">
+                                <span class="breakdown-label">Pembukaan</span>
+                                <div class="breakdown-bar-wrap">
+                                    <div class="breakdown-fill" style="background:linear-gradient(90deg,#38bdf8,#818cf8)" data-width="82"></div>
+                                </div>
+                                <span class="breakdown-val">82</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span class="breakdown-label">Kegiatan Inti</span>
+                                <div class="breakdown-bar-wrap">
+                                    <div class="breakdown-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="87.7"></div>
+                                </div>
+                                <span class="breakdown-val">87.7</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span class="breakdown-label">Pengelolaan Kelas</span>
+                                <div class="breakdown-bar-wrap">
+                                    <div class="breakdown-fill" style="background:linear-gradient(90deg,#fbbf24,#f59e0b)" data-width="80"></div>
+                                </div>
+                                <span class="breakdown-val">80</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span class="breakdown-label">Penutupan</span>
+                                <div class="breakdown-bar-wrap">
+                                    <div class="breakdown-fill" style="background:linear-gradient(90deg,#34d399,#6ee7b7)" data-width="84"></div>
+                                </div>
+                                <span class="breakdown-val">84</span>
+                            </div>
+                        </div>
+                        <div class="catatan-box">
+                            <div class="catatan-label">// Catatan Guru Pamong</div>
+                            <p class="catatan-text">
+                                Penguasaan materi dan interaksi siswa sangat baik. Perlu ditingkatkan pada manajemen transisi antar kegiatan dan pengelolaan kelas saat diskusi kelompok berlangsung. Progres sangat positif dari Siklus 1 ke Siklus 3.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── PANEL: REKAP 3 SIKLUS ── -->
+            <div class="assess-panel reveal" id="panel-rekap">
+                <div class="card" style="padding:2rem;overflow-x:auto;">
+                    <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.5rem;">📈 Rekap Perkembangan Nilai per Siklus</h3>
+                    <table class="rubric-table" style="min-width:600px;">
+                        <thead>
+                            <tr>
+                                <th>Aspek Penilaian</th>
+                                <th style="text-align:center">Siklus 1</th>
+                                <th style="text-align:center">Siklus 2</th>
+                                <th style="text-align:center">Siklus 3</th>
+                                <th style="text-align:center">Trend</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="indicator-name">Perangkat Pembelajaran</div>
+                                </td>
+                                <td style="text-align:center"><span class="score-pill s2">78</span></td>
+                                <td style="text-align:center"><span class="score-pill s3">83</span></td>
+                                <td style="text-align:center"><span class="score-pill s4">86</span></td>
+                                <td style="text-align:center;color:var(--accent3)">▲ +10.3%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="indicator-name">Praktik Mengajar</div>
+                                </td>
+                                <td style="text-align:center"><span class="score-pill s2">76</span></td>
+                                <td style="text-align:center"><span class="score-pill s3">82</span></td>
+                                <td style="text-align:center"><span class="score-pill s4">85</span></td>
+                                <td style="text-align:center;color:var(--accent3)">▲ +11.8%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="indicator-name">Pengelolaan Kelas</div>
+                                </td>
+                                <td style="text-align:center"><span class="score-pill s2">70</span></td>
+                                <td style="text-align:center"><span class="score-pill s3">76</span></td>
+                                <td style="text-align:center"><span class="score-pill s3">80</span></td>
+                                <td style="text-align:center;color:var(--accent3)">▲ +14.3%</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="indicator-name">Interaksi Siswa</div>
+                                </td>
+                                <td style="text-align:center"><span class="score-pill s3">80</span></td>
+                                <td style="text-align:center"><span class="score-pill s3">86</span></td>
+                                <td style="text-align:center"><span class="score-pill s4">90</span></td>
+                                <td style="text-align:center;color:var(--accent3)">▲ +12.5%</td>
+                            </tr>
+                            <tr style="font-weight:700;">
+                                <td>
+                                    <div class="indicator-name" style="font-weight:700;">Rata-rata Total</div>
+                                </td>
+                                <td style="text-align:center"><span class="score-pill s2">76.0</span></td>
+                                <td style="text-align:center"><span class="score-pill s3">81.8</span></td>
+                                <td style="text-align:center"><span class="score-pill s4">85.3</span></td>
+                                <td style="text-align:center;color:var(--accent3);font-weight:700;">▲ +12.2%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
+                        <div style="padding:1.2rem;background:rgba(56,189,248,0.05);border-radius:12px;border:1px solid var(--border);text-align:center;">
+                            <div style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--accent)">76.0</div>
+                            <div style="font-size:0.75rem;color:var(--muted);margin-top:0.3rem;">Siklus 1</div>
+                            <div style="font-size:0.7rem;color:var(--muted);font-family:'JetBrains Mono',monospace">B — Baik</div>
+                        </div>
+                        <div style="padding:1.2rem;background:rgba(129,140,248,0.05);border-radius:12px;border:1px solid var(--border);text-align:center;">
+                            <div style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--accent2)">81.8</div>
+                            <div style="font-size:0.75rem;color:var(--muted);margin-top:0.3rem;">Siklus 2</div>
+                            <div style="font-size:0.7rem;color:var(--muted);font-family:'JetBrains Mono',monospace">B+ — Baik Sekali</div>
+                        </div>
+                        <div style="padding:1.2rem;background:rgba(52,211,153,0.05);border-radius:12px;border:1px solid var(--border);text-align:center;">
+                            <div style="font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--accent3)">85.3</div>
+                            <div style="font-size:0.75rem;color:var(--muted);margin-top:0.3rem;">Siklus 3</div>
+                            <div style="font-size:0.7rem;color:var(--muted);font-family:'JetBrains Mono',monospace">A — Sangat Baik</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <!-- ════════════════════════════════════════
+        FOOTER
+    ═════════════════════════════════════════ -->
+        <footer>
+            <p class="footer-name">
+                &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
+            </p>
+        </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
