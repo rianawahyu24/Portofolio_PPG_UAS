@@ -40,7 +40,7 @@
     </nav>
 
 <!-- ════════════════════════════════════════
-     02 · PROFIL MAHASISWA
+     PROFIL MAHASISWA
 ═════════════════════════════════════════ -->
 
      <section id="profil">
@@ -124,6 +124,153 @@
 
         </div>
     </section>
+
+
+<!-- ════════════════════════════════════════
+     INSTITUSI — Kartu ID + Dual Map Pin
+     Tempel di profil.html, SEBELUM section#keunikan
+═════════════════════════════════════════ -->
+
+<section id="institusi">
+    <div class="container">
+
+        <div class="reveal">
+            <p class="section-label"> || Institusi</p>
+            <h2 class="section-title">Universitas & <span>Tempat PPL</span></h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="institusi-layout reveal">
+
+            <!-- KIRI: FLIP CARD -->
+            <div class="institusi-card-wrap">
+                <p class="flip-hint">
+                    <span class="flip-hint-dot"></span>
+                    Hover kartu untuk flip
+                </p>
+
+                <div class="id-scene" id="idCard">
+                    <div class="id-inner">
+
+                        <!-- DEPAN -->
+                        <div class="id-face id-front">
+                            <div class="id-header">
+                                <div class="id-header-dot"></div>
+                                <span class="id-header-text">Universitas Pendidikan Indonesia</span>
+                            </div>
+                            <div class="id-body">
+                                <div class="id-photo-slot">
+                                    <img src="/image/PAS FOTO_RIANA WAHYU PUSPITASARI.png" alt="Foto Riana" class="id-photo-img">
+                                </div>
+                                <div class="id-info">
+                                    <p class="id-name">Riana Wahyu Puspitasari</p>
+                                    <p class="id-nim">NIM: 2531036</p>
+                                    <p class="id-prodi">Informatika</p>
+                                    <p class="id-year">PPG Prajabatan · 2025/2026</p>
+                                    <div class="id-chips">
+                                        <span class="id-chip">PPL I</span>
+                                        <span class="id-chip">Terbimbing</span>
+                                        <span class="id-chip chip-active">Aktif</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="id-footer">
+                                <span class="id-footer-left">UPI · Bandung</span>
+                                <div class="id-barcode">
+                                    <span class="bar" style="height:14px"></span>
+                                    <span class="bar" style="height:20px"></span>
+                                    <span class="bar" style="height:11px"></span>
+                                    <span class="bar" style="height:18px"></span>
+                                    <span class="bar" style="height:9px"></span>
+                                    <span class="bar" style="height:20px"></span>
+                                    <span class="bar" style="height:15px"></span>
+                                    <span class="bar" style="height:11px"></span>
+                                    <span class="bar" style="height:18px"></span>
+                                    <span class="bar" style="height:13px"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BELAKANG -->
+                        <div class="id-face id-back">
+                            <p class="id-back-title">// Info PPL</p>
+                            <div class="id-back-row">
+                                <span class="id-back-icon">🏫</span>
+                                <div>
+                                    <p class="id-back-label">Sekolah PPL</p>
+                                    <p class="id-back-val">SMA Negeri 1 Bandung</p>
+                                </div>
+                            </div>
+                            <div class="id-back-row">
+                                <span class="id-back-icon">📍</span>
+                                <div>
+                                    <p class="id-back-label">Lokasi</p>
+                                    <p class="id-back-val">Bandung, Jawa Barat</p>
+                                </div>
+                            </div>
+                            <div class="id-back-row">
+                                <span class="id-back-icon">📚</span>
+                                <div>
+                                    <p class="id-back-label">Mata Pelajaran</p>
+                                    <p class="id-back-val">Informatika</p>
+                                </div>
+                            </div>
+                            <div class="id-back-row">
+                                <span class="id-back-icon">🎓</span>
+                                <div>
+                                    <p class="id-back-label">Universitas</p>
+                                    <p class="id-back-val">Universitas Pendidikan Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANAN: DUAL MAP + MINI CARDS -->
+            <div class="institusi-right">
+
+                <!-- MAP 1: UPI BANDUNG -->
+<div class="map-deco-wrap reveal">
+    <div class="map-real-wrap">
+        <iframe
+            src="https://maps.google.com/maps?q=Universitas+Pendidikan+Indonesia+Bandung&output=embed&z=13&iwloc=near"
+            width="100%" height="160"
+            style="border:0; display:block;"
+            loading="lazy" allowfullscreen>
+        </iframe>       
+    </div>
+    <div class="map-deco-footer">
+        <span>🏛️</span>
+        <span class="map-deco-text"><strong>Universitas Pendidikan Indonesia</strong> · Bandung</span>
+    </div>
+</div>
+
+<!-- MAP 2: SEKOLAH PPL -->
+<div class="map-deco-wrap reveal">
+    <div class="map-real-wrap">
+        <iframe
+            src="https://www.google.com/maps?q=SMA+Negeri+1+Bandung&output=embed"
+            width="100%" height="160"
+            style="border:0; display:block;"
+            loading="lazy" allowfullscreen>
+        </iframe>
+    </div>
+    <div class="map-deco-footer">
+        <span>🏫</span>
+        <span class="map-deco-text"><strong>Nama Sekolah PPL</strong> · Batam, Kepulauan Riau</span>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     KEUNIKAN DAERAH
+═════════════════════════════════════════ -->
     
     <section id="keunikan">
     <div class="container">

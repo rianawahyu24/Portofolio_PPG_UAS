@@ -90,6 +90,68 @@ const RevealModule = (() => {
     return { init };
 })();
 
+
+/* ═══════════════════════════════════════════════
+   TOGGLE PDF PREVIEW — Siklus
+   Tempel di main.js (bagian bawah)
+═══════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════
+   VIDEO + PDF TOGGLE — Ganti/update di main.js
+═══════════════════════════════════════════════ */
+
+/* ── TOGGLE VIDEO ── */
+function toggleVideo(btn) {
+    const section = btn.closest('.cycle-media-section');
+    const wrapper = section.querySelector('.cycle-video-wrap');
+    const isOpen  = wrapper.style.display !== 'none';
+
+    if (isOpen) {
+        // tutup — stop video juga
+        const iframe = wrapper.querySelector('.yt-iframe');
+        iframe.src = '';
+        iframe.style.display = 'none';
+        wrapper.querySelector('.yt-thumb').style.display = 'block';
+        wrapper.style.display = 'none';
+        btn.classList.remove('open');
+        btn.querySelector('.pdf-toggle-text').textContent = 'Tonton Video Pembelajaran';
+    } else {
+        wrapper.style.display = 'block';
+        btn.classList.add('open');
+        btn.querySelector('.pdf-toggle-text').textContent = 'Tutup Video';
+    }
+}
+
+/* ── KLIK THUMBNAIL → LOAD IFRAME YT ── */
+function loadYT(thumb) {
+    const videoId = thumb.dataset.videoid;
+    const iframe  = thumb.nextElementSibling; // .yt-iframe
+    iframe.src    = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    iframe.style.display = 'block';
+    thumb.style.display  = 'none';
+}
+
+/* ── TOGGLE PDF ── */
+function togglePDF(btn) {
+    const box     = btn.closest('.cycle-pdf-box');
+    const preview = box.querySelector('.cycle-pdf-preview');
+    const iframe  = preview.querySelector('iframe');
+    const pdfSrc  = btn.dataset.pdf;
+    const isOpen  = preview.style.display !== 'none';
+
+    if (isOpen) {
+        preview.style.display = 'none';
+        iframe.src = '';
+        btn.classList.remove('open');
+        btn.querySelector('.pdf-toggle-text').textContent = 'Lihat Preview Modul';
+    } else {
+        iframe.src = pdfSrc;
+        preview.style.display = 'block';
+        btn.classList.add('open');
+        btn.querySelector('.pdf-toggle-text').textContent = 'Tutup Preview';
+    }
+}
+
 /* ──────────────────────────────────────────────────
    MODULE 4: MAGNET HOVER EFFECT
 ────────────────────────────────────────────────── */
@@ -121,7 +183,7 @@ const PDFModule = (() => {
     const PDF_URL = "modul-ajar-faisal.pdf";
     let loaded = false;
 
-    function toggle() {
+    function toggleModul() {
         const wrap = document.getElementById("pdfViewerWrapper");
 
         if (wrap.style.display === "none" || !wrap.style.display) {
@@ -156,7 +218,7 @@ const PDFModule = (() => {
     }
 
     return {
-        toggle,
+        toggleModul,
         close,
         fullscreen,
         download
@@ -377,7 +439,13 @@ window.addEventListener('load', () => {
 
 /* ── Global function bindings (for inline HTML onclick) ── */
 window.toggleTheme = ThemeModule.toggle;
-window.togglePDF = PDFModule.toggle;
+
+window.togglePDF   = togglePDF;   // ← pakai fungsi standalone, bukan PDFModule
+window.toggleVideo = toggleVideo;
+window.loadYT      = loadYT;
+
+window.togglePDFModul = PDFModule.toggleModul; 
+
 window.closePDF = PDFModule.close;
 window.fullscreenPDF = PDFModule.fullscreen;
 window.downloadPDF = PDFModule.download;

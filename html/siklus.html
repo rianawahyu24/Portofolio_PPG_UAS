@@ -39,146 +39,347 @@
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
     </nav>
 
-
 <!-- ════════════════════════════════════════
      04 · SIKLUS PPL (TIMELINE)
+     Ganti seluruh <section id="siklus"> dengan ini
 ═════════════════════════════════════════ -->
-    <section id="siklus">
-        <div class="container">
-            <div class="reveal">
-                <p class="section-label">// 02 — Perjalanan PPL I</p>
-                <h2 class="section-title">3 Siklus <span>Pembelajaran</span></h2>
-                <div class="divider"></div>
-                <p style="color:var(--muted);max-width:600px;line-height:1.7;margin-bottom:3rem;font-size:0.93rem;">
-                    Tiga babak yang membentuk karakter dan kemampuan mengajar — dari bimbingan penuh hingga kemandirian total.
-                </p>
-            </div>
-
-            <div class="timeline">
-
-                <!-- Siklus 1 -->
-                <div class="cycle-item">
-                    <div class="cycle-dot"></div>
-                    <div class="card cycle-card">
-                        <div class="cycle-header">
-                            <div>
-                                <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent);margin-bottom:0.3rem;">SIKLUS 01</p>
-                                <h3 class="cycle-title">Belajar Bersama Guru Pamong</h3>
-                            </div>
-                            <span class="cycle-badge badge-s1">Observasi &amp; Kolaborasi</span>
-                        </div>
-                        <p class="cycle-desc">
-                            Guru Pamong aktif mengintervensi jalannya pembelajaran — memberikan arahan langsung, membantu mengelola kelas, dan membimbing saya merespons dinamika siswa. Siklus ini adalah fondasi pemahaman tentang realitas kelas yang sesungguhnya. Saya belajar membaca
-                            situasi dan mengikuti arahan dengan cepat.
-                        </p>
-                        <div class="cycle-stats">
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--accent)">40%</div>
-                                <div class="stat-label">Kemandirian</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--danger)">Tinggi</div>
-                                <div class="stat-label">Intervensi GP</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--warn)">55%</div>
-                                <div class="stat-label">Partisipasi Siswa</div>
-                            </div>
-                        </div>
-                        <div class="progress-row">
-                            <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="background:linear-gradient(90deg,#38bdf8,#818cf8)" data-width="40"></div>
-                            </div>
-                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent)">40%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Siklus 2 -->
-                <div class="cycle-item">
-                    <div class="cycle-dot"></div>
-                    <div class="card cycle-card">
-                        <div class="cycle-header">
-                            <div>
-                                <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent2);margin-bottom:0.3rem;">SIKLUS 02</p>
-                                <h3 class="cycle-title">Mengambil Alih Kendali Kelas</h3>
-                            </div>
-                            <span class="cycle-badge badge-s2">Transisi &amp; Penguatan</span>
-                        </div>
-                        <p class="cycle-desc">
-                            Kemandirian saya mulai terbangun. GP lebih banyak membiarkan saya mengelola kelas — intervensi hanya hadir saat situasi benar-benar kritis. Saya mulai membaca dinamika siswa secara mandiri, merespons pertanyaan dengan percaya diri, dan mengambil keputusan
-                            pedagogis secara real-time.
-                        </p>
-                        <div class="cycle-stats">
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--accent2)">70%</div>
-                                <div class="stat-label">Kemandirian</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--warn)">Sedang</div>
-                                <div class="stat-label">Intervensi GP</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--warn)">72%</div>
-                                <div class="stat-label">Partisipasi Siswa</div>
-                            </div>
-                        </div>
-                        <div class="progress-row">
-                            <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="background:linear-gradient(90deg,#818cf8,#a78bfa)" data-width="70"></div>
-                            </div>
-                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent2)">70%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Siklus 3 -->
-                <div class="cycle-item">
-                    <div class="cycle-dot"></div>
-                    <div class="card cycle-card">
-                        <div class="cycle-header">
-                            <div>
-                                <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent3);margin-bottom:0.3rem;">SIKLUS 03</p>
-                                <h3 class="cycle-title">Pengajaran Mandiri Penuh</h3>
-                            </div>
-                            <span class="cycle-badge badge-s3">Kemandirian &amp; Refleksi</span>
-                        </div>
-                        <p class="cycle-desc">
-                            Puncak perjalanan PPL I — saya mengajar penuh secara mandiri sementara GP hanya mengamati dari belakang tanpa intervensi. Setiap keputusan kelas sepenuhnya ada di tangan saya. Siklus ini adalah momen transformatif yang mengkonfirmasi kesiapan saya sebagai
-                            calon guru profesional.
-                        </p>
-                        <div class="cycle-stats">
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--accent3)">100%</div>
-                                <div class="stat-label">Kemandirian</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--accent3)">Minimal</div>
-                                <div class="stat-label">Intervensi GP</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-num" style="color:var(--accent3)">88%</div>
-                                <div class="stat-label">Partisipasi Siswa</div>
-                            </div>
-                        </div>
-                        <div class="progress-row">
-                            <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="background:linear-gradient(90deg,#34d399,#6ee7b7)" data-width="100"></div>
-                            </div>
-                            <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent3)">100%</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /timeline -->
+<section id="siklus">
+    <div class="container">
+        <div class="reveal">
+            <p class="section-label"> Jejak Perkembangan Pembelajaran PPL I</p>
+            <h2 class="section-title">Transformasi<span> 3 Siklus Pembelajaran</span></h2>
+            <div class="divider"></div>
+            <p style="color:var(--muted);max-width:1000px;line-height:1.7;margin-bottom:3rem;font-size:0.93rem;">
+                 Tiga siklus pembelajaran yang merekam proses bertumbuh sebagai 
+                 calon guru. Setiap tahap menunjukkan peningkatan kepercayaan diri, 
+                 kemampuan pedagogis, serta kesiapan untuk menciptakan pengalaman belajar 
+                 yang bermakna bagi peserta didik.
+            </p>
         </div>
-    </section>
 
-    <!-- ════════════════════════════════════════
+        <div class="timeline">
+
+            <!-- ═══════════════ SIKLUS 1 ═══════════════ -->
+            <div class="cycle-item">
+                <div class="cycle-dot"></div>
+                <div class="card cycle-card">
+                    <div class="cycle-header">
+                        <div>
+                            <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent);margin-bottom:0.3rem;">SIKLUS 01</p>
+                            <h3 class="cycle-title">Belajar Bersama Guru Pamong</h3>
+                        </div>
+                        <span class="cycle-badge badge-s1">Observasi &amp; Kolaborasi</span>
+                    </div>
+                    <p class="cycle-desc">
+                        Pada siklus pertama, saya masih berada pada tahap adaptasi terhadap situasi 
+                        kelas yang sesungguhnya. Guru Pamong berperan aktif dalam memberikan arahan, 
+                        membantu mengelola kelas, serta membimbing saya saat menyampaikan materi Excel 
+                        Dasar. Melalui pendampingan tersebut, saya mulai memahami karakter 
+                        peserta didik, ritme pembelajaran, dan strategi yang diperlukan untuk 
+                        menciptakan suasana belajar yang kondusif. Siklus ini menjadi fondasi 
+                        awal dalam membangun kepercayaan diri dan kompetensi mengajar.
+                    </p>
+                    <div class="cycle-stats">
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent)">40%</div>
+                            <div class="stat-label"><b>Kemandirian</b></div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent2)">Tinggi</div>
+                            <div class="stat-label">Intervensi Guru Pamong</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent3)">65%</div>
+                            <div class="stat-label"><b>Partisipasi Siswa</b></div>
+                        </div>
+                    </div>
+                    <div class="progress-row">
+                        <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="background:linear-gradient(135deg, #34d36e, #f472b6)" data-width="40"></div>
+                        </div>
+                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent)">40%</span>
+                    </div>
+
+                    <!-- VIDEO SIKLUS 1 -->
+                    <div class="cycle-media-section">
+                        <div class="cycle-media-label">
+                            <span class="media-label-icon">🎬</span>
+                            <span>Video Pembelajaran — Siklus 1</span>
+                        </div>
+
+                        <!-- TOGGLE BUTTON VIDEO -->
+                        <button class="cycle-pdf-toggle" onclick="toggleVideo(this)" data-videoid="6DrJKNMaVzQ">
+                            <span class="pdf-toggle-icon">▶️</span>
+                            <span class="pdf-toggle-text">Tonton Video Pembelajaran</span>
+                            <span class="pdf-toggle-arrow">▾</span>
+                        </button>
+
+                        <!-- THUMBNAIL + PLAYER WRAPPER (hidden by default) -->
+                        <div class="cycle-video-wrap" style="display:none;">
+                            <!-- Thumbnail clickable (sebelum play) -->
+                            <div class="yt-thumb" data-videoid="6DrJKNMaVzQ" onclick="loadYT(this)">
+                                <img src="https://i.ytimg.com/vi/6DrJKNMaVzQ/maxresdefault.jpg" 
+                                    onerror="this.src='https://i.ytimg.com/vi/6DrJKNMaVzQ/hqdefault.jpg'"
+                                    alt="Thumbnail Video Siklus 1">
+                                <div class="yt-play-btn">
+                                    <svg viewBox="0 0 68 48" width="68" height="48">
+                                        <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#ff0000"/>
+                                        <path d="M45 24 27 14v20" fill="#fff"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- iframe YT (kosong dulu, diisi JS pas klik thumbnail) -->
+                            <iframe class="yt-iframe" style="display:none;"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- MODUL SIKLUS 1 -->
+                    <div class="cycle-media-section">
+                        <div class="cycle-media-label">
+                            <span class="media-label-icon">📄</span>
+                            <span>Modul Ajar — Siklus 1</span>
+                        </div>
+                        <div class="cycle-pdf-box">
+                            <!-- Tombol toggle preview -->
+                            <button class="cycle-pdf-toggle" onclick="togglePDF(this)" 
+                               data-pdf="https://drive.google.com/file/d/1Wth3yI5veLU4f9yuaILrXdK3qMMqhkI-/preview">
+                                <span class="pdf-toggle-icon">📋</span>
+                                <span class="pdf-toggle-text">Lihat Preview Modul</span>
+                                <span class="pdf-toggle-arrow">▾</span>
+                            </button>
+                            <!-- PDF preview wrapper (hidden by default) -->
+                            <div class="cycle-pdf-preview" style="display:none;">
+                                <iframe src="" frameborder="0" allow="autoplay"></iframe>
+                            </div>
+                            <!-- Tombol download -->
+                            <a href="https://drive.google.com/uc?export=download&id=1Wth3yI5veLU4f9yuaILrXdK3qMMqhkI-" download class="cycle-pdf-download">
+                                <span>⬇️</span> Download Modul Siklus 1
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+           <!-- ═══════════════ SIKLUS 2 ═══════════════ -->
+            <div class="cycle-item">
+                <div class="cycle-dot"></div>
+                <div class="card cycle-card">
+                    <div class="cycle-header">
+                        <div>
+                            <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent2);margin-bottom:0.3rem;">SIKLUS 02</p>
+                            <h3 class="cycle-title">Mengembangkan Kepercayaan Diri Mengajar</h3>
+                        </div>
+                        <span class="cycle-badge badge-s2">Penguatan &amp; Adaptasi</span>
+                    </div>
+                    <p class="cycle-desc">
+                       Pada siklus kedua, saya mulai lebih percaya diri dalam mengelola pembelajaran 
+                       materi Fungsi IF pada Microsoft Excel. Guru Pamong masih memberikan masukan dan 
+                       penguatan, namun intervensi yang dilakukan tidak sebanyak pada siklus sebelumnya. 
+                       Saya mulai mampu memimpin jalannya pembelajaran, memberikan instruksi yang lebih 
+                       jelas, serta merespons pertanyaan peserta didik secara mandiri. 
+                       Keterlibatan siswa juga meningkat karena pembelajaran dirancang lebih interaktif dan kontekstual.
+                    </p>
+                    <div class="cycle-stats">
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent2)">75%</div>
+                            <div class="stat-label"><b>Kemandirian</b></div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent)">Sedang</div>
+                            <div class="stat-label">Intervensi Guru Pamong</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent2)">78%</div>
+                            <div class="stat-label"><b>Partisipasi Siswa</b></div>
+                        </div>
+                    </div>
+                    <div class="progress-row">
+                        <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="background:linear-gradient(135deg, #f472b6, #34d36e)" data-width="75"></div>
+                        </div>
+                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent2)">75%</span>
+                    </div>
+
+                    <!-- VIDEO SIKLUS 2 -->
+                    <div class="cycle-media-section">
+                        <div class="cycle-media-label">
+                            <span class="media-label-icon">🎬</span>
+                            <span>Video Pembelajaran — Siklus 2</span>
+                        </div>
+
+                        <button class="cycle-pdf-toggle" onclick="toggleVideo(this)" data-videoid="VIDEO_ID_SIKLUS_2">
+                            <span class="pdf-toggle-icon">▶️</span>
+                            <span class="pdf-toggle-text">Tonton Video Pembelajaran</span>
+                            <span class="pdf-toggle-arrow">▾</span>
+                        </button>
+
+                        <div class="cycle-video-wrap" style="display:none;">
+                            <div  class="yt-thumb" data-videoid="IZAHC3UQ2Y8" onclick="loadYT(this)">
+                                <img src="https://i.ytimg.com/vi/IZAHC3UQ2Y8/maxresdefault.jpg"
+                                    onerror="this.src='https://i.ytimg.com/vi/IZAHC3UQ2Y8/hqdefault.jpg'"
+                                    alt="Thumbnail Video Siklus 2">
+                                <div class="yt-play-btn">
+                                    <svg viewBox="0 0 68 48" width="68" height="48">
+                                        <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#ff0000"/>
+                                        <path d="M45 24 27 14v20" fill="#fff"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <iframe class="yt-iframe"
+                                    style="display:none;"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- MODUL SIKLUS 2 -->
+                    <div class="cycle-media-section">
+                        <div class="cycle-media-label">
+                            <span class="media-label-icon">📄</span>
+                            <span>Modul Ajar — Siklus 2</span>
+                        </div>
+
+                        <div class="cycle-pdf-box">
+                            <button class="cycle-pdf-toggle"
+                                    onclick="togglePDF(this)"
+                                   data-pdf="https://drive.google.com/file/d/1qRYFxsGCNMSYuGPWAXfuvRTwtqivCDYP/preview">
+                                <span class="pdf-toggle-icon">📋</span>
+                                <span class="pdf-toggle-text">Lihat Preview Modul</span>
+                                <span class="pdf-toggle-arrow">▾</span>
+                            </button>
+
+                            <div class="cycle-pdf-preview" style="display:none;">
+                                <iframe src="" frameborder="0" allow="autoplay"></iframe>
+                            </div>
+
+                            <a href="https://drive.google.com/uc?export=download&id=1qRYFxsGCNMSYuGPWAXfuvRTwtqivCDYP"
+                            target="_blank"
+                            class="cycle-pdf-download">
+                                <span>⬇️</span> Download Modul Siklus 2
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ═══════════════ SIKLUS 3 ═══════════════ -->
+            <div class="cycle-item">
+                <div class="cycle-dot"></div>
+                <div class="card cycle-card">
+                    <div class="cycle-header">
+                        <div>
+                            <p style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--accent3);margin-bottom:0.3rem;">SIKLUS 03</p>
+                            <h3 class="cycle-title">Pengajaran Mandiri dan Reflektif</h3>
+                        </div>
+                        <span class="cycle-badge badge-s3">Kemandirian &amp; Profesionalisme</span>
+                    </div>
+                    <p class="cycle-desc">
+                       Siklus ketiga menjadi tahap ketika saya memperoleh kesempatan untuk mengelola pembelajaran secara lebih mandiri pada materi Algoritma dan Pemrograman. Guru Pamong berperan sebagai pengamat dan pemberi umpan balik setelah pembelajaran berlangsung. Saya mampu merencanakan, melaksanakan, dan mengevaluasi pembelajaran secara lebih percaya diri serta menyesuaikan strategi mengajar dengan kebutuhan peserta didik. Pengalaman pada siklus ini memperkuat kesiapan saya untuk menjalankan peran sebagai calon guru profesional.
+                    </p>
+                    <div class="cycle-stats">
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent)">95%</div>
+                            <div class="stat-label"><b>Kemandirian</b></div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent2)">Minimal</div>
+                            <div class="stat-label">Intervensi GP</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num" style="color:var(--accent3)">90%</div>
+                            <div class="stat-label"><b>Partisipasi Siswa</b></div>
+                        </div>
+                    </div>
+                    <div class="progress-row">
+                        <span style="font-size:0.73rem;color:var(--muted);min-width:90px">Kemandirian</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="background:linear-gradient(135deg,#34d36e, #f472b6)" data-width="95"></div>
+                        </div>
+                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.73rem;color:var(--accent3)">95%</span>
+                    </div>
+
+                    <!-- VIDEO SIKLUS 3 -->
+                    <div class="cycle-media-section">
+                        <div class="cycle-media-label">
+                            <span class="media-label-icon">🎬</span>
+                            <span>Video Pembelajaran — Siklus 3</span>
+                        </div>
+
+                        <button class="cycle-pdf-toggle" onclick="toggleVideo(this)" data-videoid="VIDEO_ID_SIKLUS_3">
+                            <span class="pdf-toggle-icon">▶️</span>
+                            <span class="pdf-toggle-text">Tonton Video Pembelajaran</span>
+                            <span class="pdf-toggle-arrow">▾</span>
+                        </button>
+
+                        <div class="cycle-video-wrap" style="display:none;">
+                            <div  class="yt-thumb" data-videoid="5Z-JZJUYeZs" onclick="loadYT(this)">
+                                <img src="https://i.ytimg.com/vi/5Z-JZJUYeZs/maxresdefault.jpg"
+                                    onerror="this.src='https://i.ytimg.com/vi/5Z-JZJUYeZs/hqdefault.jpg'"
+                                    alt="Thumbnail Video Siklus 3">
+                                <div class="yt-play-btn">
+                                    <svg viewBox="0 0 68 48" width="68" height="48">
+                                        <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#ff0000"/>
+                                        <path d="M45 24 27 14v20" fill="#fff"/>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <iframe class="yt-iframe"
+                                    style="display:none;"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- MODUL SIKLUS 3 -->
+                    <div class="cycle-media-section">
+                        <div class="cycle-media-label">
+                            <span class="media-label-icon">📄</span>
+                            <span>Modul Ajar — Siklus 3</span>
+                        </div>
+
+                        <div class="cycle-pdf-box">
+                            <button class="cycle-pdf-toggle"
+                                    onclick="togglePDF(this)"
+                                    data-pdf="https://drive.google.com/file/d/1YrBzQnJMbOBMMDd-XXpzrALamUd_Gek8/preview">
+                                <span class="pdf-toggle-icon">📋</span>
+                                <span class="pdf-toggle-text">Lihat Preview Modul</span>
+                                <span class="pdf-toggle-arrow">▾</span>
+                            </button>
+
+                            <div class="cycle-pdf-preview" style="display:none;">
+                                <iframe src="" frameborder="0" allow="autoplay"></iframe>
+                            </div>
+
+                            <a href="https://drive.google.com/uc?export=download&id=1YrBzQnJMbOBMMDd-XXpzrALamUd_Gek8"
+                            target="_blank"
+                            class="cycle-pdf-download">
+                                <span>⬇️</span> Download Modul Siklus 3
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div><!-- /timeline -->
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════
      06 · PENILAIAN GURU PAMONG (TERUKUR)
 ═════════════════════════════════════════ -->
     <section id="penilaian">
@@ -621,8 +822,7 @@
 
         </div>
     </section>
-
-    
+ 
     <!-- ════════════════════════════════════════
         FOOTER
     ═════════════════════════════════════════ -->
