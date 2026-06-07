@@ -765,83 +765,8 @@
         </p>
     </footer>
 
-<script>
-// ── TAB SWITCHING ──
-function switchTab(btn, panelId) {
-    document.querySelectorAll('.assess-tabs > .assess-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('#penilaian > .container > .assess-panel').forEach(p => p.classList.remove('active'));
-    const panel = document.getElementById(panelId);
-    if (panel) { panel.classList.add('active'); animateBars(panel); }
-}
+    <script src="../main.js"></script>
 
-// ── SUB TAB SWITCHING ──
-function switchSubTab(btn, panelId, groupClass) {
-    btn.closest('div').querySelectorAll('.assess-tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.' + groupClass).forEach(p => p.classList.remove('active'));
-    const panel = document.getElementById(panelId);
-    if (panel) { panel.classList.add('active'); animateBars(panel); }
-}
-
-// ── ANIMATE BARS ──
-function animateBars(container) {
-    (container || document).querySelectorAll('.mini-fill, .breakdown-fill, .progress-fill').forEach(el => {
-        const w = el.dataset.width;
-        if (w) { el.style.width = '0%'; setTimeout(() => { el.style.width = w + '%'; }, 100); }
-    });
-}
-
-// ── VIDEO TOGGLE ──
-function toggleVideo(btn) {
-    const wrap = btn.nextElementSibling;
-    const isOpen = wrap.style.display !== 'none';
-    wrap.style.display = isOpen ? 'none' : 'block';
-    btn.classList.toggle('open', !isOpen);
-    btn.querySelector('.pdf-toggle-text').textContent = isOpen ? 'Tonton Video Pembelajaran' : 'Sembunyikan Video';
-}
-
-// ── YOUTUBE LOAD ──
-function loadYT(thumb) {
-    const id = thumb.dataset.videoid;
-    const iframe = thumb.nextElementSibling;
-    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
-    thumb.style.display = 'none';
-    iframe.style.display = 'block';
-}
-
-// ── PDF TOGGLE ──
-function togglePDF(btn) {
-    const previewWrap = btn.nextElementSibling;
-    const isOpen = previewWrap.style.display !== 'none';
-    if (!isOpen) {
-        const iframe = previewWrap.querySelector('iframe');
-        if (!iframe.src) iframe.src = btn.dataset.pdf;
-    }
-    previewWrap.style.display = isOpen ? 'none' : 'block';
-    btn.classList.toggle('open', !isOpen);
-    btn.querySelector('.pdf-toggle-text').textContent = isOpen ? 'Lihat Preview Modul' : 'Sembunyikan Preview';
-}
-
-// ── REVEAL ON SCROLL ──
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); animateBars(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal, .cycle-item').forEach(el => observer.observe(el));
-
-// ── THEME ──
-function toggleTheme() {
-    const html = document.documentElement;
-    html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', html.dataset.theme);
-}
-const saved = localStorage.getItem('theme');
-if (saved) document.documentElement.dataset.theme = saved;
-
-// Init active tab bars
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.assess-panel.active').forEach(panel => animateBars(panel));
-});
-</script>
+   
 </body>
 </html>
