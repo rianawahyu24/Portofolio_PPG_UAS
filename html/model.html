@@ -1,71 +1,382 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
 
-    <!-- ════════════════════════════════════════
-     07 · MODEL GURU PROFESIONAL
-═════════════════════════════════════════ -->
-    <section id="model-guru">
-        <div class="container">
-            <div class="reveal">
-                <p class="section-label">// 06 — Model Guru yang Dituju</p>
-                <h2 class="section-title">Visi Guru <span>Profesional</span></h2>
-                <div class="divider"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio | Riana Wahyu</title>
+    <link rel="icon" type="image/x-icon" href="../image/Logo_nobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+    <nav>
+        <a href="/index.html" class="nav-logo">
+            <img src="../image/logo2.png" alt="Logo Portfolio">
+        </a>
+        <ul class="nav-links">
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="artefak.html">Analisis Artefak</a></li>
+            <li><a href="siklus.html">Penilaian Siklus PPL</a></li>
+            <li><a href="model.html">Model Guru</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
+    </nav>
+
+
+<section id="misi">
+    <div class="container">
+ 
+        <div class="reveal">
+            <p class="section-label"> || Model Guru</p>
+            <h2 class="section-title">Misi & <span>Visi Saya</span></h2>
+            <div class="divider"></div>
+        </div>
+ 
+        <!-- MISI STATEMENT -->
+        <div class="card reveal" style="padding: 2.2rem 2.5rem; margin-bottom: 3rem;
+             background: linear-gradient(135deg, rgba(52,211,110,0.04), rgba(244,114,182,0.04));
+             border-left: 3px solid var(--accent);">
+            <p class="section-label" style="margin-bottom: 0.8rem;">// Misi Utama</p>
+            <p style="font-family:'Syne',sans-serif; font-size:1.15rem; line-height:1.85;
+                      font-style:italic; color:var(--text); text-align:justify;">
+                "Menjadi pendidik Informatika yang mampu memadukan kecakapan teknologi
+                dengan kepekaan terhadap manusia &mdash; mendampingi peserta didik untuk
+                tidak sekadar melek digital, tetapi juga tumbuh sebagai individu yang
+                berpikir kritis, berempati, dan siap menghadapi tantangan zamannya."
+            </p>
+            <p style="margin-top:1rem; font-family:'JetBrains Mono',monospace;
+                      font-size:0.75rem; color:var(--muted); letter-spacing:0.06em;">
+                — Riana Wahyu Puspitasari · PPG Prajabatan Informatika UPI
+            </p>
+        </div>
+ 
+        <!-- TIGA PILAR MISI -->
+        <div class="reveal" style="margin-bottom:0.8rem;">
+            <p class="section-label">// Tiga Pilar Misi</p>
+        </div>
+ 
+        <div class="mission-grid reveal" style="margin-bottom:4rem;">
+ 
+            <div class="card mission-card">
+                <div class="mission-icon">💻</div>
+                <p style="font-family:'JetBrains Mono',monospace; font-size:0.68rem;
+                          color:var(--muted); letter-spacing:0.1em; margin-bottom:0.5rem;">
+                    01 · PILAR PERTAMA
+                </p>
+                <h3 class="mission-title">Inovator Pembelajaran Digital</h3>
+                <p class="mission-text">
+                    Merancang pengalaman belajar yang memanfaatkan teknologi secara bermakna
+                    &mdash; bukan sekadar menggunakan perangkat, melainkan menghadirkan
+                    teknologi sebagai jembatan menuju pemahaman yang lebih dalam dan
+                    keterampilan yang relevan dengan dunia nyata.
+                </p>
             </div>
-
-            <div class="mission-grid reveal">
-                <div class="card mission-card">
-                    <div class="mission-icon">🎯</div>
-                    <h3 class="mission-title">Misi Saya</h3>
-                    <p class="mission-text">Menjadi guru yang menciptakan ekosistem belajar berpusat pada siswa — di mana setiap anak merasa dilihat, didengar, dan dihargai. Berkomitmen mengintegrasikan teknologi pendidikan secara bermakna dan menginspirasi kecintaan seumur
-                        hidup terhadap ilmu pengetahuan.</p>
-                </div>
-                <div class="card mission-card">
-                    <div class="mission-icon">🌱</div>
-                    <h3 class="mission-title">Kompetensi yang Dibangun</h3>
-                    <p class="mission-text">Pedagogi dinamis — adaptif terhadap generasi digital, mampu merancang pembelajaran berbasis data, dan mahir dalam asesmen formatif berkelanjutan. Saya ingin menjadi guru yang terus belajar bersama siswanya, bukan hanya mendepan kelas.</p>
-                </div>
-                <div class="card mission-card">
-                    <div class="mission-icon">💎</div>
-                    <h3 class="mission-title">Karakter yang Dikembangkan</h3>
-                    <p class="mission-text">Integritas, empati mendalam, dan rasa ingin tahu yang tak padam. Guru profesional bukan hanya ahli di bidangnya, tetapi juga menjadi teladan — menunjukkan bahwa belajar adalah proses indah yang tidak pernah berakhir.</p>
-                </div>
+ 
+            <div class="card mission-card">
+                <div class="mission-icon" style="background:rgba(244,114,182,0.1);">🫶</div>
+                <p style="font-family:'JetBrains Mono',monospace; font-size:0.68rem;
+                          color:var(--muted); letter-spacing:0.1em; margin-bottom:0.5rem;">
+                    02 · PILAR KEDUA
+                </p>
+                <h3 class="mission-title">Guru yang Melihat Manusianya</h3>
+                <p class="mission-text">
+                    Memahami bahwa di balik setiap siswa ada kebutuhan, potensi, dan ritme
+                    belajar yang unik. Keputusan pedagogis selalu berangkat dari pemahaman
+                    terhadap peserta didik &mdash; bukan sekadar mengejar target kurikulum.
+                </p>
             </div>
-
-            <div class="card reveal" style="padding:2rem;margin-top:1.5rem;">
-                <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.5rem;">🏆 Target Kompetensi Guru Profesional</h3>
-                <ul class="competency-list">
-                    <li class="competency-item"><span class="comp-icon">📐</span>
-                        <div><strong>Kompetensi Pedagogik</strong> — Merancang dan melaksanakan pembelajaran yang efektif, inovatif, dan kontekstual berdasarkan kebutuhan siswa</div>
-                    </li>
-                    <li class="competency-item"><span class="comp-icon">🧠</span>
-                        <div><strong>Kompetensi Profesional</strong> — Menguasai materi secara mendalam dan mengembangkan keilmuan secara berkelanjutan melalui riset dan refleksi</div>
-                    </li>
-                    <li class="competency-item"><span class="comp-icon">🤝</span>
-                        <div><strong>Kompetensi Sosial</strong> — Membangun relasi positif dengan siswa, kolega, orang tua, dan komunitas sekolah secara kolaboratif</div>
-                    </li>
-                    <li class="competency-item"><span class="comp-icon">🌟</span>
-                        <div><strong>Kompetensi Kepribadian</strong> — Menjadi teladan dalam integritas, kedisiplinan, dan semangat belajar sepanjang hayat</div>
-                    </li>
-                    <li class="competency-item"><span class="comp-icon">💻</span>
-                        <div><strong>Literasi Digital &amp; Teknologi</strong> — Mengintegrasikan teknologi secara bijak dan kreatif untuk memperkaya proses pembelajaran</div>
-                    </li>
-                </ul>
+ 
+            <div class="card mission-card">
+                <div class="mission-icon" style="background:rgba(74,222,128,0.1);">🌱</div>
+                <p style="font-family:'JetBrains Mono',monospace; font-size:0.68rem;
+                          color:var(--muted); letter-spacing:0.1em; margin-bottom:0.5rem;">
+                    03 · PILAR KETIGA
+                </p>
+                <h3 class="mission-title">Pendidik yang Terus Bertumbuh</h3>
+                <p class="mission-text">
+                    Komitmen untuk tidak berhenti belajar &mdash; merefleksikan setiap
+                    praktik mengajar, terbuka terhadap umpan balik, dan terus memperbarui
+                    diri seiring perkembangan ilmu pendidikan dan teknologi.
+                </p>
             </div>
-
-            <div class="model-grid reveal" style="margin-top:1.5rem;">
-                <div class="card model-card">
-                    <div class="model-num">3</div>
-                    <div class="model-label">Siklus PPL</div>
-                    <p class="model-text">Tiga babak pembelajaran yang membentuk karakter dari nol menuju kemandirian penuh sebagai calon guru.</p>
+ 
+        </div>
+ 
+    </div>
+</section>
+ 
+<!-- ════════════════════════════════════════
+     SECTION: KOMPETENSI YANG INGIN DIBANGUN
+════════════════════════════════════════ -->
+ 
+<section id="kompetensi">
+    <div class="container">
+ 
+        <div class="reveal">
+            <p class="section-label"> || Kompetensi</p>
+            <h2 class="section-title">Kompetensi yang Ingin <span>Dibangun</span></h2>
+            <div class="divider"></div>
+        </div>
+ 
+        <!-- LAYOUT: DAFTAR KOMPETENSI (KIRI) + RADAR INFO (KANAN) -->
+        <div style="display:grid; grid-template-columns:1.4fr 1fr; gap:2rem;
+                    align-items:start;" class="reveal">
+ 
+            <!-- KIRI: DAFTAR -->
+            <ul class="competency-list">
+ 
+                <li class="competency-item">
+                    <span class="comp-icon">🧩</span>
+                    <div>
+                        <p style="font-weight:600; font-size:0.9rem; margin-bottom:0.3rem;">
+                            Pedagogik berbasis diferensiasi
+                        </p>
+                        <p style="font-size:0.83rem; color:var(--muted); line-height:1.7; text-align:justify;">
+                            Merancang pembelajaran yang responsif terhadap keberagaman gaya
+                            belajar dan kemampuan peserta didik, sehingga setiap siswa
+                            mendapatkan pengalaman belajar yang sesuai dan bermakna.
+                        </p>
+                    </div>
+                </li>
+ 
+                <li class="competency-item">
+                    <span class="comp-icon">🛠️</span>
+                    <div>
+                        <p style="font-weight:600; font-size:0.9rem; margin-bottom:0.3rem;">
+                            Penguasaan teknologi pendidikan
+                        </p>
+                        <p style="font-size:0.83rem; color:var(--muted); line-height:1.7; text-align:justify;">
+                            Mengintegrasikan tools digital seperti LMS, simulasi interaktif,
+                            dan coding tools secara kontekstual &mdash; sesuai tujuan
+                            pembelajaran, bukan sekadar penggunaan teknologi demi teknologi.
+                        </p>
+                    </div>
+                </li>
+ 
+                <li class="competency-item">
+                    <span class="comp-icon">📋</span>
+                    <div>
+                        <p style="font-weight:600; font-size:0.9rem; margin-bottom:0.3rem;">
+                            Asesmen autentik &amp; formatif
+                        </p>
+                        <p style="font-size:0.83rem; color:var(--muted); line-height:1.7; text-align:justify;">
+                            Menilai proses, bukan hanya produk &mdash; dengan instrumen
+                            yang bermakna dan mampu memberikan umpan balik yang
+                            mendorong perkembangan peserta didik secara berkelanjutan.
+                        </p>
+                    </div>
+                </li>
+ 
+                <li class="competency-item">
+                    <span class="comp-icon">💬</span>
+                    <div>
+                        <p style="font-weight:600; font-size:0.9rem; margin-bottom:0.3rem;">
+                            Komunikasi &amp; relasi guru–siswa
+                        </p>
+                        <p style="font-size:0.83rem; color:var(--muted); line-height:1.7; text-align:justify;">
+                            Membangun kepercayaan melalui komunikasi yang hangat, jelas,
+                            dan konsisten &mdash; menciptakan ruang kelas yang aman
+                            secara psikologis bagi setiap peserta didik.
+                        </p>
+                    </div>
+                </li>
+ 
+                <li class="competency-item">
+                    <span class="comp-icon">📖</span>
+                    <div>
+                        <p style="font-weight:600; font-size:0.9rem; margin-bottom:0.3rem;">
+                            Refleksi &amp; pengembangan profesional
+                        </p>
+                        <p style="font-size:0.83rem; color:var(--muted); line-height:1.7; text-align:justify;">
+                            Menjadikan setiap siklus mengajar sebagai sumber pembelajaran
+                            diri yang berkelanjutan &mdash; dengan praktik lesson study,
+                            jurnal reflektif, dan kolaborasi dengan sesama pendidik.
+                        </p>
+                    </div>
+                </li>
+ 
+            </ul>
+ 
+            <!-- KANAN: STATS CARD -->
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+ 
+                <div class="card" style="padding:1.8rem; text-align:center;">
+                    <p style="font-family:'JetBrains Mono',monospace; font-size:0.68rem;
+                              color:var(--muted); text-transform:uppercase; letter-spacing:0.1em;
+                              margin-bottom:0.8rem;">
+                        // Peta Kompetensi Guru
+                    </p>
+                    <p style="font-family:'Syne',sans-serif; font-size:0.85rem;
+                              color:var(--muted); line-height:1.75; text-align:justify;">
+                        Berdasarkan Permendikbud No. 16 Tahun 2007 dan kerangka PPG
+                        Prajabatan, kompetensi guru profesional mencakup empat domain
+                        utama yang saling memperkuat satu sama lain.
+                    </p>
                 </div>
-                <div class="card model-card">
-                    <div class="model-num">4</div>
-                    <div class="model-label">Kompetensi Inti</div>
-                    <p class="model-text">Pedagogik, profesional, sosial, kepribadian — empat pilar standar guru profesional Indonesia.</p>
-                </div>
-                <div class="card model-card">
-                    <div class="model-num">∞</div>
-                    <div class="model-label">Komitmen Belajar</div>
-                    <p class="model-text">Perjalanan menjadi guru tidak pernah berakhir — selalu ada hal baru untuk dipelajari dan ditingkatkan.</p>
+ 
+                <!-- 4 DOMAIN KOMPETENSI -->
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem;">
+ 
+                    <div class="card model-card" style="padding:1.2rem;">
+                        <p class="model-num" style="font-size:2rem;">📚</p>
+                        <p class="model-label">Pedagogik</p>
+                        <p class="model-text" style="font-size:0.78rem;">
+                            Kemampuan mengelola proses pembelajaran yang bermakna
+                        </p>
+                    </div>
+ 
+                    <div class="card model-card" style="padding:1.2rem;">
+                        <p class="model-num" style="font-size:2rem;">💡</p>
+                        <p class="model-label">Profesional</p>
+                        <p class="model-text" style="font-size:0.78rem;">
+                            Penguasaan materi Informatika yang mendalam dan mutakhir
+                        </p>
+                    </div>
+ 
+                    <div class="card model-card" style="padding:1.2rem;">
+                        <p class="model-num" style="font-size:2rem;">🤝</p>
+                        <p class="model-label">Sosial</p>
+                        <p class="model-text" style="font-size:0.78rem;">
+                            Kemampuan berkomunikasi &amp; berkolaborasi dengan komunitas
+                        </p>
+                    </div>
+ 
+                    <div class="card model-card" style="padding:1.2rem;">
+                        <p class="model-num" style="font-size:2rem;">🪞</p>
+                        <p class="model-label">Kepribadian</p>
+                        <p class="model-text" style="font-size:0.78rem;">
+                            Karakter yang stabil, dewasa, dan menjadi teladan nyata
+                        </p>
+                    </div>
+ 
                 </div>
             </div>
         </div>
-    </section>
+ 
+    </div>
+</section>
+ 
+<!-- ════════════════════════════════════════
+     SECTION: KARAKTER GURU
+════════════════════════════════════════ -->
+ 
+<section id="karakter">
+    <div class="container">
+ 
+        <div class="reveal">
+            <p class="section-label"> || Karakter</p>
+            <h2 class="section-title">Karakter yang Ingin <span>Diteladankan</span></h2>
+            <div class="divider"></div>
+        </div>
+ 
+        <!-- INTRO KARAKTER -->
+        <div class="card reveal" style="padding:1.8rem 2rem; margin-bottom:2.5rem;
+             background:linear-gradient(135deg, rgba(52,211,110,0.03), rgba(244,114,182,0.03));">
+            <p style="font-size:0.9rem; color:var(--muted); line-height:1.85; text-align:justify;">
+                Karakter seorang guru bukan sesuatu yang diucapkan di depan kelas, melainkan
+                ditunjukkan melalui setiap keputusan kecil yang dibuat sehari-hari &mdash;
+                cara merespons pertanyaan siswa, cara menyikapi kegagalan, dan cara hadir
+                secara utuh di dalam maupun di luar ruang belajar. Lima karakter berikut
+                adalah yang ingin saya bangun dan terus jaga sepanjang perjalanan menjadi
+                pendidik profesional.
+            </p>
+        </div>
+ 
+        <!-- KARAKTER CARDS: MODEL GRID -->
+        <div class="model-grid reveal">
+ 
+            <div class="card model-card">
+                <div class="model-num">🔍</div>
+                <p class="model-label">Reflektif</p>
+                <p class="model-text">
+                    Selalu bertanya <em>"apa yang bisa diperbaiki?"</em> setelah
+                    setiap siklus pembelajaran &mdash; menjadikan evaluasi diri
+                    sebagai kebiasaan, bukan beban.
+                </p>
+            </div>
+ 
+            <div class="card model-card">
+                <div class="model-num">🌊</div>
+                <p class="model-label">Adaptif</p>
+                <p class="model-text">
+                    Lentur menghadapi perubahan kurikulum, kebutuhan siswa,
+                    maupun dinamika kelas yang tidak selalu bisa diprediksi.
+                </p>
+            </div>
+ 
+            <div class="card model-card">
+                <div class="model-num">❤️</div>
+                <p class="model-label">Empatis</p>
+                <p class="model-text">
+                    Hadir secara utuh untuk siswa &mdash; merasakan apa yang
+                    mereka rasakan dan menjadi ruang aman bagi mereka untuk
+                    tumbuh tanpa rasa takut.
+                </p>
+            </div>
+ 
+        </div>
+ 
+        <div class="model-grid reveal" style="margin-top:1.5rem;">
+ 
+            <div class="card model-card">
+                <div class="model-num">✨</div>
+                <p class="model-label">Inovatif</p>
+                <p class="model-text">
+                    Berani mencoba pendekatan pembelajaran baru yang lebih
+                    bermakna, dan tidak takut gagal selama proses ekplorasi
+                    tersebut memberi pelajaran berharga.
+                </p>
+            </div>
+ 
+            <div class="card model-card">
+                <div class="model-num">🛡️</div>
+                <p class="model-label">Berintegritas</p>
+                <p class="model-text">
+                    Konsisten antara nilai yang diajarkan di kelas dan
+                    yang diteladankan dalam keseharian &mdash; karena
+                    siswa belajar lebih banyak dari apa yang dilihat
+                    daripada apa yang didengar.
+                </p>
+            </div>
+ 
+            <!-- CARD PENUTUP / QUOTE -->
+            <div class="card quote-card model-card" style="text-align:left;">
+                <div class="quote-icon">"</div>
+                <p style="font-family:'Syne',sans-serif; font-size:0.92rem;
+                          line-height:1.75; font-style:italic; color:var(--text);">
+                    "I never teach my pupils. I only attempt to provide the conditions in which they can learn."
+
+                </p>
+                <p style="margin-top:0.8rem; font-family:'JetBrains Mono',monospace;
+                          font-size:0.72rem; color:var(--muted);">
+                   — Albert Einstein
+                </p>
+            </div>
+ 
+        </div>
+ 
+    </div>
+</section>
+
+    <footer>
+        <p class="footer-name">
+            &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
+        </p>
+    </footer>
+
+    <script src="../main.js"></script>
+
+   
+</body>
+</html>

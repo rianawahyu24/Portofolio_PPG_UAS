@@ -417,6 +417,328 @@ margin:auto;
 .quote-text { font-family:'Syne',sans-serif; font-size:1.15rem; line-height:1.7; font-style:italic; }
 .quote-author { margin-top: 1rem; color: var(--muted); font-size: 0.82rem; }
 
+
+/* ── PEMBIMBING PPL ── */
+.pembimbing-wrap {
+    margin-top: 1.5rem;
+}
+
+.pembimbing-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+}
+
+.pembimbing-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pembimbing-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.pembimbing-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(52,211,110,0.08);
+    border-color: rgba(52,211,110,0.3);
+}
+
+.pembimbing-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(52,211,110,0.1);
+    border: 1px solid rgba(52,211,110,0.25);
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pembimbing-avatar.dpl {
+    background: rgba(244,114,182,0.1);
+    border-color: rgba(244,114,182,0.25);
+    color: var(--accent2);
+}
+
+.pembimbing-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.pembimbing-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.pembimbing-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.pembimbing-detail {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+.pembimbing-foto {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+}
+
+
+
+/* ═══════════════════════════════════════════════════
+   FIX PROFIL SECTION — paste di bawah style.css
+   (menggantikan tambahan_style.css sebelumnya)
+   ═══════════════════════════════════════════════════ */
+
+/* ── SECTION HEADER (rp-label, rp-title, rp-divider) ── */
+.rp-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.rp-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700; line-height: 1.1; margin-bottom: 1rem; color: var(--text);
+}
+.rp-title span {
+  background: var(--gradient);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.rp-divider {
+  width: 60px; height: 3px;
+  background: var(--gradient); border-radius: 2px; margin-bottom: 3rem;
+}
+
+/* ── GRID LAYOUT ── */
+.rp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.rp-col {
+  display: flex; flex-direction: column; gap: 1.25rem;
+}
+
+/* ── CARD ── */
+.rp-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(12px);
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.rp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(52,211,110,0.08);
+  border-color: rgba(52,211,110,0.28);
+}
+
+/* ── AVATAR FOTO ── */
+.rp-avatar-photo {
+  width: 195px; height: 195px;
+  border-radius: 20px; overflow: hidden;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(52,211,110,0.35);
+  box-shadow: 0 0 20px rgba(52,211,110,0.18);
+  display: flex; align-items: center; justify-content: center;
+  background: var(--gradient); font-size: 24px;
+}
+.rp-avatar-img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top; display: block;
+}
+
+/* ── NAME / ROLE / BIO ── */
+.rp-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem; font-weight: 700;
+  margin-bottom: 2px; color: var(--text);
+}
+.rp-role {
+  font-size: 12px; color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.06em; margin-bottom: 1rem;
+}
+.rp-bio {
+  font-size: 13.5px; color: var(--muted); line-height: 1.75;
+}
+
+/* ── BIODATA ROWS ── */
+.bio-rows {
+  display: flex; flex-direction: column;
+  margin-top: 1rem; border-radius: 10px;
+  overflow: hidden; border: 0.5px solid var(--border);
+}
+.bio-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 12px; border-bottom: 0.5px solid var(--border);
+  font-size: 13px; transition: background 0.2s;
+}
+.bio-row:last-child { border-bottom: none; }
+.bio-row:hover { background: rgba(52,211,110,0.03); }
+.bio-row-label {
+  color: var(--muted); min-width: 110px;
+  display: flex; align-items: center; gap: 7px; font-size: 12px;
+}
+.bio-icon { font-size: 14px; }
+.bio-row-val { color: var(--text); font-weight: 500; }
+.zodiak-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; padding: 3px 10px; border-radius: 999px;
+  background: rgba(244,114,182,0.08); border: 0.5px solid rgba(244,114,182,0.25);
+  color: #f472b6;
+}
+
+/* ── CHIPS ── */
+.rp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; }
+.rp-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 999px;
+  border: 0.5px solid var(--border); color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  transition: border-color 0.2s, color 0.2s; cursor: default;
+}
+.rp-chip:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ── QUOTE CARD ── */
+.rp-quote-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-left: 3px solid #f472b6;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1rem 1.25rem; backdrop-filter: blur(12px);
+}
+.rp-quote-mark {
+  font-size: 32px; line-height: 1; color: #f472b6;
+  opacity: 0.4; margin-bottom: 4px; font-family: Georgia, serif;
+}
+.rp-quote-text { font-size: 13px; font-style: italic; color: var(--muted); line-height: 1.7; }
+.rp-quote-author { font-size: 11px; color: var(--muted); opacity: 0.6; margin-top: 8px; }
+
+/* ── SECTION HEAD ── */
+.rp-section-head {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.rp-section-head::before {
+  content: ''; display: inline-block;
+  width: 18px; height: 1.5px; background: var(--accent);
+}
+
+/* ── GOAL ITEMS ── */
+.rp-goal-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 13px; color: var(--muted); line-height: 1.65;
+  padding: 8px 10px; border-radius: 8px;
+  background: rgba(52,211,110,0.03); border: 0.5px solid var(--border);
+  margin-bottom: 7px; transition: background 0.2s, border-color 0.2s;
+}
+.rp-goal-item:last-child { margin-bottom: 0; }
+.rp-goal-item:hover { background: rgba(52,211,110,0.06); border-color: rgba(52,211,110,0.2); }
+.rp-goal-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+
+/* ── INSPIRASI ── */
+.rp-insp-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+.rp-insp-item:last-of-type { margin-bottom: 0; }
+.rp-insp-icon {
+  width: 34px; height: 34px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; flex-shrink: 0;
+}
+.rp-insp-text { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.rp-insp-text strong { color: var(--text); font-weight: 500; }
+.rp-insp-tagline {
+  margin-top: 1rem; padding: 10px 12px; font-size: 13px;
+  color: var(--muted); line-height: 1.7;
+  border-left: 2.5px solid var(--accent);
+  background: rgba(52,211,110,0.04);
+  border-radius: 0 8px 8px 0; font-style: italic;
+}
+
+/* ── EDUCATION TIMELINE ── */
+.edu-timeline {
+  display: flex; flex-direction: column;
+  position: relative; padding-left: 20px;
+}
+.edu-timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px;
+  width: 1.5px;
+  background: linear-gradient(to bottom, #34d36e, #818cf8, #f472b6, #fbbf24, #60a5fa);
+  border-radius: 2px;
+}
+.edu-item { position: relative; padding: 0 0 18px 16px; cursor: default; }
+.edu-item:last-child { padding-bottom: 0; }
+.edu-dot {
+  position: absolute; left: -14px; top: 22px;
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 2px solid #34d36e; background: var(--bg);
+  transition: transform 0.3s;
+}
+.edu-item:hover .edu-dot { transform: scale(1.4); }
+.edu-item:nth-child(1) .edu-dot { border-color: #34d36e; }
+.edu-item:nth-child(2) .edu-dot { border-color: #818cf8; }
+.edu-item:nth-child(3) .edu-dot { border-color: #f472b6; }
+.edu-item:nth-child(4) .edu-dot { border-color: #fbbf24; }
+.edu-item:nth-child(5) .edu-dot { border-color: #60a5fa; background: #60a5fa; }
+
+/* ── EDU SVG BUILDING ── */
+.edu-building { margin-bottom: 5px; }
+.edu-svg { width: 72px; height: 48px; display: block; transition: transform 0.3s ease; }
+.edu-item:hover .edu-svg { transform: scale(1.1) translateY(-3px); }
+.edu-svg-active { filter: drop-shadow(0 0 6px rgba(96,165,250,0.5)); }
+.edu-year {
+  font-size: 11px; color: var(--muted);
+  font-family: 'JetBrains Mono', monospace; margin-bottom: 2px; opacity: 0.7;
+}
+.edu-school { font-size: 13.5px; font-weight: 500; color: var(--text); margin-bottom: 1px; }
+.edu-level { font-size: 11.5px; color: var(--muted); }
+.edu-badge {
+  display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 999px;
+  background: rgba(96,165,250,0.1); border: 0.5px solid rgba(96,165,250,0.3);
+  color: #60a5fa; margin-top: 3px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .rp-grid { grid-template-columns: 1fr; }
+  .rp-title { font-size: 1.8rem; }
+}
+
+
 /* ═══════════════════════════════════════════════
    SECTION INSTITUSI — Flip Card + Dual Map Pin
    Tempel di bagian bawah style.css
@@ -755,6 +1077,33 @@ margin:auto;
     position: absolute;
     inset: 0;
     pointer-events: none;
+}
+
+.institusi-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+.map-deco-wrap {
+    flex: 1;  /* bagi tinggi rata antara dua peta */
+}
+
+.map-real-wrap iframe {
+    height: 100%;
+    min-height: 160px;
+}
+
+.map-real-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.map-deco-wrap {
+    display: flex;
+    flex-direction: column;
 }
 
 

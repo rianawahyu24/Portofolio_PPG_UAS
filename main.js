@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   E-PORTFOLIO PPL — Faisal Fajar Ramadhan
+   E-PORTFOLIO PPL — Riana Wahyu
    main.js — Semua logic terpisah & modular
    ═══════════════════════════════════════════════════ */
 
@@ -504,3 +504,33 @@ function switchTab(btn, panelId) {
 
 window.switchTab = switchTab;
 window.switchSubTab = switchSubTab;
+
+
+/* ═══════════════════════════════════════════════════
+   PROFIL SECTION — tambahkan di bagian bawah main.js
+   ═══════════════════════════════════════════════════ */
+
+/* ── AVATAR FALLBACK ── */
+const avatarImg = document.querySelector('.rp-avatar-img');
+if (avatarImg) {
+  avatarImg.addEventListener('error', () => {
+    const wrap = avatarImg.parentElement;
+    if (wrap) wrap.innerHTML = '<span style="font-size:26px">🎓</span>';
+  });
+}
+
+/* ── EDU ITEM: highlight nama sekolah saat hover gedung ── */
+document.querySelectorAll('.edu-item').forEach((item) => {
+  const svg = item.querySelector('.edu-svg');
+  const school = item.querySelector('.edu-school');
+  if (!svg || !school) return;
+  svg.addEventListener('mouseenter', () => { school.style.color = 'var(--accent)'; });
+  svg.addEventListener('mouseleave', () => { school.style.color = ''; });
+});
+
+/* ── CHIPS: efek press ── */
+document.querySelectorAll('.rp-chip').forEach((chip) => {
+  chip.addEventListener('mousedown', () => { chip.style.transform = 'scale(0.93)'; });
+  chip.addEventListener('mouseup',   () => { chip.style.transform = ''; });
+  chip.addEventListener('mouseleave',() => { chip.style.transform = ''; });
+});

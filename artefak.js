@@ -103,6 +103,12 @@ function openArfModal(title, sub, badgeClass, topik, durasi, model, iconClass, d
     document.body.style.overflow = 'hidden';
 }
 
+document.querySelectorAll('.dok-item img').forEach(img => {
+    img.addEventListener('error', function() {
+        this.closest('.dok-item').style.display = 'none';
+    });
+});
+
 /* ════════════════════════════════════════
    HANDLE PREVIEW DARI MODAL
 ════════════════════════════════════════ */
@@ -297,15 +303,54 @@ function addVideoPanel() {
 }
 
 function vpPlay(idx, ytId) {
-  const thumb = document.getElementById('vpThumb-' + idx);
-  if (!thumb) return;
-  thumb.innerHTML = `
-    <iframe src="https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0"
-            allowfullscreen allow="autoplay"
-            style="position:absolute;inset:0;width:100%;height:100%;border:none;">
-    </iframe>
-  `;
-  thumb.style.position = 'relative';
+  let modal = document.getElementById('vpModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'vpModal';
+    modal.style.cssText = `
+      display:none; position:fixed; inset:0; z-index:1000;
+      background:rgba(0,0,0,0.88); backdrop-filter:blur(6px);
+      align-items:center; justify-content:center; padding:1rem;
+    `;
+    modal.innerHTML = `
+      <div style="position:relative; width:100%; max-width:860px; aspect-ratio:16/9;">
+        <button onclick="vpCloseModal()" style="
+          position:absolute; top:-48px; right:0;
+          display:flex; align-items:center; gap:6px;
+          background:linear-gradient(135deg, rgba(52,211,110,0.2), rgba(244,114,182,0.2));
+          border:1px solid rgba(52,211,110,0.4);
+          color:#fff; font-size:0.82rem; font-family:inherit;
+          padding:7px 16px; border-radius:999px; cursor:pointer;
+          backdrop-filter:blur(8px); letter-spacing:0.04em;
+          transition:all 0.2s;
+        " onmouseover="this.style.background='linear-gradient(135deg, rgba(52,211,110,0.4), rgba(244,114,182,0.4))'"
+           onmouseout="this.style.background='linear-gradient(135deg, rgba(52,211,110,0.2), rgba(244,114,182,0.2))'">
+          <i class="fas fa-times"></i> Tutup
+        </button>
+        <iframe id="vpIframe" src="" allow="autoplay; encrypted-media"
+          allowfullscreen frameborder="0"
+          style="width:100%; height:100%; border-radius:12px; display:block;">
+        </iframe>
+      </div>
+    `;
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) vpCloseModal();
+    });
+    document.body.appendChild(modal);
+  }
+
+  document.getElementById('vpIframe').src =
+    `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function vpCloseModal() {
+  const modal = document.getElementById('vpModal');
+  if (!modal) return;
+  document.getElementById('vpIframe').src = '';
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
 }
 
 /* ════════════════════════════════════════
@@ -370,8 +415,11 @@ function navDokLightbox(dir) {
 }
 
 document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeDokLightbox();
+    vpCloseModal();
+  }
   if (!document.getElementById('dokLightbox')?.classList.contains('open')) return;
-  if (e.key === 'Escape')     closeDokLightbox();
   if (e.key === 'ArrowLeft')  navDokLightbox(-1);
   if (e.key === 'ArrowRight') navDokLightbox(1);
 });
@@ -389,3 +437,4 @@ window.openArfModal       = openArfModal;
 window.closeArfModal      = closeArfModal;
 window.closeArfModalBtn   = closeArfModalBtn;
 window.handleModalPreview = handleModalPreview;
+window.vpCloseModal = vpCloseModal;

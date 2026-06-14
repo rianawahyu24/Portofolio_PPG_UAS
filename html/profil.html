@@ -34,7 +34,6 @@
             <li><a href="artefak.html">Analisis Artefak</a></li>
             <li><a href="siklus.html">Penilaian Siklus PPL</a></li>
             <li><a href="model.html">Model Guru</a></li>
-            <li><a href="observasi.html">Observasi</a></li>
         </ul>
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
     </nav>
@@ -42,95 +41,265 @@
 <!-- ════════════════════════════════════════
      PROFIL MAHASISWA
 ═════════════════════════════════════════ -->
-
-     <section id="profil">
-        <div class="container">
-            <div class="reveal">
-                <p class="section-label"> || Profil Mahasiswa</p>
-                <h2 class="section-title">Siapa <span>Saya?</span></h2>
-                <div class="divider"></div>
+<section id="profil">
+  <div class="container">
+ 
+    <!-- HEADER SECTION -->
+    <div class="reveal">
+      <p class="rp-label">|| Profil Mahasiswa</p>
+      <h2 class="rp-title">Siapa <span>Saya?</span></h2>
+      <div class="rp-divider"></div>
+    </div>
+ 
+    <div class="rp-grid">
+ 
+      <!-- ══ KOLOM KIRI ══ -->
+      <div class="rp-col">
+ 
+        <!-- BIODATA CARD -->
+        <div class="rp-card">
+          <!-- Ganti path foto sesuai struktur folder kamu -->
+          <div class="rp-avatar-photo">
+            <img
+              src="../image/RI.jpg"
+              alt="Foto Riana Wahyu Puspitasari"
+              class="rp-avatar-img"
+            >
+          </div>
+ 
+          <div class="rp-name">Riana Wahyu Puspitasari</div>
+          <div class="rp-role">// Calon Pendidik · PPL I Terbimbing</div>
+          <div class="rp-bio">
+            Mahasiswa PPG Prajabatan dari
+            <strong style="color:var(--text);font-weight:600">Universitas Pendidikan Indonesia</strong>,
+            bidang Informatika. Sedang menjalani praktik mengajar di SMAN 1 Bandung.
+          </div>
+ 
+          <!-- BIODATA ROWS -->
+          <div class="bio-rows">
+            <div class="bio-row">
+              <span class="bio-row-label"><span class="bio-icon">📍</span> Tempat Lahir</span>
+              <span class="bio-row-val">Banyumas</span>
             </div>
-
-            <div class="profile-grid">
-                <!-- Kiri: Biodata -->
-                <div class="card profile-card reveal">
-                    <div class="profile-avatar">🎓</div>
-                    <h3 class="profile-name">Riana Wahyu Puspitasari</h3>
-                    <p class="profile-role">// Calon Pendidik · PPL I Terbimbing</p>
-                    <p class="profile-bio">
-                        Perkenalkan, nama saya <b>Riana Wahyu Puspitasari</b>, mahasiswa Program Pendidikan Profesi Guru (PPG) 
-                        Prajabatan dari <b>Universitas Pendidikan Indonesia</b> dengan latar belakang keilmuan di bidang Informatika. 
-                    </p>
-                    <p class="profile-bio"> 
-                        Ketertarikan saya untuk menjadi seorang guru berangkat dari <em>pengalaman sederhana, yaitu ketika saya membantu teman memahami materi pelajaran.</em>
-                        Dari situ, saya merasakan bahwa proses berbagi ilmu 
-                        dan berinteraksi dalam pembelajaran merupakan hal yang menyenangkan dan bermakna.
-                    </p>
-                    <p class="profile-bio"> 
-                        Selain itu, saya juga terinspirasi dari <b>sosok guru semasa sekolah.</b> Saat di sekolah dasar, 
-                        saya memiliki guru yang sangat cerdas, baik, dan memiliki cara komunikasi yang lembut sehingga membuat siswa 
-                        merasa nyaman untuk belajar. Kemudian, saat di SMK, saya bertemu dengan guru yang luar biasa karena mampu 
-                        mengajarkan berbagai bidang seperti pemrograman dan desain, meskipun bukan berasal dari jurusan tersebut. 
-                    </p>
-                    <p class="profile-bio"> 
-                       <em>Hal ini menunjukkan bahwa seorang guru tidak hanya dituntut untuk menguasai materi, 
-                        tetapi juga memiliki kemauan untuk terus belajar dan berkembang.</em> 
-                        <b>Pengalaman-pengalaman</b> tersebut memperkuat keyakinan saya bahwa menjadi guru adalah profesi yang tidak hanya mengajar, 
-                        tetapi juga menginspirasi.
-                    </p>
-                </div>
-
-                <div style="display:flex;flex-direction:column;gap:1.5rem;">
-                    <div class="card quote-card reveal">
-                        <div class="quote-icon">"</div>
-                        <p class="quote-text">
-                        “A good education can change anyone. A good teacher changes everything.”
-                        </p>
-                        <p class="quote-text">
-                        “The principal goal of education in the schools should be creating men and women who are capable of doing new things, not simply repeating what other generations have done.”  
-                        </p>
-                        <p class="quote-author">— Jean Piaget · Filosofi mengajar saya</p>
-                    </div>
-                    <div class="card profile-card reveal">
-                        <h4 style="font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:1rem;">🎯 Tujuan Menjadi Guru Profesional</h4>
-                        <ul style="display:flex;flex-direction:column;gap:0.75rem;">
-                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65; text-align: justify;">
-                                <span style="color:var(--accent);flex-shrink:0;margin-top:0.1rem;">▸</span> Menjadi guru yang cerdas dan terus berkembang, baik dalam penguasaan materi maupun dalam kemampuan pedagogik.
-                            </li>
-                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65;text-align: justify;">
-                                <span style="color:var(--accent2);flex-shrink:0;margin-top:0.1rem;">▸</span> Menjadi guru yang mampu memahami kebutuhan peserta didik, baik dari segi akademik maupun karakter.
-                            </li>
-                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65;text-align: justify;">
-                                <span style="color:var(--accent3);flex-shrink:0;margin-top:0.1rem;">▸</span>Menciptakan pembelajaran yang aktif, interaktif, dan menyenangkan, sehingga siswa lebih mudah memahami materi.
-                            </li>
-                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65;text-align: justify;">
-                                <span style="color:var(--warn);flex-shrink:0;margin-top:0.1rem;">▸</span> Mampu mengintegrasikan teknologi dalam pembelajaran, khususnya dalam bidang informatika sesuai dengan perkembangan.
-                            </li>
-                            <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65;text-align: justify;">
-                                <span style="color:var(--warn);flex-shrink:0;margin-top:0.1rem;">▸</span> Menjadi guru yang mampu menyampaikan dan “mengalirkan” ilmu dengan jelas dan sederhana, sehingga dapat diterima oleh semua siswa.
-                            </li>
-                             <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65; text-align: justify;">
-                                <span style="color:var(--warn);flex-shrink:0;margin-top:0.1rem;">▸</span> Mengembangkan pembelajaran yang tidak hanya berfokus pada pengetahuan.
-                            </li>
-                             <li style="display:flex;gap:0.8rem;align-items:flex-start;color:var(--muted);font-size:0.87rem;line-height:1.65; text-align: justify;">
-                                <span style="color:var(--warn);flex-shrink:0;margin-top:0.1rem;">▸</span> Menjadi pendidik yang reflektif, yaitu melakukan evaluasi dan perbaikan dalam setiap proses pembelajaran.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="bio-row">
+              <span class="bio-row-label"><span class="bio-icon">🎂</span> Tanggal Lahir</span>
+              <span class="bio-row-val">24 Mei 2003</span>
             </div>
-
-            
-
+            <div class="bio-row">
+              <span class="bio-row-label"><span class="bio-icon">✉️</span> Email</span>
+              <span class="bio-row-val" style="font-size:12px;font-family:'JetBrains Mono',monospace;">
+                riana24wahyu@gmail.com
+              </span>
+            </div>
+            <div class="bio-row">
+              <span class="bio-row-label"><span class="bio-icon">♊</span> Zodiak</span>
+              <span class="zodiak-badge">♊ Gemini</span>
+            </div>
+          </div>
         </div>
-    </section>
-
+ 
+        <!-- QUOTE CARD -->
+        <div class="rp-quote-card">
+          <div class="rp-quote-mark">"</div>
+          <div class="rp-quote-text">
+            A good teacher changes everything — bukan hanya mengajar, tetapi menginspirasi.
+          </div>
+          <div class="rp-quote-author">— Filosofi mengajar saya</div>
+        </div>
+ 
+        <!-- TUJUAN CARD -->
+        <div class="rp-card">
+          <div class="rp-section-head">Tujuan Menjadi Guru Profesional</div>
+ 
+          <div class="rp-goal-item">
+            <div class="rp-goal-dot" style="background:#34d36e;"></div>
+            Cerdas dan terus berkembang — konten maupun pedagogik
+          </div>
+          <div class="rp-goal-item">
+            <div class="rp-goal-dot" style="background:#f472b6;"></div>
+            Memahami kebutuhan siswa secara akademik dan karakter
+          </div>
+          <div class="rp-goal-item">
+            <div class="rp-goal-dot" style="background:#60a5fa;"></div>
+            Menciptakan pembelajaran aktif, interaktif, dan menyenangkan
+          </div>
+          <div class="rp-goal-item">
+            <div class="rp-goal-dot" style="background:#fbbf24;"></div>
+            Mengintegrasikan teknologi secara bermakna dalam Informatika
+          </div>
+          <div class="rp-goal-item">
+            <div class="rp-goal-dot" style="background:#4ade80;"></div>
+            Reflektif — mengevaluasi dan memperbaiki proses belajar
+          </div>
+        </div>
+ 
+      </div><!-- /KOLOM KIRI -->
+ 
+      <!-- ══ KOLOM KANAN ══ -->
+      <div class="rp-col">
+ 
+        <!-- INSPIRASI CARD -->
+        <div class="rp-card">
+          <div class="rp-section-head">Inspirasi Menjadi Guru</div>
+ 
+          <div class="rp-insp-item">
+            <div class="rp-insp-icon" style="background:rgba(52,211,110,0.08);border:0.5px solid rgba(52,211,110,0.2);">🤝</div>
+            <div class="rp-insp-text">
+              <strong>Pengalaman sederhana</strong> — ketika membantu teman belajar,
+              saya merasakan bahwa berbagi ilmu adalah hal yang sungguh bermakna.
+            </div>
+          </div>
+ 
+          <div class="rp-insp-item">
+            <div class="rp-insp-icon" style="background:rgba(244,114,182,0.08);border:0.5px solid rgba(244,114,182,0.2);">🏫</div>
+            <div class="rp-insp-text">
+              <strong>Guru SD</strong> — cerdas, baik, dan berkomunikasi lembut.
+              Mengajarkan saya bahwa kehadiran guru melampaui sekadar materi pelajaran.
+            </div>
+          </div>
+ 
+          <div class="rp-insp-item">
+            <div class="rp-insp-icon" style="background:rgba(96,165,250,0.08);border:0.5px solid rgba(96,165,250,0.2);">💻</div>
+            <div class="rp-insp-text">
+              <strong>Guru SMK</strong> — mampu mengajarkan pemrograman sekaligus desain
+              meski bukan dari latar belakangnya. Bukti bahwa
+              <em style="color:var(--text)">kemauan belajar lebih penting dari gelar</em>.
+            </div>
+          </div>
+ 
+          <div class="rp-insp-tagline">
+            Menjadi guru bukan sekadar profesi mengajar — melainkan profesi menginspirasi.
+          </div>
+        </div>
+ 
+        <!-- RIWAYAT PENDIDIKAN CARD -->
+        <div class="rp-card">
+          <div class="rp-section-head">Riwayat Pendidikan</div>
+ 
+          <div class="edu-timeline">
+ 
+            <!-- SD -->
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-building">
+                <svg viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg" class="edu-svg" aria-label="Ilustrasi gedung SD">
+                  <rect x="10" y="22" width="52" height="22" rx="2" fill="rgba(52,211,110,0.12)" stroke="#34d36e" stroke-width="1"/>
+                  <rect x="22" y="14" width="28" height="10" rx="1.5" fill="rgba(52,211,110,0.08)" stroke="#34d36e" stroke-width="1"/>
+                  <rect x="32" y="32" width="8" height="12" rx="1" fill="rgba(52,211,110,0.15)" stroke="#34d36e" stroke-width="0.8"/>
+                  <rect x="14" y="30" width="8" height="6" rx="1" fill="rgba(52,211,110,0.08)" stroke="#34d36e" stroke-width="0.7"/>
+                  <rect x="50" y="30" width="8" height="6" rx="1" fill="rgba(52,211,110,0.08)" stroke="#34d36e" stroke-width="0.7"/>
+                  <line x1="8" y1="22" x2="8" y2="10" stroke="#34d36e" stroke-width="1"/>
+                  <polygon points="8,10 15,13 8,16" fill="#34d36e" opacity="0.7"/>
+                </svg>
+              </div>
+              <div class="edu-year">— s.d. ~2009</div>
+              <div class="edu-school">MI Raudlatul Qur'an</div>
+              <div class="edu-level">Sekolah Dasar · Batam</div>
+            </div>
+ 
+            <!-- SMP -->
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-building">
+                <svg viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg" class="edu-svg" aria-label="Ilustrasi gedung SMP">
+                  <rect x="8" y="28" width="56" height="16" rx="2" fill="rgba(129,140,248,0.12)" stroke="#818cf8" stroke-width="1"/>
+                  <rect x="14" y="16" width="44" height="14" rx="2" fill="rgba(129,140,248,0.08)" stroke="#818cf8" stroke-width="1"/>
+                  <rect x="30" y="34" width="12" height="10" rx="1" fill="rgba(129,140,248,0.15)" stroke="#818cf8" stroke-width="0.8"/>
+                  <rect x="12" y="31" width="7" height="5" rx="1" fill="rgba(129,140,248,0.1)" stroke="#818cf8" stroke-width="0.7"/>
+                  <rect x="53" y="31" width="7" height="5" rx="1" fill="rgba(129,140,248,0.1)" stroke="#818cf8" stroke-width="0.7"/>
+                  <rect x="18" y="19" width="7" height="5" rx="1" fill="rgba(129,140,248,0.1)" stroke="#818cf8" stroke-width="0.7"/>
+                  <rect x="47" y="19" width="7" height="5" rx="1" fill="rgba(129,140,248,0.1)" stroke="#818cf8" stroke-width="0.7"/>
+                  <rect x="32" y="19" width="8" height="5" rx="1" fill="rgba(129,140,248,0.1)" stroke="#818cf8" stroke-width="0.7"/>
+                  <polygon points="36,8 14,16 58,16" fill="rgba(129,140,248,0.15)" stroke="#818cf8" stroke-width="1"/>
+                </svg>
+              </div>
+              <div class="edu-year">~2015 — 2018</div>
+              <div class="edu-school">SMP Negeri 16 Batam</div>
+              <div class="edu-level">Sekolah Menengah Pertama</div>
+            </div>
+ 
+            <!-- SMA/SMK -->
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-building">
+                <svg viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg" class="edu-svg" aria-label="Ilustrasi gedung SMA/SMK">
+                  <rect x="4" y="26" width="64" height="18" rx="2" fill="rgba(244,114,182,0.1)" stroke="#f472b6" stroke-width="1"/>
+                  <rect x="10" y="14" width="52" height="14" rx="2" fill="rgba(244,114,182,0.07)" stroke="#f472b6" stroke-width="1"/>
+                  <rect x="28" y="32" width="16" height="12" rx="1" fill="rgba(244,114,182,0.15)" stroke="#f472b6" stroke-width="0.8"/>
+                  <rect x="8" y="29" width="8" height="6" rx="1" fill="rgba(244,114,182,0.1)" stroke="#f472b6" stroke-width="0.7"/>
+                  <rect x="56" y="29" width="8" height="6" rx="1" fill="rgba(244,114,182,0.1)" stroke="#f472b6" stroke-width="0.7"/>
+                  <rect x="12" y="17" width="6" height="5" rx="1" fill="rgba(244,114,182,0.1)" stroke="#f472b6" stroke-width="0.7"/>
+                  <rect x="33" y="17" width="6" height="5" rx="1" fill="rgba(244,114,182,0.1)" stroke="#f472b6" stroke-width="0.7"/>
+                  <rect x="54" y="17" width="6" height="5" rx="1" fill="rgba(244,114,182,0.1)" stroke="#f472b6" stroke-width="0.7"/>
+                  <circle cx="36" cy="10" r="3" fill="rgba(244,114,182,0.3)" stroke="#f472b6" stroke-width="0.8"/>
+                  <line x1="36" y1="13" x2="36" y2="14" stroke="#f472b6" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <div class="edu-year">2018 — 2021</div>
+              <div class="edu-school">SMK Negeri 3 Batam</div>
+              <div class="edu-level">Sekolah Menengah Kejuruan</div>
+            </div>
+ 
+            <!-- S1 -->
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-building">
+                <svg viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg" class="edu-svg" aria-label="Ilustrasi gedung kampus S1">
+                  <rect x="6" y="28" width="60" height="16" rx="2" fill="rgba(251,191,36,0.1)" stroke="#fbbf24" stroke-width="1"/>
+                  <rect x="16" y="18" width="40" height="12" rx="1" fill="rgba(251,191,36,0.07)" stroke="#fbbf24" stroke-width="1"/>
+                  <rect x="18" y="18" width="4" height="26" rx="1" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="0.7"/>
+                  <rect x="28" y="18" width="4" height="26" rx="1" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="0.7"/>
+                  <rect x="40" y="18" width="4" height="26" rx="1" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="0.7"/>
+                  <rect x="50" y="18" width="4" height="26" rx="1" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="0.7"/>
+                  <rect x="12" y="14" width="48" height="5" rx="1" fill="rgba(251,191,36,0.15)" stroke="#fbbf24" stroke-width="0.8"/>
+                  <polygon points="36,6 12,14 60,14" fill="rgba(251,191,36,0.12)" stroke="#fbbf24" stroke-width="0.8"/>
+                  <rect x="31" y="33" width="10" height="11" rx="1" fill="rgba(251,191,36,0.2)" stroke="#fbbf24" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <div class="edu-year">2021 — 2025</div>
+              <div class="edu-school">Universitas Pendidikan Indonesia</div>
+              <div class="edu-level">S1 Pendidikan Ilmu Komputer</div>
+            </div>
+ 
+            <!-- PPG UPI -->
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div class="edu-building">
+                <svg viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg" class="edu-svg edu-svg-active" aria-label="Ilustrasi gedung UPI PPG">
+                  <rect x="4" y="24" width="64" height="20" rx="2" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1"/>
+                  <rect x="10" y="12" width="52" height="14" rx="2" fill="rgba(96,165,250,0.1)" stroke="#60a5fa" stroke-width="1"/>
+                  <rect x="13" y="15" width="8" height="5" rx="1" fill="rgba(96,165,250,0.2)" stroke="#60a5fa" stroke-width="0.7"/>
+                  <rect x="25" y="15" width="8" height="5" rx="1" fill="rgba(96,165,250,0.2)" stroke="#60a5fa" stroke-width="0.7"/>
+                  <rect x="39" y="15" width="8" height="5" rx="1" fill="rgba(96,165,250,0.2)" stroke="#60a5fa" stroke-width="0.7"/>
+                  <rect x="51" y="15" width="8" height="5" rx="1" fill="rgba(96,165,250,0.2)" stroke="#60a5fa" stroke-width="0.7"/>
+                  <rect x="13" y="27" width="8" height="5" rx="1" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="0.7"/>
+                  <rect x="51" y="27" width="8" height="5" rx="1" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="0.7"/>
+                  <rect x="29" y="30" width="14" height="14" rx="1.5" fill="rgba(96,165,250,0.25)" stroke="#60a5fa" stroke-width="0.8"/>
+                  <circle cx="36" cy="6" r="3" fill="rgba(96,165,250,0.3)" stroke="#60a5fa" stroke-width="0.8">
+                    <animate attributeName="r" values="2.5;4.5;2.5" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                  </circle>
+                </svg>
+              </div>
+              <div class="edu-year">2025 — sekarang</div>
+              <div class="edu-school">Universitas Pendidikan Indonesia</div>
+              <div class="edu-level">PPG Prajabatan · Informatika</div>
+              <span class="edu-badge">● Sedang berjalan</span>
+            </div>
+ 
+          </div><!-- /edu-timeline -->
+        </div><!-- /RIWAYAT PENDIDIKAN CARD -->
+ 
+      </div><!-- /KOLOM KANAN -->
+ 
+    </div><!-- /rp-grid -->
+  </div><!-- /container -->
+</section>
 
 <!-- ════════════════════════════════════════
      INSTITUSI — Kartu ID + Dual Map Pin
      Tempel di profil.html, SEBELUM section#keunikan
 ═════════════════════════════════════════ -->
-
 <section id="institusi">
     <div class="container">
 
@@ -226,42 +395,71 @@
 
                     </div>
                 </div>
+
+                    <!-- PEMBIMBING -->
+                    <div class="pembimbing-wrap reveal">
+
+                        <p class="pembimbing-label">// Pembimbing PPL</p>
+
+                        <div class="pembimbing-grid">
+
+                            <!-- DOSEN PEMBIMBING -->
+                            <div class="pembimbing-card">
+                                <img src="../image/EKI1.png" alt="Foto Dosen Pembimbing" class="pembimbing-foto">
+                                <div class="pembimbing-info">
+                                    <p class="pembimbing-role">Dosen Pembimbing Lapangan</p>
+                                    <p class="pembimbing-name">Dr. Eki Nugraha, S.Pd., M.Kom</p>
+                                    <p class="pembimbing-detail">Informatika · UPI Bandung</p>
+                                </div>
+                            </div>
+
+                            <!-- GURU PAMONG -->
+                            <div class="pembimbing-card">
+                                <img src="../image/irman.png" alt="Foto Guru Pamong" class="pembimbing-foto">
+                                <div class="pembimbing-info">
+                                    <p class="pembimbing-role">Guru Pamong</p>
+                                    <p class="pembimbing-name">Irman Margino, S.T.</p>
+                                    <p class="pembimbing-detail">Informatika · SMAN 1 Bandung</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
             <!-- KANAN: DUAL MAP + MINI CARDS -->
             <div class="institusi-right">
 
                 <!-- MAP 1: UPI BANDUNG -->
-<div class="map-deco-wrap reveal">
-    <div class="map-real-wrap">
-        <iframe
-            src="https://maps.google.com/maps?q=Universitas+Pendidikan+Indonesia+Bandung&output=embed&z=13&iwloc=near"
-            width="100%" height="160"
-            style="border:0; display:block;"
-            loading="lazy" allowfullscreen>
-        </iframe>       
-    </div>
-    <div class="map-deco-footer">
-        <span>🏛️</span>
-        <span class="map-deco-text"><strong>Universitas Pendidikan Indonesia</strong> · Bandung</span>
-    </div>
-</div>
+                <div class="map-deco-wrap reveal">
+                    <div class="map-real-wrap">
+                        <iframe
+                            src="https://maps.google.com/maps?q=Universitas+Pendidikan+Indonesia+Bandung&output=embed&z=13&iwloc=near"
+                            width="100%" height="160"
+                            style="border:0; display:block;"
+                            loading="lazy" allowfullscreen>
+                        </iframe>       
+                    </div>
+                    <div class="map-deco-footer">
+                        <span>🏛️</span>
+                        <span class="map-deco-text"><strong>Universitas Pendidikan Indonesia</strong> · Bandung</span>
+                    </div>
+                </div>
 
-<!-- MAP 2: SEKOLAH PPL -->
-<div class="map-deco-wrap reveal">
-    <div class="map-real-wrap">
-        <iframe
-            src="https://www.google.com/maps?q=SMA+Negeri+1+Bandung&output=embed"
-            width="100%" height="160"
-            style="border:0; display:block;"
-            loading="lazy" allowfullscreen>
-        </iframe>
-    </div>
-    <div class="map-deco-footer">
-        <span>🏫</span>
-        <span class="map-deco-text"><strong>Nama Sekolah PPL</strong> · Batam, Kepulauan Riau</span>
-    </div>
-</div>
+                <!-- MAP 2: SEKOLAH PPL -->
+                <div class="map-deco-wrap reveal">
+                    <div class="map-real-wrap">
+                        <iframe
+                            src="https://www.google.com/maps?q=SMA+Negeri+1+Bandung&output=embed"
+                            width="100%" height="160"
+                            style="border:0; display:block;"
+                            loading="lazy" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="map-deco-footer">
+                        <span>🏫</span>
+                        <span class="map-deco-text"><strong>Nama Sekolah PPL</strong> · Batam, Kepulauan Riau</span>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -270,9 +468,8 @@
 
 <!-- ════════════════════════════════════════
      KEUNIKAN DAERAH
-═════════════════════════════════════════ -->
-    
-    <section id="keunikan">
+═════════════════════════════════════════ -->    
+<section id="keunikan">
     <div class="container">
 
         <!-- HEADER -->
@@ -306,7 +503,7 @@
             <div class="keunikan-side">
 
                 <div class="keunikan-grid">
-
+                    
                     <div class="keunikan-card reveal">
                         <img src="../image/ikon_kota.jpg">
                         <div class="keunikan-content">
