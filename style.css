@@ -1151,123 +1151,215 @@ margin:auto;
 
 
 
-/* ── 12. ARTEFAK ── */
-#artefak{
-  padding-top: 8rem;
+/* ══════════════════════════════
+   ANALISIS ARTEFAK — FLIP CARDS
+══════════════════════════════ */
+.analisis-flip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    align-items: start;
 }
 
-.artifact-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-
-  max-width: 1100px; /* batas lebar */
-  margin: 0 auto; /* center */
-  margin-top: 6rem;
+.af-scene {
+    perspective: 1200px;
+    cursor: pointer;
+    position: relative;
 }
 
-/* CARD */
-.artifact-card{
+.af-inner {
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.af-scene:hover .af-inner {
+    transform: rotateY(180deg);
+}
+
+.af-front {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--radius-md);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 1px solid var(--border);
+    background: var(--card);
+    backdrop-filter: blur(12px);
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.af-back {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-md);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.af-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.af-emoji { font-size: 1.3rem; }
+
+.af-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.af-accent {
+    width: 28px;
+    height: 2.5px;
+    border-radius: 2px;
+    margin: 0.1rem 0 0.4rem;
+}
+
+.af-c1 .af-accent { background: var(--accent); }
+.af-c2 .af-accent { background: #818cf8; }
+.af-c3 .af-accent { background: #38bdf8; }
+.af-c4 .af-accent { background: var(--accent2); }
+
+.af-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 0.2rem;
+}
+
+.af-body {
+    font-size: 0.81rem;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.af-body p { margin-bottom: 0.4rem; }
+.af-body ul { padding-left: 1rem; margin: 0.3rem 0; }
+.af-body li { margin-bottom: 0.3rem; }
+.af-body strong { color: var(--text); }
+.af-body blockquote {
+    border-left: 3px solid var(--accent);
+    padding-left: 0.8rem;
+    margin: 0.5rem 0;
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.af-hint {
+    font-size: 0.7rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--border);
+    margin-top: 0.8rem;
+    opacity: 0.7;
+}
+
+.af-back-header {
+    padding: 0.75rem 1.2rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.af-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    padding: 0.75rem;
+    flex: 1;
+}
+
+.af-photo-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    display: block;
+    transition: transform 0.3s;
+}
+
+.af-photo-grid img:hover { transform: scale(1.03); }
+
+.af-back-caption {
+    padding: 0.5rem 1rem 0.8rem;
+    font-size: 0.7rem;
+    color: var(--muted);
+    line-height: 1.5;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.03em;
+}
+
+@media (max-width: 768px) {
+    .analisis-flip-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Thumb dengan cover image dari Drive ── */
+.arf-thumb {
   position: relative;
-
-  padding: 3rem;
-  padding-top: 4rem;
-
-  border-radius: 24px;
-
-  overflow: visible; /* penting */
+  overflow: hidden;
+  height: 200px !important;
 }
 
-/* ICON */
-.artifact-icon{
-  position: absolute; 
-  top: 25px;
-  left: 25px;
+.arf-thumb-amber{
+  
+}
 
-  width: 60px;
-  height: 60px;
+.arf-thumb-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
 
+.arf-card:hover .arf-thumb-cover {
+  transform: scale(1.05);
+}
+
+.arf-thumb-cover-fallback {
+  position: absolute;
+  inset: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  border-radius: 16px;
-
-  font-size: 2rem;
-
-  background: rgba(52,211,110,0.08);
-  border: 1px solid var(--border);
-
-  z-index: 10;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.6);
 }
 
-/* TITLE */
-.artifact-title{
-  font-family: 'Syne', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
 
-  line-height: 1.4;
-  margin-bottom: 1.5rem;
-    margin-top: 3.5rem;
-}
-
-/* TEXT */
-.artifact-text{
-  color: var(--muted);
-
-  font-size: 1rem;
-  line-height: 2;
-
-  text-align: justify;
-}
-
-/* PARAGRAF */
-.artifact-text p{
-  margin-bottom: 1.2rem;
-}
-
-/* SUB JUDUL */
-.artifact-text h4{
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-
-  font-size: 1.1rem;
-  font-weight: 700;
-
-  color: var(--text);
-}
-
-/* LIST */
-.artifact-text ul{
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.artifact-text li{
-  margin-bottom: 0.9rem;
-}
-
-/* BOLD */
-.artifact-text strong{
-  color: var(--text);
-  font-weight: 700;
-}
-
-/* QUOTE */
-.artifact-text blockquote{
-  margin: 1.5rem 0;
-  padding: 1rem 1.5rem;
-
-  border-left: 4px solid #34d36e;
-
-  background: rgba(255,255,255,0.03);
-
-  border-radius: 12px;
-
-  font-style: italic;
-  color: #828282;
-}
 
 /* ═══════════════════════════════════════
    BUKTI PENDUKUNG

@@ -229,32 +229,8 @@ const PDFModule = (() => {
    MODULE 6: ASSESSMENT TABS
 ────────────────────────────────────────────────── */
 const AssessmentModule = (() => {
-    function switchTab(tabId) {
-
-    document.querySelectorAll('.assess-tab')
-        .forEach(tab => tab.classList.remove('active'));
-
-    document.querySelectorAll('.assess-panel')
-        .forEach(panel => panel.classList.remove('active'));
-
-    const activeTab = document.querySelector(
-        `[data-tab="${tabId}"]`
-    );
-
-    const activePanel = document.getElementById(
-        `panel-${tabId}`
-    );
-
-    if (activeTab) activeTab.classList.add('active');
-
-    if (activePanel) {
-        activePanel.classList.add('active');
-
-        setTimeout(() => {
-            animateBars(activePanel);
-        }, 100);
-    }
-}
+    function init() {}
+    return { init };
 })();
 
 /* ──────────────────────────────────────────────────
@@ -280,13 +256,17 @@ const ChartsModule = (() => {
     }
 
     function create() {
+        // Guard: skip jika Chart.js tidak tersedia (misal di halaman artefak.html)
+        if (typeof Chart === 'undefined') return;
+
         const c = getColors();
         Chart.defaults.color = c.text;
         Chart.defaults.borderColor = c.grid;
         Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
 
         /* Chart 1 — Kemandirian Mengajar */
-        instances.kemandirian = new Chart(document.getElementById('chartKemandirian'), {
+        const elKemandirian = document.getElementById('chartKemandirian');
+        if (elKemandirian) instances.kemandirian = new Chart(elKemandirian, {
             type: 'bar',
             data: {
                 labels: ['Siklus 1', 'Siklus 2', 'Siklus 3'],
@@ -318,7 +298,8 @@ const ChartsModule = (() => {
         });
 
         /* Chart 2 — Radar Kompetensi */
-        instances.radar = new Chart(document.getElementById('chartRadar'), {
+        const elRadar = document.getElementById('chartRadar');
+        if (elRadar) instances.radar = new Chart(elRadar, {
             type: 'radar',
             data: {
                 labels: ['Pedagogik', 'Profesional', 'Sosial', 'Kepribadian', 'Komunikasi', 'Inovasi'],
@@ -335,7 +316,8 @@ const ChartsModule = (() => {
         });
 
         /* Chart 3 — Partisipasi Siswa */
-        instances.aktivitas = new Chart(document.getElementById('chartAktivitas'), {
+        const elAktivitas = document.getElementById('chartAktivitas');
+        if (elAktivitas) instances.aktivitas = new Chart(elAktivitas, {
             type: 'line',
             data: {
                 labels: ['Siklus 1', 'Siklus 2', 'Siklus 3'],
@@ -355,7 +337,8 @@ const ChartsModule = (() => {
         });
 
         /* Chart 4 — Distribusi Waktu */
-        instances.waktu = new Chart(document.getElementById('chartWaktu'), {
+        const elWaktu = document.getElementById('chartWaktu');
+        if (elWaktu) instances.waktu = new Chart(elWaktu, {
             type: 'doughnut',
             data: {
                 labels: ['Pendahuluan (15%)', 'Kegiatan Inti (55%)', 'Diskusi/Latihan (20%)', 'Penutup & Evaluasi (10%)'],
@@ -372,6 +355,7 @@ const ChartsModule = (() => {
     }
 
     function updateTheme() {
+        if (typeof Chart === 'undefined') return;
         const c = getColors();
         Chart.defaults.color = c.text;
         Object.values(instances).forEach(chart => {
@@ -413,8 +397,11 @@ const SmoothScrollModule = (() => {
     function init() {
         document.querySelectorAll('a[href^="#"]').forEach(link => {
             link.addEventListener('click', e => {
+                const href = link.getAttribute('href');
+                // Skip: link kosong, bukan anchor dalam halaman, atau punya target="_blank"
+                if (!href || href === '#' || href.startsWith('http') || link.target === '_blank') return;
                 e.preventDefault();
-                const target = document.querySelector(link.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
@@ -463,6 +450,8 @@ function switchSubTab(btn, panelId, groupClass) {
     }
 }
 
+
+
 /* ──────────────────────────────────────────────────
    BOOTSTRAP — init semua module saat DOM siap
 ────────────────────────────────────────────────── */
@@ -486,7 +475,7 @@ window.addEventListener('load', () => {
 /* ── Global function bindings (for inline HTML onclick) ── */
 window.toggleTheme = ThemeModule.toggle;
 
-window.togglePDF   = togglePDF;   // ← pakai fungsi standalone, bukan PDFModule
+window.togglePDF   = togglePDF;
 window.toggleVideo = toggleVideo;
 window.loadYT      = loadYT;
 
@@ -496,5 +485,22 @@ window.closePDF = PDFModule.close;
 window.fullscreenPDF = PDFModule.fullscreen;
 window.downloadPDF = PDFModule.download;
 
-window.switchTab = AssessmentModule.switchTab;
+function switchTab(btn, panelId) {
+    btn.closest('.assess-tabs')
+        .querySelectorAll('.assess-tab')
+        .forEach(tab => tab.classList.remove('active'));
+
+    btn.classList.add('active');
+
+    document.querySelectorAll('[data-main-panel]')
+        .forEach(panel => panel.classList.remove('active'));
+
+    const target = document.getElementById(panelId);
+    if (target) {
+        target.classList.add('active');
+        animateBars(target);
+    }
+}
+
+window.switchTab = switchTab;
 window.switchSubTab = switchSubTab;

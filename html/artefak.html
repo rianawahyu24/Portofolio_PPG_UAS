@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Portfolio | Riana Wahyu</title>
+    <title>Artefak & Analisis | Riana Wahyu</title>
     <link rel="icon" type="image/x-icon" href="../image/Logo_nobg.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../artefak.css">
 </head>
 
 <body>
@@ -21,17 +21,16 @@
     <div class="orb orb2"></div>
     <div class="orb orb3"></div>
 
-<!-- ════════════════════════════════════════
-     NAVBAR
-═════════════════════════════════════════ -->
+    <!-- ════════════════════════════════════════
+         NAVBAR
+    ═════════════════════════════════════════ -->
     <nav>
         <a href="/index.html" class="nav-logo">
             <img src="../image/logo2.png" alt="Logo Portfolio">
         </a>
-        
         <ul class="nav-links">
             <li><a href="profil.html">Profil</a></li>
-            <li><a href="artefak.html">Analisis Artefak</a></li>
+            <li><a href="artefak.html" class="nav-active">Analisis Artefak</a></li>
             <li><a href="siklus.html">Penilaian Siklus PPL</a></li>
             <li><a href="model.html">Model Guru</a></li>
             <li><a href="observasi.html">Observasi</a></li>
@@ -39,412 +38,897 @@
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
     </nav>
 
-<div class="artifact-grid">
+    <!-- ════════════════════════════════════════
+         SECTION 1 — ARTEFAK PEMBELAJARAN
+    ═════════════════════════════════════════ -->
+    <section id="artefak" class="container">
 
-    <!-- ═════════ 1 ═════════ -->
-    <div class="card artifact-card reveal">
-
-        <div class="artifact-icon">⚠️</div>
-
-        <h3 class="artifact-title">
-            1. Kendala dalam Penyusunan Produk Pembelajaran
-        </h3>
-
-        <div class="artifact-text">
-
-            <p>
-                Dalam proses penyusunan perangkat pembelajaran berupa 
-                <strong>modul ajar, LKPD, lembar asesmen, dan bahan ajar</strong>, 
-                kendala utama yang dihadapi adalah heterogenitas karakteristik 
-                Murid pada setiap kelas.
+        <div class="section-header reveal">
+            <p class="section-label">Produk PPL</p>
+            <h2 class="section-title">Artefak <span>pembelajaran</span></h2>
+            <div class="divider"></div>
+            <p class="section-intro">
+                Kumpulan produk pembelajaran yang disusun dan digunakan selama pelaksanaan 
+                PPL di sekolah mitra. Klik kartu untuk melihat detail dan mengunduh file.
             </p>
+        </div>
 
-            <p>
-                Terdapat kelas dengan Murid yang aktif dan cepat 
-                memahami materi, kelas yang cenderung pasif namun memiliki 
-                kemampuan akademik baik, serta kelas yang pasif dan masih 
-                membutuhkan pendampingan intensif. Dalam penerapannya, 
-                <b>media pembelajaran juga perlu disesuaikan dengan fasilitas 
-                sekolah dan karakteristik tiap kelas</b>. Hal ini menjadi 
-                pembelajaran penting mengenai pentingnya kontekstualisasi dan 
-                fleksibilitas dalam penyusunan perangkat pembelajaran.
-            </p>
+        <!-- ── TABS ── -->
+        <div class="arf-tabs reveal">
+            <button class="arf-tab active" onclick="switchArfTab(this,'modul')">
+                <i class="fas fa-book"></i> Modul ajar
+            </button>
+            <button class="arf-tab" onclick="switchArfTab(this,'lkpd')">
+                <i class="fas fa-clipboard-list"></i> LKPD
+            </button>
+            <button class="arf-tab" onclick="switchArfTab(this,'ppt')">
+                <i class="fas fa-file-powerpoint"></i> Bahan ajar / PPT
+            </button>
+            <button class="arf-tab" onclick="switchArfTab(this,'media')">
+                <i class="fas fa-gamepad"></i> Media digital
+            </button>
+            <button class="arf-tab" onclick="switchArfTab(this,'hasil')">
+                <i class="fas fa-star"></i> Hasil belajar
+            </button>
+            <button class="arf-tab" onclick="switchArfTab(this,'video')">
+                <i class="fas fa-circle-play"></i> Video Pembelajaran
+            </button>
+            <button class="arf-tab" onclick="switchArfTab(this,'dokumentasi')">
+                <i class="fas fa-image"></i> Dokumentasi
+            </button>
+        </div>
 
-            <p>
-                Selain itu, materi Informatika seperti 
-                <strong>algoritma, flowchart, dan spreadsheet</strong> 
-                membutuhkan kemampuan berpikir logis serta keterampilan 
-                praktik langsung menggunakan perangkat komputer. 
-            </p>
+        <!-- ── PANEL: MODUL AJAR ── -->
+        <div id="panel-modul" class="arf-panel active">
+            <div class="arf-grid">
 
-            <p>
-                Kendala lain yang ditemukan adalah pengelolaan waktu 
-                pembelajaran karena aktivitas berbasis proyek dan praktik 
-                sering kali membutuhkan waktu lebih panjang dibandingkan 
-                alokasi yang tersedia. Serta 
-            </p>
-
-            <h4>Contoh Aktual di Kelas</h4>
-
-            <ul>
-                <li>
-                    <b>•</b> Pada kelas X-11, sebagian Murid masih kesulitan 
-                    memahami simbol flowchart sehingga guru memberikan 
-                    demonstrasi ulang secara perlahan.
-                </li>
-
-                <li>
-                    <b>•</b> Pada kelas X-1, Murid cenderung aktif dan cepat 
-                    memahami materi algoritma sehingga guru dapat langsung 
-                    melanjutkan ke tahap penyusunan pseudocode dan flowchart.
-                </li>
-
-                <li>
-                    <b>•</b> Saat praktik fungsi IF di spreadsheet, beberapa peserta 
-                    didik salah menuliskan sintaks rumus sehingga hasil output 
-                    tidak muncul.
-                </li>
-
-                <li>
-                    <b>•</b> Pada pembelajaran proyek algoritma, beberapa kelompok 
-                    membutuhkan waktu lebih lama menyusun logika percabangan.
-                </li>
-            </ul>
-
-            <!-- BUKTI -->
-            <div class="artifact-proof">
-
-                <h4>Bukti Pendukung</h4>
-
-                <div class="proof-grid">
-                    <img src="../image/MODUL.png" alt="">
-                    <img src="../image/LKPD.png" alt="">
-                    <img src="../image/quiz.png" alt="">
-                    <img src="../image/PPT.png" alt="">
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'Modul 1 — Pengenalan Excel',
+                    'Informatika · Kelas X · Fase E',
+                    'ba',
+                    'SUM · MIN · MAX · AVERAGE',
+                    '2 × 45 menit',
+                    'PBL + Scaffolding',
+                    'fas fa-book',
+                    'Murid mengolah data penjualan menggunakan fungsi SUM, MIN, MAX, dan AVERAGE. Diferensiasi diberikan berupa template setengah jadi untuk murid yang membutuhkan pendampingan.',
+                    'https://drive.google.com/file/d/1Wth3yI5veLU4f9yuaILrXdK3qMMqhkI-/view?usp=sharing'
+                )">
+                    <div class="arf-thumb arf-thumb-amber">
+                        <i class="fas fa-book fa-2x"></i>
+                        <span>modul-01.pdf</span>
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Modul 1</p>
+                        <p class="arf-sub">Pengenalan Excel</p>
+                        <span class="arf-badge ba">Scaffolding</span>
+                    </div>
                 </div>
 
-                <p class="proof-caption">
-                    <strong>Dokumentasi:</strong> kendala penyusunan produk pembelajaran  
-                    seperti modul ajar, LKPD, lembar asesmen, dan bahan ajar,
-                </p>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ═════════ 2 ═════════ -->
-    <div class="card artifact-card reveal">
-
-        <div class="artifact-icon">📚</div>
-
-        <h3 class="artifact-title">
-            2. Teori dan Konsep Pedagogi yang Diadopsi
-        </h3>
-
-        <div class="artifact-text">
-
-            <p>
-                Perangkat pembelajaran disusun dengan mengadopsi beberapa 
-                teori dan konsep pedagogi agar pembelajaran lebih bermakna, 
-                kontekstual, dan berpusat pada Murid.
-            </p>
-
-            <h4> | Problem-Based Learning (PBL) | </h4>
-
-            <p>
-                Model PBL diterapkan untuk melatih kemampuan berpikir kritis 
-                dan pemecahan masalah melalui kasus nyata.
-            </p>
-
-            <blockquote>
-                “Murid diberikan studi kasus data penjualan untuk 
-                menentukan kategori laris dan tidak laris.”
-            </blockquote>
-
-            <h4>| Direct-Learning |</h4>
-
-            <p>
-               Guru perlu memberikan penjelasan dan demonstrasi 
-               secara bertahap agar peserta didik memahami konsep dasar 
-               sebelum melakukan praktik mandiri.
-            </p>
-
-            <blockquote>
-                Pada materi fungsi IF di spreadsheet, guru terlebih dahulu 
-                mendemonstrasikan cara menuliskan rumus, menentukan range data, 
-                dan membaca hasil output melalui proyektor.
-            </blockquote>
-
-            <h4>| Constructivism |</h4>
-
-            <p>
-                Guru tidak langsung memberikan definisi algoritma, 
-                tetapi mengawali pembelajaran dengan pertanyaan pemantik seperti:
-            </p>
-
-            <blockquote>
-                “Bagaimana langkah membuat mie instan?”
-                Dari jawaban peserta didik, guru mengarahkan bahwa urutan langkah 
-                tersebut merupakan bentuk sederhana dari algoritma.
-            </blockquote>
-
-            <h4>| Differentiated Instruction |</h4>
-
-            <p>
-                Strategi diferensiasi diterapkan karena kemampuan 
-                dan karakteristik peserta didik pada setiap kelas berbeda.
-            </p>
-            
-            <blockquote>
-                    <li>
-                        Pada kelas aktif, Murid diberikan tantangan 
-                        tambahan membuat flowchart lebih kompleks.
-                    </li>
-
-                    <li>
-                        Pada kelas yang masih kesulitan, guru memberikan 
-                        template pseudocode setengah jadi.
-                    </li>
-            </blockquote>
-
-            <h4>| Scaffolding dan ZPD |</h4>
-
-            <p>
-                Guru memberikan bantuan bertahap kepada Murid 
-                yang belum mampu menyelesaikan tugas secara mandiri.
-            </p>
-
-            <blockquote>
-                "Saat praktik spreadsheet, beberapa peserta didik belum 
-                memahami penggunaan range data pada fungsi AVERAGE. 
-                Guru kemudian memberikan contoh langsung mulai dari 
-                memilih sel hingga menuliskan formula dengan benar.”
-            </blockquote>
-
-            <h4>| Mindful, Meaningful, Joyful Learning |</h4>
-            <blockquote>
-                <ul>
-                    <li>
-                        <b>Meaningful</b> Learning   : Materi algoritma dikaitkan dengan aktivitas sehari-hari seperti login media sosial dan pemesanan online.
-                    </li>
-
-                    <li>
-                        <b>Joyful</b> Learning       : Guru menggunakan game “Flowchart Maze” dan kuis Quizizz sehingga suasana belajar lebih interaktif.
-                    </li>
-
-                    <li>
-                        <b>Mindful</b> Learning      : Murid diajak merefleksikan kesalahan logika algoritma dan memperbaikinya bersama.
-                    </li>
-                </ul>
-            </blockquote>
-            
-
-            <!-- BUKTI -->
-            <div class="artifact-proof">
-
-                <h4>Bukti Pendukung</h4>
-
-                <div class="proof-grid">
-                    <img src="../image/1.jpeg" alt="">
-                    <img src="../image/2.jpeg" alt="">
-                    <img src="../image/3.jpeg" alt="">
-                    <img src="../image/4.jpeg" alt="">
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'Modul 2 — Fungsi Logika IF',
+                    'Informatika · Kelas X · Fase E',
+                    'bb',
+                    'Spreadsheet',
+                    '2 × 45 menit',
+                    'PBL + Direct Learning',
+                    'fas fa-book',
+                    'Guru mendemonstrasikan penggunaan fungsi IF melalui proyektor, kemudian murid praktik mandiri mengolah data kategori laris dan tidak laris.',
+                    'https://drive.google.com/file/d/1qRYFxsGCNMSYuGPWAXfuvRTwtqivCDYP/view?usp=sharing'
+                )">
+                    <div class="arf-thumb arf-thumb-blue">
+                        <i class="fas fa-book fa-2x"></i>
+                        <span>modul-02.pdf</span>
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Modul 2</p>
+                        <p class="arf-sub">Fungsi logika IF</p>
+                        <span class="arf-badge bb">Direct Learning</span>
+                    </div>
                 </div>
 
-                <p class="proof-caption">
-                    <strong>Dokumentasi:</strong> Penerapan model PBL, Direct-Learning, dan aktivitas diskusi kelompok.
-                </p>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ═════════ 3 ═════════ -->
-    <div class="card artifact-card reveal">
-
-        <div class="artifact-icon">✅</div>
-
-        <h3 class="artifact-title">
-            3. Faktor Keberhasilan Penerapan Produk Pembelajaran
-        </h3>
-
-        <div class="artifact-text">
-
-            <p>
-                Keberhasilan perangkat pembelajaran dipengaruhi oleh penggunaan
-                pendekatan yang kontekstual, aktivitas praktik langsung, serta
-                pemanfaatan media digital yang interaktif.Peserta didik menunjukkan 
-                keterlibatan aktif <em>(student engagement)</em> yang tinggi ketika 
-                pembelajaran dilakukan secara praktik menggunakan komputer masing-masing.
-            </p>
-           
-            <blockquote>
-                <li>
-                    Penggunaan LKPD yang terstruktur membantu Murid memahami
-                    alur pembelajaran secara bertahap dan lebih mandiri.    
-                </li>
-                <li>
-                    Media digital seperti Quizizz, Wordwall, spreadsheet, dan game
-                    interaktif meningkatkan motivasi belajar Murid.   
-                </li>
-            </blockquote>
-            
-            <h4>Contoh Aktual di Kelas</h4>
-            
-            <ul>
-                <li>
-                   <b>•</b>  Murid antusias saat praktik fungsi SUM, MIN, MAX,
-                    dan AVERAGE.
-                </li>
-
-                <li>
-                   <b>•</b>  Game “Flowchart Maze” membuat Murid aktif berdiskusi.
-                </li>
-
-                <li>
-                   <b>•</b>  Kuis Quizizz meningkatkan semangat belajar karena adanya leaderboard.
-                </li>
-
-                <li>
-                   <b>•</b>  LKPD membantu Murid mengulang langkah penggunaan formula.
-                </li>
-            </ul>
-
-            <!-- BUKTI -->
-            <div class="artifact-proof">
-
-                <h4>Bukti Pendukung</h4>
-
-                <div class="proof-grid">
-                    <img src="../image/FLOWCHARTMAZE.png" alt="">
-                    <img src="../image/Excel.png" alt="">
-                    <img src="../image/LAPD.png" alt="">
-                    <img src="../image/HasilFlowchart.png" alt="">
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'Modul 3 — Algoritma dan Pemrograman',
+                    'Informatika · Kelas X · Fase E',
+                    'bg',
+                    'Algoritma dan Pemrograman',
+                    '2 × 45 menit',
+                    'Project-Based Learning (PjBL) + Konstruktivisme',
+                    'fas fa-book',
+                    'Murid membangun pemahaman algoritma dari pengalaman sehari-hari melalui pertanyaan pemantik kontekstual. Murid menyusun pseudocode dan menggambar flowchart.',
+                    'https://drive.google.com/file/d/1YrBzQnJMbOBMMDd-XXpzrALamUd_Gek8/view?usp=sharing'
+                )">
+                    <div class="arf-thumb arf-thumb-green">
+                        <i class="fas fa-book fa-2x"></i>
+                        <span>modul-03.pdf</span>
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Modul 3</p>
+                        <p class="arf-sub">Algoritma dan Pemrograman</p>
+                        <span class="arf-badge bg">Konstruktivisme</span>
+                    </div>
                 </div>
 
-                <p class="proof-caption">
-                    Dokumentasi aktivitas praktik komputer dan penggunaan media digital.
-                </p>
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'Modul 4 —  Fungsi Sederhana Bahasa C',
+                    'Informatika · Kelas XI · Fase F',
+                    'bp',
+                    'Flowchart',
+                    '4 × 45 menit',
+                    'PBL',
+                    'fas fa-book',
+                    'Murid mempelajari konsep fungsi dalam bahasa C melalui diskusi, analisis kode, praktik membuat dan memanggil fungsi, serta refleksi pembelajaran.',
+                    'https://drive.google.com/file/d/1Fj-_CzCKHfr8x-fnhS_pPPDOrkeqVZVa/view?usp=sharing'
+                )">
+                    <div class="arf-thumb arf-thumb-pink">
+                        <i class="fas fa-book fa-2x"></i>
+                        <span>modul-04.pdf</span>
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Modul 4</p>
+                        <p class="arf-sub">Algoritma &amp; Pemrograman</p>
+                        <span class="arf-badge bp">PjBL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- ── PANEL: LKPD ── -->
+        <div id="panel-lkpd" class="arf-panel">
+            <div class="arf-grid">
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'LKPD 1 — Fungsi SUM & AVERAGE',
+                    'Lembar Kerja Peserta Didik',
+                    'ba',
+                    'Spreadsheet',
+                    '1 × 45 menit',
+                    'Mandiri',
+                    'fas fa-clipboard-list',
+                    'Lembar kerja praktik penggunaan fungsi SUM dan AVERAGE dengan dataset penjualan. Dilengkapi kolom refleksi mandiri di akhir halaman.',
+                    'https://drive.google.com/file/d/1sNGIwU2tkSfM7YT2s0moRyBm7zIvJUOJ/view?usp=sharing'
+                )">
+                    <div class="arf-thumb arf-thumb-amber">
+                        <i class="fas fa-clipboard-list fa-2x"></i>
+                        <span>lkpd-01.pdf</span>
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">LKPD 1</p>
+                        <p class="arf-sub">Fungsi SUM &amp; AVERAGE</p>
+                        <span class="arf-badge ba">Mandiri</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'LKPD 2 — Praktik Fungsi IF',
+                    'Lembar Kerja Peserta Didik',
+                    'bb',
+                    'Spreadsheet',
+                    '1 × 45 menit',
+                    'Mandiri',
+                    'fas fa-clipboard-list',
+                    'Panduan langkah-langkah praktik fungsi IF di spreadsheet. Murid mengikuti instruksi tertulis sambil mengerjakan di komputer masing-masing.',
+                    'https://drive.google.com/file/d/1oahnWP7VFhLRdNPqK-BIKlVEk-NVyko6/view?usp=sharing'
+                )">
+                    <div class="arf-thumb arf-thumb-blue">
+                        <i class="fas fa-clipboard-list fa-2x"></i>
+                        <span>lkpd-02.pdf</span>
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">LKPD 2</p>
+                        <p class="arf-sub">Praktik fungsi IF</p>
+                        <span class="arf-badge bb">Mandiri</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'LKPD 3 — Menyusun Algoritma',
+                    'Lembar Kerja Peserta Didik',
+                    'bg',
+                    'Algoritma',
+                    '1 × 45 menit',
+                    'Mandiri',
+                    'fas fa-clipboard-list',
+                    'Murid menyusun urutan langkah penyelesaian masalah sehari-hari dalam format algoritma sederhana menggunakan panduan yang terstruktur.',
+                    'https://drive.google.com/file/d/1LJUM6L0-pM90_qwvSTGm_-6uJNRIhNO9/view?usp=sharing'
+                )">
+                    <div class="arf-thumb arf-thumb-green">
+                        <i class="fas fa-clipboard-list fa-2x"></i>
+                        <span>lkpd-03.pdf</span>
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">LKPD 3</p>
+                        <p class="arf-sub">Menyusun algoritma</p>
+                        <span class="arf-badge bg">Mandiri</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'LKPD 4 — Mengenal Dunia C',
+                    'Lembar Kerja Peserta Didik',
+                    'bp',
+                    'Flowchart',
+                    '1 × 45 menit',
+                    'Kelompok',
+                    'fas fa-clipboard-list',
+                    'Murid untuk mengenal dasar-dasar bahasa C melalui analisis kode, penggunaan variabel dan tipe data, input-output, debugging, serta pembuatan program sederhana secara bertahap.',
+                    'https://drive.google.com/file/d/1Y0Gn8ICWB1FpMUcrrFp7CK4zaUIcrrbR/view?usp=sharing'
+                )">
+                    <div class="arf-thumb arf-thumb-pink">
+                        <i class="fas fa-clipboard-list fa-2x"></i>
+                        <span>lkpd-04.pdf</span>
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">LKPD 4</p>
+                        <p class="arf-sub">Mengenal Bahasa C</p>
+                        <span class="arf-badge bp">Kelompok</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── PANEL: BAHAN AJAR / PPT ── -->
+        <div id="panel-ppt" class="arf-panel">
+            <div class="arf-grid">
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'PPT 1 — Excel Dasar',
+                    'Bahan Ajar · Slide Presentasi',
+                    'bb',
+                    'Excel',
+                    '45 menit',
+                    'Demonstrasi',
+                    'fas fa-file-powerpoint',
+                    'Pengenalan antarmuka spreadsheet, navigasi sel, dan cara memasukkan data. Slide dirancang untuk digunakan bersamaan dengan demonstrasi langsung di proyektor.',
+                    'https://canva.link/fpyn9hpmzfcs7br'
+                )">
+                    <div class="arf-thumb arf-thumb-blue">
+                        <img 
+                        class="arf-thumb-cover"
+                        src="../image/exceldasar.png"
+                        alt="Preview PPT Spreadsheet Dasar"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Presentasi 1</p>
+                        <p class="arf-sub">Excel dasar</p>
+                        <span class="arf-badge bb">Demonstrasi</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'PPT 2 — Fungsi Logika IF',
+                    'Bahan Ajar · Slide Presentasi',
+                    'ba',
+                    'Fungsi IF',
+                    '45 menit',
+                    'Demonstrasi + praktik',
+                    'fas fa-file-powerpoint',
+                    'Slide khusus materi fungsi IF dengan contoh sintaks lengkap, penjelasan parameter, dan studi kasus nyata yang dapat langsung dipraktikkan murid.',
+                    'https://canva.link/excelif'
+                )">
+                    <div class="arf-thumb arf-thumb-amber">
+                        <img 
+                        class="arf-thumb-cover"
+                        src="../image/EXCEL - IF.png"
+                        alt="Preview PPT If"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Presentasi 2</p>
+                        <p class="arf-sub">Fungsi logika IF</p>
+                        <span class="arf-badge ba">Demonstrasi</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'PPT 3 — Apa Itu Algoritma?',
+                    'Bahan Ajar · Slide Presentasi',
+                    'bg',
+                    'Pengenalan',
+                    '45 menit',
+                    'Ceramah + tanya jawab',
+                    'fas fa-file-powerpoint',
+                    'Slide pembuka materi algoritma dengan desain visual menarik. Berisi definisi, ciri-ciri, dan contoh algoritma dalam kehidupan sehari-hari yang relevan bagi murid.',
+                    'https://canva.link/algoritmapemogramankelasx'
+                )">
+                    <div class="arf-thumb arf-thumb-green">
+                        <img 
+                        class="arf-thumb-cover"
+                        src="../image/PPT.png"
+                        alt="Preview PPT algoritma"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Presentasi 3</p>
+                        <p class="arf-sub">Apa itu algoritma?</p>
+                        <span class="arf-badge bg">Pengenalan</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'PPT 4 — Mengenal Bahasa C',
+                    'Bahan Ajar · Slide Presentasi',
+                    'bp',
+                    'Flowchart',
+                    '45 menit',
+                    'Direct Learning',
+                    'fas fa-file-powerpoint',
+                    'Presentasi visual simbol-simbol standar flowchart lengkap dengan contoh penggunaan. Dilengkapi animasi alur yang membantu murid memahami urutan logika.',
+                    'https://canva.link/nn7vffs4s3gw71w'
+                )">
+                    <div class="arf-thumb arf-thumb-pink">
+                        <img 
+                        class="arf-thumb-cover"
+                        src="../image/P1_Presentasi_Mengenal_Dunia_C.pptx.png"
+                        alt="Preview PPT mengenal bahasa C"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">PPT 2</p>
+                        <p class="arf-sub">Simbol flowchart</p>
+                        <span class="arf-badge bp">Flowchart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── PANEL: MEDIA DIGITAL ── -->
+        <div id="panel-media" class="arf-panel">
+            <div class="arf-grid">
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'Wordwall — Game Flowchart',
+                    'Media Digital Interaktif',
+                    'bp',
+                    'Wordwall',
+                    '15 menit',
+                    'Kompetisi',
+                    'fas fa-gamepad',
+                    'Game interaktif pencocokan simbol dan fungsi flowchart menggunakan Wordwall. Murid berlomba menyelesaikan tantangan dalam waktu tercepat.',
+                    'https://www.studyfetch.com/games/play/6815d57dc8f30afca2b1750f'
+                )">
+                    <div class="arf-thumb arf-thumb-pink">
+                        <img 
+                        class="arf-thumb-cover"
+                        src="../image/GAME-IF.png"
+                        alt="Preview game if"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Wordwall</p>
+                        <p class="arf-sub">Game flowchart</p>
+                        <span class="arf-badge bp">Kompetisi</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'Flowchart Maze',
+                    'Game Edukasi Kelompok',
+                    'bb',
+                    'Game kelompok',
+                    '1 × 45 menit',
+                    'Diskusi aktif',
+                    'fas fa-gamepad',
+                    'Game berbasis papan di mana murid harus mengikuti alur flowchart untuk menemukan jalan keluar dari labirin. Mendorong diskusi aktif dan pemahaman logika bersama.',
+                    'https://wordwall.net/id/resource/11149987'
+                )">
+                    <div class="arf-thumb arf-thumb-blue">
+                        <img 
+                        class="arf-thumb-cover"
+                        src="../image/FLOWCHARTMAZE.png"
+                        alt="Preview game flowchart"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Flowchart Maze</p>
+                        <p class="arf-sub">Game kelompok</p>
+                        <span class="arf-badge bb">Kolaboratif</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'Quizizz — Kuis Spreadsheet',
+                    'Media Digital Interaktif',
+                    'ba',
+                    'Quizizz',
+                    '15 menit',
+                    'Leaderboard',
+                    'fas fa-gamepad',
+                    'Kuis formatif khusus materi spreadsheet menggunakan Quizizz. Soal mencakup identifikasi fungsi, membaca output, dan menentukan sintaks yang benar.',
+                    'https://wordwall.net/id/resource/104933002/informatika/latihan-ms-excel-dasar-if'
+                )">
+                    <div class="arf-thumb arf-thumb-amber">
+                        <img 
+                        class="arf-thumb-cover"
+                        src="../image/GAME-EXCEL.png"
+                        alt="Preview PPT game excel"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Quizizz</p>
+                        <p class="arf-sub">Kuis spreadsheet</p>
+                        <span class="arf-badge ba">Interaktif</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'OnlineGDB — Praktik Pemrograman C',
+                    'Media Praktik Pemrograman',
+                    'bg',
+                    'OnlineGDB',
+                    '30 menit',
+                    'Coding',
+                    'fas fa-code',
+                    'Media praktik pemrograman bahasa C menggunakan OnlineGDB. Peserta didik dapat menulis, menjalankan, dan menguji program secara langsung melalui browser tanpa perlu instalasi aplikasi tambahan.',
+                    'https://www.onlinegdb.com/'
+                )">
+                    <div class="arf-thumb arf-thumb-green">
+                        <img
+                        class="arf-thumb-cover"
+                        src="../image/ONLINEGDB.png"
+                        alt="Preview OnlineGDB"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">OnlineGDB</p>
+                        <p class="arf-sub">Praktik Coding Bahasa C</p>
+                        <span class="arf-badge bg">Coding</span>
+                    </div>
+                </div>
+
+                <div class="arf-card reveal" onclick="openArfModal(
+                    'Draw.io — Desain Flowchart',
+                    'Media Visualisasi Algoritma',
+                    'ba',
+                    'Draw.io',
+                    '20 menit',
+                    'Flowchart',
+                    'fas fa-project-diagram',
+                    'Media untuk membuat flowchart dan diagram algoritma secara visual. Peserta didik dapat menuangkan langkah-langkah penyelesaian masalah ke dalam bentuk diagram alur yang sistematis dan mudah dipahami.',
+                    'https://app.diagrams.net/'
+                )">
+                    <div class="arf-thumb arf-thumb-amber">
+                        <img
+                        class="arf-thumb-cover"
+                        src="../image/DRAWIO.png"
+                        alt="Preview Draw.io"
+                        onerror="this.style.display='none'">
+                    </div>
+                    <div class="arf-info">
+                        <p class="arf-name">Draw.io</p>
+                        <p class="arf-sub">Pembuatan Flowchart</p>
+                        <span class="arf-badge ba">Visualisasi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- ════════════════════════════════════════
+             PANEL: HASIL BELAJAR (BARU)
+        ═════════════════════════════════════════ -->
+        <div id="panel-hasil" class="arf-panel">
+
+            <div class="hb-info-bar reveal">
+                <i class="fas fa-info-circle"></i>
+                Rekap tugas siswa tersimpan di Google Drive per kelas. Klik folder untuk membuka di tab baru.
             </div>
 
-        </div>
-    </div>
+            <div class="hb-folder-grid reveal">
 
-    <!-- ═════════ 4 ═════════ -->
-    <div class="card artifact-card reveal">
+                <a class="hb-folder-card" href="https://drive.google.com/drive/folders/1X75E3W4Us8h6YOP0ucYj4J-oDdyiighM?usp=drive_link" target="_blank" rel="noopener">
+                    <div class="hb-folder-icon"><i class="fas fa-folder"></i></div>
+                    <div class="hb-folder-info">
+                        <span class="hb-folder-name">Kelas X-1</span>
+                        <span class="hb-folder-meta">Rekap Tugas Informatika</span>
+                    </div>
+                    <i class="fas fa-external-link-alt hb-open-icon"></i>
+                </a>
 
-        <div class="artifact-icon">🔄</div>
+                <a class="hb-folder-card" href="https://drive.google.com/drive/folders/1FssNtuIXaYs-Ar9FiuvZMm2JMhQIhH3i?usp=sharing" target="_blank" rel="noopener">
+                    <div class="hb-folder-icon"><i class="fas fa-folder"></i></div>
+                    <div class="hb-folder-info">
+                        <span class="hb-folder-name">Kelas X-2</span>
+                        <span class="hb-folder-meta">Rekap Tugas Informatika</span>
+                    </div>
+                    <i class="fas fa-external-link-alt hb-open-icon"></i>
+                </a>
 
-        <h3 class="artifact-title">
-            4. Komponen yang Dapat Diadaptasi
-        </h3>
+                <a class="hb-folder-card" href="https://drive.google.com/drive/folders/1HLXfYemRO5ttpfWrnEwI9nubpZB7uHDT?usp=drive_link" target="_blank" rel="noopener">
+                    <div class="hb-folder-icon"><i class="fas fa-folder"></i></div>
+                    <div class="hb-folder-info">
+                        <span class="hb-folder-name">Kelas X-3</span>
+                        <span class="hb-folder-meta">Rekap Tugas Informatika</span>
+                    </div>
+                    <i class="fas fa-external-link-alt hb-open-icon"></i>
+                </a>
 
-        <div class="artifact-text">
+                <a class="hb-folder-card" href="https://drive.google.com/drive/folders/1tJMce04GYGn0Pvm5C5NhLkAbJy2Uc_aW?usp=drive_link" target="_blank" rel="noopener">
+                    <div class="hb-folder-icon"><i class="fas fa-folder"></i></div>
+                    <div class="hb-folder-info">
+                        <span class="hb-folder-name">Kelas X-8</span>
+                        <span class="hb-folder-meta">Rekap Tugas Informatika</span>
+                    </div>
+                    <i class="fas fa-external-link-alt hb-open-icon"></i>
+                </a>
 
-            <p>
-                Perangkat pembelajaran perlu bersifat fleksibel agar dapat
-                diterapkan pada kondisi kelas yang berbeda.
-                Adaptasi dilakukan berdasarkan karakteristik peserta didik, 
-                tingkat kesiapan belajar, fasilitas sekolah, serta dinamika pembelajaran di kelas.
-            </p>
+                <a class="hb-folder-card" href="https://drive.google.com/drive/folders/1zIIIn8Z92yGKdf7U-UnrOCRQud61C2C3?usp=drive_link" target="_blank" rel="noopener">
+                    <div class="hb-folder-icon"><i class="fas fa-folder"></i></div>
+                    <div class="hb-folder-info">
+                        <span class="hb-folder-name">Kelas X-9</span>
+                        <span class="hb-folder-meta">Rekap Tugas Informatika</span>
+                    </div>
+                    <i class="fas fa-external-link-alt hb-open-icon"></i>
+                </a>
 
-            <h4>Strategi Pembelajaran</h4>
+                <a class="hb-folder-card" href="https://drive.google.com/drive/folders/1pNeGTrG_G841BEJg_aO_nk_br0bFA3ZJ?usp=drive_link" target="_blank" rel="noopener">
+                    <div class="hb-folder-icon"><i class="fas fa-folder"></i></div>
+                    <div class="hb-folder-info">
+                        <span class="hb-folder-name">Kelas X-10</span>
+                        <span class="hb-folder-meta">Rekap Tugas Informatika</span>
+                    </div>
+                    <i class="fas fa-external-link-alt hb-open-icon"></i>
+                </a>
 
-            <ul>
-                <li>
-                    <b>➤</b> Pada kelas aktif, guru menggunakan diskusi terbuka
-                    dan presentasi kelompok.
-                </li>
+                <a class="hb-folder-card" href="https://drive.google.com/drive/folders/1pNeGTrG_G841BEJg_aO_nk_br0bFA3ZJ?usp=drive_link" target="_blank" rel="noopener">
+                    <div class="hb-folder-icon"><i class="fas fa-folder"></i></div>
+                    <div class="hb-folder-info">
+                        <span class="hb-folder-name">Kelas X-11</span>
+                        <span class="hb-folder-meta">Rekap Tugas Informatika</span>
+                    </div>
+                    <i class="fas fa-external-link-alt hb-open-icon"></i>
+                </a>
 
-                <li>
-                     <b>➤</b> Pada kelas pasif, guru menggunakan demonstrasi langsung
-                    dan pertanyaan pemantik sederhana.
-                </li>
-            </ul>
-
-            <h4>Tingkat Kompleksitas Tugas</h4>
-
-            <ul>
-                <li>
-                    <b>➤</b> Peserta didik yang cepat memahami materi diberikan 
-                    tantangan membuat algoritma dengan percabangan tambahan.
-                </li>
-
-                <li>
-                     <b>➤</b> Peserta didik yang masih kesulitan diberikan 
-                     kasus sederhana seperti algoritma membuat teh atau login akun.
-                </li>
-            </ul>
-
-            <h4>Alokasi Waktu Pembelajaran</h4>
-
-            <ul>
-                <li>
-                    <b>➤</b> Pada kelas yang cepat memahami materi, guru dapat 
-                    menambahkan aktivitas pengayaan berupa kuis atau tantangan tambahan.
-                </li>
-
-                <li>
-                     <b>➤</b> Pada kelas yang membutuhkan pendampingan lebih, 
-                     guru memperpanjang sesi demonstrasi dan latihan praktik.
-                </li>
-            </ul>
-
-            <h4>Media Pembelajaran</h4>
-
-            <ul>
-                <li>
-                    <b>➤</b> Pada kelas dengan akses komputer penuh,
-                    Murid langsung praktik spreadsheet.
-                </li>
-
-                <li>
-                    <b>➤</b> Jika terdapat kendala perangkat, guru menggunakan simulasi
-                    melalui proyektor dan diskusi kelompok.
-                </li>
-            </ul>
-
-            <h4>Pengembangan Media Digital</h4>
-
-            <p>
-                Ke depan, media pembelajaran direncanakan dikembangkan dalam
-                bentuk website pembelajaran terintegrasi agar seluruh perangkat
-                pembelajaran tersimpan secara sistematis.
-            </p>
-
-            <p>
-                Saat ini materi, LKPD, asesmen, dan link game masih 
-                tersimpan di platform yang berbeda seperti Google Drive, 
-                Canva, dan Quizizz. Oleh karena itu, direncanakan 
-                pengembangan website pembelajaran agar peserta didik 
-                dapat mengakses seluruh materi dalam satu 
-                tempat secara lebih efektif dan terorganisasi.
-            </p>
+                <!-- Tombol buka folder utama -->
+                <a class="hb-folder-btn" href="https://drive.google.com/drive/folders/17-LejVNNMqV-Nwv_rD8x8dPB-1LpEDit?usp=drive_link" target="_blank" rel="noopener">
+                    <i class="fab fa-google-drive"></i> Buka Semua Folder
+                </a>
 
             </div>
-
+        </div>
+ 
+        <!-- ════════════════════════════════════════
+             PANEL: VIDEO PEMBELAJARAN (BARU)
+        ═════════════════════════════════════════ -->
+        <div id="panel-video" class="arf-panel">
+    <div class="vp-grid reveal" id="vpGrid">
+        <!-- Kartu 1 -->
+        <div class="vp-card">
+            <div class="vp-thumb" id="vpThumb-0">
+                <img class="vp-preview-img"
+                     src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+                     alt="Pengenalan HTML & CSS">
+                <button class="vp-play-btn" onclick="vpPlay(0,'dQw4w9WgXcQ')" aria-label="Putar video">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+            <div class="vp-meta">
+                <p class="vp-title">Pengenalan HTML &amp; CSS — Siklus 1</p>
+                <p class="vp-info"><i class="fas fa-users"></i> Kelas XI B &nbsp;&middot;&nbsp; <i class="fas fa-calendar-alt"></i> 18 Maret 2025</p>
+            </div>
+        </div>
+        <!-- Kartu 2 -->
+        <div class="vp-card">
+            <div class="vp-thumb" id="vpThumb-1">
+                <img class="vp-preview-img"
+                     src="https://img.youtube.com/vi/aircAruvnKk/hqdefault.jpg"
+                     alt="Algoritma & Pemrograman">
+                <button class="vp-play-btn" onclick="vpPlay(1,'aircAruvnKk')" aria-label="Putar video">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+            <div class="vp-meta">
+                <p class="vp-title">Algoritma &amp; Pemrograman Dasar</p>
+                <p class="vp-info"><i class="fas fa-users"></i> Kelas XI C &nbsp;&middot;&nbsp; <i class="fas fa-calendar-alt"></i> 25 Maret 2025</p>
+            </div>
         </div>
     </div>
-
-</div>
-           
         </div>
+ 
+        <!-- ════════════════════════════════════════
+             PANEL: DOKUMENTASI (BARU)
+        ═════════════════════════════════════════ -->
+        <div id="panel-dokumentasi" class="arf-panel">
+            <div class="dok-grid reveal" id="dokGrid">
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 2.JPG" alt="Presentasi kelompok" loading="lazy">
+                    <figcaption>Penerimaan PPL PPG UPI</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 5.jpg" alt="Diskusi kelompok" loading="lazy">
+                    <figcaption>Foto Bersama Rekan PPL</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 8.png" alt="Praktik coding" loading="lazy">
+                    <figcaption>Rapat Bersama Guru Pamong</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 13.png" alt="Supervisi" loading="lazy">
+                    <figcaption>Supervisi Pak Irman Margino</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 10.png" alt="Asesmen formatif" loading="lazy">
+                    <figcaption>Mengajar Excel di Kelas</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 4.jpg" alt="Demo produk" loading="lazy">
+                    <figcaption>Demo Excel</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 23.jpg" alt="Refleksi bersama" loading="lazy">
+                    <figcaption>Sesi refleksi bersama kelas</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 18.jpg" alt="Foto bersama" loading="lazy">
+                    <figcaption>Foto bersama kelas XI</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 14.png" alt="Foto bersama" loading="lazy">
+                    <figcaption>Pengawasan Pembelajaran di Kelas</figcaption>
+                </figure>
+                <figure class="dok-item" onclick="openDokLightbox(this)">
+                    <img src="../image-dokum/FOTO 20.jpg" alt="Foto bersama" loading="lazy">
+                    <figcaption>Mengecek Hasil Ulangan Murid</figcaption>
+                </figure>
+            </div>
+        </div>
+
     </section>
 
+    <!-- ════════════════════════════════════════
+         SECTION 2 — ANALISIS ARTEFAK
+    ═════════════════════════════════════════ -->
+    <section id="analisis" class="container">
+
+        <div class="section-header reveal">
+            <p class="section-label">Refleksi PPL</p>
+            <h2 class="section-title">Analisis <span>artefak</span></h2>
+            <div class="divider"></div>
+            <p class="section-intro">
+                Refleksi mendalam terhadap produk pembelajaran selama PPL.
+                Hover kartu untuk melihat bukti dokumentasi.
+            </p>
+        </div>
+
+        <div class="analisis-flip-grid">
+
+            <!-- CARD 1 -->
+            <div class="af-scene reveal">
+                <div class="af-inner">
+                    <div class="af-front af-c1">
+                        <div class="af-card-header">
+                            <span class="af-emoji">⚠️</span>
+                            <span class="af-num">01 — Kendala</span>
+                        </div>
+                        <div class="af-accent"></div>
+                        <h3 class="af-title">Kendala dalam Penyusunan Produk Pembelajaran</h3>
+                        <div class="af-body">
+                            <p>Kendala utama adalah <strong>heterogenitas karakteristik murid</strong> — aktif, pasif-mampu, dan pasif-perlu pendampingan intensif. Media pembelajaran perlu disesuaikan dengan fasilitas dan karakteristik tiap kelas.</p>
+                            <p>Selain itu, guru perlu menyiapkan <strong>strategi diferensiasi</strong> agar seluruh murid dapat berpartisipasi dan mencapai tujuan pembelajaran sesuai kemampuannya.</p>
+                            <p>Materi seperti algoritma, flowchart, dan spreadsheet membutuhkan kemampuan berpikir logis serta praktik langsung. Pengelolaan waktu pun menjadi tantangan karena aktivitas berbasis proyek sering melebihi alokasi.</p>
+                            <h4>Contoh Aktual di Kelas</h4>
+                            <ul>
+                                <li><b>•</b> Kelas X-11 : Sebagian Murid kesulitan simbol flowchart → demonstrasi ulang perlahan</li>
+                                <li><b>•</b> Kelas X-1  : Murid lebih aktif → langsung ke pseudocode & flowchart kompleks</li>
+                                <li><b>•</b> Praktik IF : Beberapa Murid sintaks salah → output tidak muncul</li>
+                                <li><b>•</b> Proyek algoritma: Beberapa kelompok melebihi alokasi waktu</li>
+                            </ul>
+                        </div>
+                        <p class="af-hint"><i class="fas fa-sync-alt"></i> hover untuk lihat Bukti Pendukung</p>
+                    </div>
+                    <div class="af-back">
+                        <div class="af-back-header">
+                            <i class="fas fa-camera"></i> Bukti Dokumentasi — Kendala
+                        </div>
+                        <div class="af-photo-grid">
+                            <img src="../image/MODUL.png" alt="Modul Ajar">
+                            <img src="../image/LKPD.png" alt="LKPD">
+                            <img src="../image/quiz.png" alt="Lembar Kuis">
+                            <img src="../image/PPT.png" alt="Bahan Ajar PPT">
+                        </div>
+                        <p class="af-back-caption">Modul ajar · LKPD · Lembar kuis · Bahan ajar PPT</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="af-scene reveal">
+                <div class="af-inner">
+                    <div class="af-front af-c2">
+                        <div class="af-card-header">
+                            <span class="af-emoji">📚</span>
+                            <span class="af-num">02 — Teori Pedagogi</span>
+                        </div>
+                        <div class="af-accent"></div>
+                        <h3 class="af-title">Teori dan Konsep Pedagogi yang Diadopsi</h3>
+                        <div class="af-body">
+                            <p>Perangkat pembelajaran disusun dengan mengadopsi beberapa teori agar pembelajaran lebih bermakna, kontekstual, dan berpusat pada murid.</p>
+                            <ul>
+                                <li><strong>Problem-Based Learning (PBL)</strong> — <em>"Studi kasus data penjualan: tentukan produk laris/tidak laris"</em></li>
+                                <li><strong>Direct Learning</strong> — <em>"Demonstrasi fungsi IF via proyektor, bertahap"</em></li>
+                                <li><strong>Konstruktivisme</strong> — <em>"Langkah buat mie instan?" sebelum definisi algoritma</em></li>
+                                <li><strong>Differentiated Instruction</strong> — <em>"Tantangan lebih kompleks vs Template setengah jadi"</em></li>
+                                <li><strong>Scaffolding & ZPD</strong> — <em>"Contoh bertahap memilih sel hingga menulis AVERAGE"</em></li>
+                                <li><strong>Meaningful Learning</strong> —<em>"Materi algoritma dikaitkan dengan aktivitas sehari-hari"</em></li>
+                                <li><strong>Joyful Learning</strong> —<em>"Quizizz leaderboard + Flowchart Maze + refleksi logika"</em></li>
+                                <li><strong>Mindful Learning</strong> —<em>"Murid merefleksikan dan memperbaiki kesalahan logika algoritma"</em></li>
+                            </ul>
+                        </div>
+                        <p class="af-hint"><i class="fas fa-sync-alt"></i> hover untuk lihat Bukti Pendukung</p>
+                    </div>
+                    <div class="af-back">
+                        <div class="af-back-header">
+                            <i class="fas fa-camera"></i> Bukti Dokumentasi — Pedagogi
+                        </div>
+                        <div class="af-photo-grid">
+                            <img src="../image/1.jpeg" alt="Dokumentasi 1">
+                            <img src="../image/2.jpeg" alt="Dokumentasi 2">
+                            <img src="../image/3.jpeg" alt="Dokumentasi 3">
+                            <img src="../image/4.jpeg" alt="Dokumentasi 4">
+                        </div>
+                        <p class="af-back-caption">Penerapan PBL · Direct Learning · Diskusi kelompok</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="af-scene reveal">
+                <div class="af-inner">
+                    <div class="af-front af-c3">
+                        <div class="af-card-header">
+                            <span class="af-emoji">✅</span>
+                            <span class="af-num">03 — Keberhasilan</span>
+                        </div>
+                        <div class="af-accent"></div>
+                        <h3 class="af-title">Faktor Keberhasilan Penerapan Produk Pembelajaran</h3>
+                        <div class="af-body">
+                            <p>Peserta didik menunjukkan <strong>student engagement tinggi</strong> saat praktik langsung menggunakan komputer apalagi menggunakan media digital. LKPD terstruktur membantu murid memahami alur pembelajaran secara bertahap dan lebih mandiri.</p>
+                            <h4>Contoh Aktual di Kelas</h4>
+                            <ul>
+                                <li><b>•</b> LKPD terstruktur       → murid lebih mandiri & paham alur</li>
+                                <li><b>•</b> Murid antusias praktik SUM, MIN, MAX, AVERAGE</li>
+                                <li><b>•</b> Flowchart Maze         → diskusi aktif dan kolaboratif</li>
+                                <li><b>•</b> Quizizz leaderboard    → semangat belajar meningkat</li>
+                                <li><b>•</b> Media digital Wordwall → kompetisi antar murid</li>
+                            </ul>
+                        </div>
+                        <p class="af-hint"><i class="fas fa-sync-alt"></i> hover untuk lihat  Bukti Pendukung</p>
+                    </div>
+                    <div class="af-back">
+                        <div class="af-back-header">
+                            <i class="fas fa-camera"></i> Bukti Dokumentasi — Keberhasilan
+                        </div>
+                        <div class="af-photo-grid">
+                            <img src="../image/FLOWCHARTMAZE.png" alt="Flowchart Maze">
+                            <img src="../image/Excel.png" alt="Praktik Excel">
+                            <img src="../image/LAPD.png" alt="LKPD">
+                            <img src="../image/HasilFlowchart.png" alt="Hasil Flowchart">
+                        </div>
+                        <p class="af-back-caption">Flowchart Maze · Praktik Excel · LKPD · Hasil karya murid</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="af-scene reveal">
+                <div class="af-inner">
+                    <div class="af-front af-c4">
+                        <div class="af-card-header">
+                            <span class="af-emoji">🔄</span>
+                            <span class="af-num">04 — Adaptasi</span>
+                        </div>
+                        <div class="af-accent"></div>
+                        <h3 class="af-title">Komponen yang Dapat Diadaptasi</h3>
+                        <div class="af-body">
+                            <p>Perangkat pembelajaran perlu fleksibel agar dapat diterapkan pada kondisi kelas yang berbeda berdasarkan karakteristik murid, kesiapan belajar, dan fasilitas sekolah.</p>
+                            <ul>
+                                <li><strong>Strategi</strong> — kelas aktif: diskusi terbuka; kelas pasif: demonstrasi + pemantik</li>
+                                <li><strong>Kompleksitas tugas</strong> — percabangan tambahan vs kasus sederhana</li>
+                                <li><strong>Alokasi waktu</strong> — pengayaan kuis atau perpanjangan sesi demonstrasi</li>
+                                <li><strong>Media</strong> — komputer penuh: praktik langsung; kendala: simulasi proyektor</li>
+                            </ul>
+                            <blockquote>Ke depan: <strong>website pembelajaran terintegrasi</strong> — materi, LKPD, asesmen & game dalam satu platform.</blockquote>
+                        </div>
+                        <p class="af-hint"><i class="fas fa-sync-alt"></i> hover untuk lihat  Bukti Pendukung</p>
+                    </div>
+                    <div class="af-back">
+                        <div class="af-back-header">
+                            <i class="fas fa-camera"></i> Bukti Dokumentasi — Adaptasi
+                        </div>
+                        <div class="af-photo-grid">
+                            <img src="../image/FLOWCHARTMAZE.png" alt="Adaptasi Media">
+                            <img src="../image/Excel.png" alt="Praktik Komputer">
+                            <img src="../image/LKPD.png" alt="LKPD Fleksibel">
+                            <img src="../image/HasilFlowchart.png" alt="Hasil Diferensiasi">
+                        </div>
+                        <p class="af-back-caption">Adaptasi media · Diferensiasi tugas · LKPD fleksibel</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- ════════════════════════════════════════
-        FOOTER
+         MODAL ARTEFAK
     ═════════════════════════════════════════ -->
-        <footer>
-            <p class="footer-name">
-                &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
-            </p>
-        </footer>
+    <div id="arfModal" class="arf-modal-overlay" onclick="closeArfModal(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="arf-modal" onclick="event.stopPropagation()">
+
+            <div class="arf-modal-header">
+                <div class="arf-modal-meta">
+                    <p class="arf-modal-title" id="modalTitle">—</p>
+                    <p class="arf-modal-sub" id="modalSub">—</p>
+                </div>
+                <button class="arf-modal-close" onclick="closeArfModalBtn()" aria-label="Tutup modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="arf-modal-preview" id="modalPreview">
+                <i id="modalIcon" class="fas fa-file fa-3x"></i>
+                <span>Preview tersedia setelah file diunggah</span>
+            </div>
+
+            <div class="arf-modal-body">
+                <div class="arf-modal-info-grid">
+                    <div class="arf-modal-info-box">
+                        <p class="arf-modal-info-lbl">Topik</p>
+                        <p class="arf-modal-info-val" id="modalTopik">—</p>
+                    </div>
+                    <div class="arf-modal-info-box">
+                        <p class="arf-modal-info-lbl">Durasi / Kelas</p>
+                        <p class="arf-modal-info-val" id="modalDurasi">—</p>
+                    </div>
+                    <div class="arf-modal-info-box">
+                        <p class="arf-modal-info-lbl">Model / Tipe</p>
+                        <p class="arf-modal-info-val" id="modalModel">—</p>
+                    </div>
+                    <div class="arf-modal-info-box">
+                        <p class="arf-modal-info-lbl">Kategori</p>
+                        <span id="modalBadge" class="arf-badge bg">—</span>
+                    </div>
+                </div>
+                <p class="arf-modal-desc" id="modalDesc">—</p>
+            </div>
+
+            <div class="arf-modal-actions">
+                <button class="btn-primary-arf" id="modalBtnPreview" onclick="handleModalPreview()">
+                    <i class="fas fa-eye"></i> Preview
+                </button>
+                <a class="btn-ghost-arf" id="modalBtnDownload" href="#" target="_blank" rel="noopener noreferrer" onclick="this.href = currentDownloadSrc; return true;">
+                    <i class="fas fa-external-link-alt"></i> Buka Link
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+         FOOTER
+    ═════════════════════════════════════════ -->
+    <footer>
+        <p class="footer-name">
+            &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
+        </p>
+    </footer>
+
+      <!-- ════════════════════════════════════════
+         LIGHTBOX DOKUMENTASI
+    ═════════════════════════════════════════ -->
+    <div class="dok-lightbox" id="dokLightbox" role="dialog" aria-modal="true" aria-label="Preview foto">
+        <button class="dok-lb-close" onclick="closeDokLightbox()" aria-label="Tutup"><i class="fas fa-times"></i></button>
+        <button class="dok-lb-nav dok-lb-prev" onclick="navDokLightbox(-1)" aria-label="Foto sebelumnya"><i class="fas fa-chevron-left"></i></button>
+        <div class="dok-lb-content">
+            <img id="dokLbImg" src="" alt="">
+            <p id="dokLbCaption"></p>
+        </div>
+        <button class="dok-lb-nav dok-lb-next" onclick="navDokLightbox(1)" aria-label="Foto berikutnya"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="dok-lb-backdrop" id="dokLbBackdrop" onclick="closeDokLightbox()"></div>
+ 
 
     <script src="../main.js"></script>
+    <script src="../artefak.js"></script>
 </body>
-
 </html>

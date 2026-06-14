@@ -122,7 +122,7 @@
                         </div>
                         <div class="cycle-pdf-box">
                             <button class="cycle-pdf-toggle" onclick="togglePDF(this)"
-                               data-pdf="https://drive.google.com/file/d/1Wth3yI5veLU4f9yuaILrXdK3qMMqhkI-/preview">
+                               data-pdf="https://drive.google.com/file/d/1Wth3yI5veLU4f9yuaILrXdK3qMMqhkI-/preview"> 
                                 <span class="pdf-toggle-icon">📋</span>
                                 <span class="pdf-toggle-text">Lihat Preview Modul</span>
                                 <span class="pdf-toggle-arrow">▾</span>
@@ -341,7 +341,11 @@
         </div>
 
         <!-- ══ PANEL 1: PENILAIAN PERANGKAT PEMBELAJARAN (DATA ASLI PDF) ══ -->
-        <div class="assess-panel active reveal" id="panel-lamp1">
+        <div class="assess-panel active reveal" id="panel-lamp1" data-main-panel>
+
+        <a href="https://drive.google.com/file/d/1LqyuisBUUhSgs0YVkYcunx50__V8E7Cp/view?usp=sharing" target="_blank" class="cycle-pdf-download" style="width:100%;margin-bottom:1.2rem;justify-content:center;">
+            <span>📂</span> Buka File Asli Lampiran - Penilaian Perangkat Pembelajaran
+        </a>
 
             <!-- SUB TABS PER SIKLUS -->
             <div style="display:flex;gap:0.5rem;margin-bottom:1.5rem;flex-wrap:wrap;">
@@ -555,19 +559,24 @@
         </div>
 
         <!-- ══ PANEL 2: PENILAIAN PRAKTIK MENGAJAR ══ -->
-        <div class="assess-panel reveal" id="panel-lamp2">
+        <div class="assess-panel reveal" id="panel-lamp2" data-main-panel>
+
+            <a href="https://drive.google.com/file/d/1K87B9lFAF-m8aCsfk6GmuBMNbCMS5O9Z/view?usp=sharing" target="_blank" class="cycle-pdf-download" style="width:100%;margin-bottom:1.5rem;justify-content:center;">
+                <span>📂</span> Buka File Asli Lampiran — Penilaian Praktik Mengajar
+            </a>
+
             <div class="card" style="padding:2rem;">
                 <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;">
                     <div style="font-size:2rem;">🎤</div>
                     <div>
                         <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;">Format Penilaian Pelaksanaan Pembelajaran</h3>
-                        <p style="font-size:0.8rem;color:var(--muted);margin-top:0.3rem;">Lampiran 12 — untuk DPL/GP · Skala 1–4</p>
+                        <p style="font-size:0.8rem;color:var(--muted);margin-top:0.3rem;">Lampiran 12 — dari Guru Pamong > untuk saya · Skala 1–4</p>
                     </div>
                 </div>
                 <!-- Catatan -->
                 <div style="padding:1rem 1.2rem;background:rgba(251,191,36,0.07);border:1px solid rgba(251,191,36,0.25);border-radius:10px;margin-bottom:1.5rem;">
                     <div style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:var(--warn);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.4rem;">⚠️ Catatan</div>
-                    <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;">Dokumen PDF Lampiran 2 (Penilaian Praktik Mengajar) yang diunggah merupakan <strong style="color:var(--text)">template/formulir kosong</strong> — skor belum diisi oleh Guru Pamong. Tampilkan dokumen asli atau isi skor setelah penilaian diterima.</p>
+                    <p style="font-size:0.83rem;color:var(--muted);line-height:1.7;">Secara umum, pelaksanaan pembelajaran memperoleh hasil yang baik. Penilaian ini menjadi dasar refleksi untuk terus meningkatkan kualitas pembelajaran pada pertemuan berikutnya.</p>
                 </div>
                 <table class="rubric-table">
                     <thead>
@@ -575,28 +584,30 @@
                     </thead>
                     <tbody>
                         <!-- MEMBUKA -->
-                        <tr><td rowspan="2" style="vertical-align:middle;font-weight:600;color:var(--accent);font-size:0.8rem;">1. Membuka Pembelajaran</td><td><div class="indicator-name">Motivasi</div></td><td><div class="indicator-sub">Mempersiapkan siswa melalui aktivitas yang menarik perhatian</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-name">Apersepsi</div></td><td><div class="indicator-sub">Mengaitkan materi dengan kehidupan siswa atau pengetahuan sebelumnya</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td rowspan="2" style="vertical-align:middle;font-weight:600;color:var(--accent);font-size:0.8rem;">1. Membuka Pembelajaran</td><td><div class="indicator-name">Motivasi</div></td><td><div class="indicator-sub">Mempersiapkan siswa melalui aktivitas yang menarik perhatian</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">2</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-name">Apersepsi</div></td><td><div class="indicator-sub">Mengaitkan materi dengan kehidupan siswa atau pengetahuan sebelumnya</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">2</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
                         <!-- KEGIATAN INTI -->
-                        <tr><td rowspan="9" style="vertical-align:middle;font-weight:600;color:var(--accent2);font-size:0.8rem;">2. Kegiatan Inti</td><td rowspan="3"><div class="indicator-name">Penggunaan Metode</div></td><td><div class="indicator-sub">Metode melibatkan siswa untuk aktif</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Metode memungkinkan siswa saling bekerja sama</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Metode menciptakan suasana pembelajaran menyenangkan</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td rowspan="2"><div class="indicator-name">Ketepatan Materi</div></td><td><div class="indicator-sub">Materi menunjang pencapaian kompetensi dasar</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Materi benar secara teoritis</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td rowspan="3"><div class="indicator-name">Penguasaan Kompetensi</div></td><td><div class="indicator-sub">Mendemonstrasikan kompetensi yang harus dikuasai siswa</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Memberikan balikan jelas terhadap performansi siswa</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Merespons pertanyaan/komentar/pendapat siswa secara memadai</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td rowspan="3"><div class="indicator-name">Penggunaan Media</div></td><td><div class="indicator-sub">Menggunakan media sesuai tujuan pembelajaran</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td rowspan="11" style="vertical-align:middle;font-weight:600;color:var(--accent2);font-size:0.8rem;">2. Kegiatan Inti</td><td rowspan="3"><div class="indicator-name">Penggunaan Metode</div></td><td><div class="indicator-sub">Metode melibatkan siswa untuk aktif</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Metode memungkinkan siswa saling bekerja sama</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Metode menciptakan suasana pembelajaran menyenangkan</div></td><td style="text-align:center"><span class="score-pill s4">4</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td rowspan="2"><div class="indicator-name">Ketepatan Materi</div></td><td><div class="indicator-sub">Materi menunjang pencapaian kompetensi dasar</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Materi benar secara teoritis</div></td><td style="text-align:center"><span class="score-pill s4">4</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td rowspan="3"><div class="indicator-name">Penguasaan Kompetensi</div></td><td><div class="indicator-sub">Mendemonstrasikan kompetensi yang harus dikuasai siswa</div></td><td style="text-align:center"><span class="score-pill s4">4</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Memberikan balikan jelas terhadap performansi siswa</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Merespons pertanyaan/komentar/pendapat siswa secara memadai</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td rowspan="3"><div class="indicator-name">Penggunaan Media</div></td><td><div class="indicator-sub">Menggunakan media sesuai tujuan pembelajaran</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Memanfaatkan media pembelajaran dengan efektif dan efisien</div></td><td style="text-align:center"><span class="score-pill s4">4</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Memanfaatkan media dengan melibatkan siswa</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
                         <!-- MENUTUP -->
-                        <tr><td rowspan="3" style="vertical-align:middle;font-weight:600;color:var(--accent3);font-size:0.8rem;">3. Menutup Pembelajaran</td><td rowspan="2"><div class="indicator-name">Refleksi &amp; Penilaian</div></td><td><div class="indicator-sub">Mendorong siswa mengungkapkan kesulitan yang masih dihadapi</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Membantu siswa membuat kesimpulan materi</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-name">Penilaian</div></td><td><div class="indicator-sub">Melakukan penilaian dengan instrumen sesuai KD</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td rowspan="3" style="vertical-align:middle;font-weight:600;color:var(--accent3);font-size:0.8rem;">3. Menutup Pembelajaran</td><td rowspan="2"><div class="indicator-name">Refleksi </div></td><td><div class="indicator-sub">Mendorong siswa mengungkapkan kesulitan yang masih dihadapi</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Membantu siswa membuat kesimpulan materi</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-name">Penilaian</div></td><td><div class="indicator-sub">Melakukan penilaian dengan instrumen sesuai KD</div></td><td style="text-align:center"><span class="score-pill s4">4</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
                         <!-- FAKTOR PENUNJANG -->
-                        <tr><td rowspan="5" style="vertical-align:middle;font-weight:600;color:var(--accent);font-size:0.8rem;">4. Faktor Penunjang</td><td rowspan="5"><div class="indicator-name">Bahasa, Waktu, Percaya Diri, Penampilan</div></td><td><div class="indicator-sub">Menggunakan bahasa yang jelas dan komunikatif</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Tampil dengan penuh percaya diri</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Mengorganisasikan waktu secara tepat</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Berbusana dan berdandan sopan dan rapi</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
-                        <tr><td><div class="indicator-sub">Memperlakukan siswa secara bijak dan adil</div></td><td style="text-align:center"><span class="score-pill" style="background:rgba(148,163,184,0.1);color:var(--muted);border:1px dashed var(--border);">—</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td rowspan="5" style="vertical-align:middle;font-weight:600;color:var(--accent2);font-size:0.8rem;">4. Faktor Penunjang</td><td rowspan="5"><div class="indicator-name">Bahasa, Waktu, Percaya Diri, Penampilan</div></td><td><div class="indicator-sub">Menggunakan bahasa yang jelas dan komunikatif</div></td><td style="text-align:center"><span class="score-pill s4">4</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Tampil dengan penuh percaya diri</div></td><td style="text-align:center"><span class="score-pill s4">4</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Mengorganisasikan waktu secara tepat</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Berbusana dan berdandan sopan dan rapi</div></td><td style="text-align:center"><span class="score-pill s4">4</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>
+                        <tr><td><div class="indicator-sub">Memperlakukan siswa secara bijak dan adil</div></td><td style="text-align:center"><span class="score-pill s3">3</span></td><td style="text-align:center"><span class="max-label">4</span></td></tr>   
                     </tbody>
                 </table>
                 <p style="font-size:0.75rem;color:var(--muted);margin-top:1rem;line-height:1.6;">Kriteria: Deskriptor muncul sempurna = skor 2 · muncul kurang sempurna = skor 1 · tidak muncul = skor 0. Hasil penilaian diberikan kepada mahasiswa untuk bahan refleksi.</p>
@@ -604,7 +615,12 @@
         </div>
 
         <!-- ══ PANEL 3: LAPORAN PPL ══ -->
-        <div class="assess-panel reveal" id="panel-lamp3">
+        <div class="assess-panel reveal" id="panel-lamp3" data-main-panel>
+            
+            <a href="https://docs.google.com/document/d/1yrp5Vxk4HoYGWjFvZ68rzA53maW8oqV_/edit?usp=sharing&ouid=103439907895642456658&rtpof=true&sd=true" target="_blank" class="cycle-pdf-download" style="width:100%;margin-bottom:1.2rem;justify-content:center;">
+                <span>📂</span> Buka File Asli Lampiran — Laporan PPL
+            </a>
+
             <div class="assess-grid">
                 <div class="card" style="padding:2rem;">
                     <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.2rem;">📝 Halaman Pengesahan Laporan PPL</h3>
@@ -671,7 +687,7 @@
         </div>
 
         <!-- ══ PANEL REKAP ══ -->
-        <div class="assess-panel reveal" id="panel-rekap">
+        <div class="assess-panel reveal" id="panel-rekap" data-main-panel>
             <div class="card" style="padding:2rem;overflow-x:auto;">
                 <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.5rem;">📈 Rekap Perkembangan Penilaian Perangkat per Siklus</h3>
                 <p style="font-size:0.8rem;color:var(--muted);margin-bottom:1.5rem;">Berdasarkan data asli dari dokumen Penilaian Penyusunan Perangkat Pembelajaran PPL (Penilaian Guru Pamong) — seluruh siklus mendapat skor maksimal 4 di semua indikator.</p>
