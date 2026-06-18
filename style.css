@@ -2021,3 +2021,689 @@ footer .footer-name {
   .pdf-iframe-container iframe { height:400px; }
   .assess-grid { grid-template-columns:1fr; }
 }
+
+/* ===================================
+   FILOSOFI MENGAJAR
+=================================== */
+
+/* ===================================
+   KHUSUS HALAMAN FILOSOFI MENGAJAR
+=================================== */
+
+.hero-name,
+.manifesto-content h2,
+.section-title,
+.journey-card h3 {
+    font-family: 'Marcellus', serif;
+    font-weight: 400;
+    letter-spacing: .02em;
+}
+
+.manifesto-wrapper{
+    padding:3rem;
+    display:flex;
+    align-items:center;
+    gap:2.5rem;
+    position:relative;
+    overflow:hidden;
+}
+
+.manifesto-wrapper::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:6px;
+    height:100%;
+    background:linear-gradient(
+        to bottom,
+        var(--accent),
+        transparent
+    );
+}
+
+.manifesto-icon{
+    width:90px;
+    height:90px;
+    border-radius:24px;
+    background:rgba(212,160,23,.08);
+    border:1px solid rgba(212,160,23,.2);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+}
+
+.manifesto-icon i{
+    font-size:2rem;
+    color:var(--accent);
+}
+
+.manifesto-label{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.75rem;
+    letter-spacing:2px;
+    color:var(--accent);
+}
+
+.manifesto-content h2{
+    margin:1rem 0;
+    line-height:1.2;
+}
+
+.manifesto-content h2 span{
+    display:block;
+    background:var(--gradient);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.manifesto-content p{
+    color:var(--muted);
+    line-height:1.9;
+}
+
+/* ===== POHON ===== */
+/* ====================================
+   POHON FILOSOFI MENGAJAR
+==================================== */
+
+.philosophy-tree {
+    margin-top: 4rem;
+}
+
+/* BARIS DAUN DAN AKAR */
+
+.tree-top,
+.tree-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    position: relative;
+}
+
+/* GARIS PENGHUBUNG */
+
+.tree-top::after,
+.tree-bottom::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(212, 160, 23, .6),
+            transparent
+        );
+}
+
+.tree-top::after {
+    bottom: -55px;
+}
+
+.tree-bottom::before {
+    top: -55px;
+}
+
+/* NODE */
+
+.tree-node {
+    background: rgba(255,255,255,.03);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 28px;
+    padding: 2rem;
+    text-align: center;
+    transition: .4s;
+}
+
+.tree-node:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212,160,23,.3);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35),
+        0 0 35px rgba(212,160,23,.08);
+}
+
+.tree-node i {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.tree-node h4 {
+    margin-bottom: .8rem;
+    font-family: 'Syne', sans-serif;
+}
+
+.tree-node p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: .9rem;
+}
+
+/* BATANG */
+
+.tree-center {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree-line {
+    width: 3px;
+    height: 55px;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(212,160,23,.7),
+            transparent
+        );
+}
+
+.tree-trunk {
+    width: 420px;
+    padding: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.tree-trunk::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212,160,23,.25),
+            transparent
+        );
+    z-index: -1;
+}
+
+.tree-trunk i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.tree-trunk h3 {
+    margin-bottom: 1rem;
+    font-family: 'Syne', sans-serif;
+}
+
+.tree-trunk p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+/* AKAR */
+
+.root-node {
+    position: relative;
+}
+
+.root-node::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 40px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(212,160,23,.7),
+            transparent
+        );
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .tree-top,
+    .tree-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .tree-top::after,
+    .tree-bottom::before {
+        display: none;
+    }
+
+    .tree-trunk {
+        width: 100%;
+    }
+
+    .root-node::before {
+        display: none;
+    }
+}
+
+/* FILOSOFI */
+.philosophy-journey {
+    max-width: 950px;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.journey-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.journey-number {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: .7;
+}
+
+.journey-card {
+    width: 100%;
+    padding: 2.5rem;
+
+    background: rgba(255,255,255,.6);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(168,55,41,.1);
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.08),
+        inset 0 1px rgba(255,255,255,.7);
+}
+
+.journey-card h3 {
+    font-family: "Marcellus", serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.journey-card p {
+    line-height: 1.9;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+@media(max-width:768px){
+
+    .manifesto-wrapper{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .journey-item{
+        grid-template-columns:1fr;
+        gap:1rem;
+    }
+
+    .journey-number{
+        font-size:2rem;
+    }
+
+}
+
+
+.scrapbook {
+    margin-top: 5rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+}
+
+.polaroid {
+    position: relative;
+
+    width: 260px;
+
+    background: rgba(255,255,255,.92);
+
+    padding: .8rem;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.12);
+
+    transition: .4s;
+}
+
+.polaroid::before {
+    content: "";
+
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 70px;
+    height: 18px;
+
+    background:
+        rgba(255,248,220,.95);
+
+    border-radius: 4px;
+}
+
+.polaroid img {
+    width: 100%;
+    aspect-ratio: 16/10;
+
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.polaroid figcaption {
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+
+    font-family: var(--font-mono);
+    font-size: .85rem;
+
+    color: #3A1818;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.p1 {
+    transform: rotate(-5deg);
+}
+
+.p2 {
+    transform: rotate(4deg);
+}
+
+.p3 {
+    transform: rotate(5deg);
+}
+
+.p4 {
+    transform: rotate(-4deg);
+}
+
+.polaroid:hover {
+    transform:
+        translateY(-12px)
+        rotate(0deg);
+}
+
+@media (max-width: 900px) {
+
+    .hero-reflection {
+        padding-top: 7rem;
+    }
+
+    .hero-reflection h1 {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    .scrapbook {
+        gap: 1rem;
+    }
+
+    .polaroid {
+        width: 180px;
+    }
+
+    .polaroid img {
+        height: 230px;
+    }
+}
+/* =====================
+   ROADMAP PPL
+===================== */
+
+.ppl-roadmap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.road-step {
+    text-align: center;
+    flex: 1;
+}
+
+.road-icon {
+    width: 90px;
+    height: 90px;
+    margin: auto auto 1.5rem;
+
+    border-radius: 28px;
+
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(16px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .4s;
+}
+
+.road-icon i {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.road-icon:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35),
+        0 0 30px rgba(212,160,23,.08);
+}
+
+.road-step h4 {
+    margin-bottom: .75rem;
+}
+
+.road-step p {
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.7;
+}
+
+.road-line {
+    width: 80px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(212,160,23,.7),
+            transparent
+        );
+}
+
+/* =====================
+   REFLECTION TIMELINE
+===================== */
+
+.reflection-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+}
+
+.reflection-timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        transparent,
+        rgba(212,160,23,.5),
+        transparent
+    );
+}
+
+.reflection-card {
+    width: calc(50% - 3rem);
+    padding: 2rem;
+    position: relative;
+}
+
+.reflection-card.left {
+    align-self: flex-start;
+}
+
+.reflection-card.right {
+    align-self: flex-end;
+}
+
+.reflection-number {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+
+    font-size: 4rem;
+    font-weight: 800;
+
+    color: rgba(255,255,255,.05);
+    pointer-events: none;
+}
+
+.reflection-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.reflection-head i {
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+
+.reflection-head h3 {
+    margin: 0;
+}
+
+.reflection-card p {
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.reflection-tag {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+
+    background: rgba(212,160,23,.08);
+    border: 1px solid rgba(212,160,23,.2);
+
+    color: var(--accent);
+    font-size: .85rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .reflection-timeline::before {
+        display: none;
+    }
+
+    .reflection-card {
+        width: 100%;
+    }
+
+    .reflection-card.left,
+    .reflection-card.right {
+        align-self: stretch;
+    }
+
+}
+
+/* =====================
+   GROWTH CARDS
+===================== */
+
+.growth-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+
+.growth-card {
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.growth-card i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.growth-card h3 {
+    margin-bottom: 1rem;
+}
+
+.growth-card p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 900px) {
+
+    .ppl-roadmap {
+        flex-direction: column;
+    }
+
+    .road-line {
+        width: 2px;
+        height: 50px;
+    }
+
+    .reflection-journey::before {
+        display: none;
+    }
+
+    .journey-card {
+        width: 100%;
+    }
+
+    .growth-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio | Riana Wahyu</title>
+    <link rel="icon" type="image/x-icon" href="../image/Logo_nobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- ── BACKGROUND FX ── -->
+    <div class="bg-grid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+═════════════════════════════════════════ -->
+    <nav>
+        <a href="/index.html" class="nav-logo">
+            <img src="../image/logo2.png" alt="Logo Portfolio">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/html/profil.html">Profil</a></li>
+            <li><a href="/html/artefak.html">Analisis Artefak</a></li>
+            <li><a href="/html/siklus.html">Penilaian Siklus PPL</a></li>
+            <li><a href="/html/model.html">Model Guru</a></li>
+            <li><a href="/html/filosofi.html">Filosofi Mengajar</a></li>
+            <li><a href="/html/refleksi.html">Refleksi Akhir</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
+    </nav>
+
+    <main class="refleksi-page">
+
+        <!-- HERO -->
+        <section class="hero-wrapper">
+
+            <div class="hero-badge">
+                <span class="dot"></span>
+                REFLEKSI AKHIR PPL TERBIMBING
+            </div>
+
+            <h1 class="hero-name">
+                <span class="line1">Perjalanan Menjadi</span>
+                <span class="line2">
+                    Guru yang Reflektif dan Bertumbuh
+                </span>
+            </h1>
+
+            <p class="hero-quote">
+                "Setiap pengalaman mengajar bukan hanya tentang bagaimana
+                saya mengajarkan murid, tetapi juga bagaimana saya belajar
+                untuk terus menjadi guru yang lebih baik."
+            </p>
+           <!-- SCRAPBOOK -->
+        <div class="scrapbook">
+
+            <figure class="polaroid p1">
+                <img src="../image-dokum/FOTObersama.png"
+                    alt="Observasi">
+
+                <figcaption>
+                    <i class="fas fa-eye"></i>
+                    Observasi
+                </figcaption>
+            </figure>
+
+            <figure class="polaroid p2">
+                <img src="../image-dokum/FOTO 13.png"
+                    alt="Asistensi">
+
+                <figcaption>
+                    <i class="fas fa-handshake"></i>
+                    Asistensi
+                </figcaption>
+            </figure>
+
+            <figure class="polaroid p3">
+                <img src="../image-dokum/FOTO 4.jpg"
+                    alt="Praktik Mengajar">
+
+                <figcaption>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Praktik Mengajar
+                </figcaption>
+            </figure>
+
+            <figure class="polaroid p4">
+                <img src="../image-dokum/FOTO 3.JPG"
+                    alt="Refleksi">
+
+                <figcaption>
+                    <i class="fas fa-seedling"></i>
+                    Bertumbuh
+                </figcaption>
+            </figure>
+
+        </div> 
+
+        </section>
+
+<!-- =========================
+     ROADMAP PERJALANAN PPL
+========================= -->
+<section class="container reveal">
+
+    <div class="section-label">
+        PERJALANAN PPL
+    </div>
+
+    <h2 class="section-title">
+        Dari Mengamati hingga <span>Bertumbuh</span>
+    </h2>
+
+    <div class="divider"></div>
+
+    <div class="ppl-roadmap">
+
+        <div class="road-step">
+            <div class="road-icon">
+                <i class="fas fa-eye"></i>
+            </div>
+            <h4>Observasi</h4>
+            <p>Mengamati lingkungan sekolah, karakteristik murid, dan proses pembelajaran.</p>
+        </div>
+
+        <div class="road-line"></div>
+
+        <div class="road-step">
+            <div class="road-icon">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <h4>Asistensi</h4>
+            <p>Mendampingi guru pamong serta memahami dinamika pembelajaran secara langsung.</p>
+        </div>
+
+        <div class="road-line"></div>
+
+        <div class="road-step">
+            <div class="road-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <h4>Praktik Mengajar</h4>
+            <p>Merancang dan melaksanakan pembelajaran yang berpusat pada murid.</p>
+        </div>
+
+        <div class="road-line"></div>
+
+        <div class="road-step">
+            <div class="road-icon">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <h4>Bertumbuh</h4>
+            <p>Melakukan refleksi dan membangun kesiapan menuju PPL Mandiri.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REFLEKSI UTAMA
+========================= -->
+<section class="container reveal">
+
+    <div class="section-label">
+        REFLEKSI AKHIR
+    </div>
+
+    <h2 class="section-title">
+        Perjalanan <span>Pembelajaran Saya</span>
+    </h2>
+
+    <div class="divider"></div>
+
+    <div class="reflection-timeline">
+
+        <!-- CARD 01 -->
+        <article class="reflection-card card left">
+
+            <div class="reflection-number">
+                01
+            </div>
+
+            <div class="reflection-head">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Apa yang Saya Pelajari?</h3>
+            </div>
+
+            <p>
+                Selama tahapan PPL Terbimbing, saya belajar bahwa mengajar
+                bukan sekadar menyampaikan materi, melainkan memahami
+                kebutuhan murid, menciptakan pembelajaran yang bermakna,
+                serta membangun lingkungan belajar yang aman dan
+                menyenangkan. Saya juga belajar merancang perangkat
+                pembelajaran, memanfaatkan media digital, melakukan
+                asesmen, serta merefleksikan praktik pembelajaran secara
+                berkelanjutan.
+            </p>
+
+            <span class="reflection-tag">
+                Pembelajaran Profesional
+            </span>
+
+        </article>
+
+
+        <!-- CARD 02 -->
+        <article class="reflection-card card right">
+
+            <div class="reflection-number">
+                02
+            </div>
+
+            <div class="reflection-head">
+                <i class="fas fa-mountain"></i>
+                <h3>Tantangan dan Solusi</h3>
+            </div>
+
+            <p>
+                Salah satu pengalaman yang menantang adalah heterogenitas
+                karakteristik murid di kelas. Terdapat murid yang aktif,
+                pasif, serta membutuhkan pendampingan lebih intensif.
+                Untuk mengatasinya, saya menerapkan diferensiasi
+                pembelajaran, memanfaatkan media interaktif, serta
+                memberikan pendampingan secara bertahap agar seluruh
+                murid tetap dapat terlibat secara optimal.
+            </p>
+
+            <span class="reflection-tag">
+                Adaptasi dan Diferensiasi
+            </span>
+
+        </article>
+
+
+        <!-- CARD 03 -->
+        <article class="reflection-card card left">
+
+            <div class="reflection-number">
+                03
+            </div>
+
+            <div class="reflection-head">
+                <i class="fas fa-comments"></i>
+                <h3>Umpan Balik dan Langkah Selanjutnya</h3>
+            </div>
+
+            <p>
+                Melalui diskusi refleksi akhir, saya memperoleh berbagai
+                masukan konstruktif untuk meningkatkan kemampuan
+                mengelola kelas, merancang aktivitas yang lebih berpusat
+                pada murid, serta memperkuat penerapan asesmen dan
+                diferensiasi pembelajaran. Umpan balik tersebut menjadi
+                landasan bagi saya untuk mempersiapkan diri menghadapi
+                tahapan PPL Mandiri dengan lebih percaya diri dan
+                reflektif.
+            </p>
+
+            <span class="reflection-tag">
+                Perbaikan Berkelanjutan
+            </span>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HASIL PERTUMBUHAN
+========================= -->
+<section class="container reveal">
+
+    <div class="section-label">
+        HASIL PERTUMBUHAN
+    </div>
+
+    <h2 class="section-title">
+        Yang Saya Bawa dari <span>PPL Terbimbing</span>
+    </h2>
+
+    <div class="divider"></div>
+
+    <div class="growth-grid">
+
+        <div class="growth-card card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Kompetensi Profesional</h3>
+
+            <p>
+                Lebih memahami proses perencanaan,
+                pelaksanaan, dan evaluasi pembelajaran.
+            </p>
+        </div>
+
+        <div class="growth-card card">
+            <i class="fas fa-puzzle-piece"></i>
+            <h3>Pengelolaan Kelas</h3>
+
+            <p>
+                Lebih mampu memahami karakteristik
+                murid dan menciptakan pembelajaran
+                yang lebih inklusif.
+            </p>
+        </div>
+
+        <div class="growth-card card">
+            <i class="fas fa-seedling"></i>
+            <h3>Kesiapan PPL Mandiri</h3>
+
+            <p>
+                Lebih percaya diri, reflektif, dan
+                siap mengembangkan diri sebagai
+                guru profesional.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- ════════════════════════════════════════
+        FOOTER
+    ═════════════════════════════════════════ -->
+        <footer>
+            <p class="footer-name">
+                &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
+            </p>
+        </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Portfolio | Riana Wahyu</title>
+    <link rel="icon" type="image/x-icon" href="../image/Logo_nobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- ── BACKGROUND FX ── -->
+    <div class="bg-grid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+═════════════════════════════════════════ -->
+    <nav>
+        <a href="/index.html" class="nav-logo">
+            <img src="../image/logo2.png" alt="Logo Portfolio">
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/html/profil.html">Profil</a></li>
+            <li><a href="/html/artefak.html">Analisis Artefak</a></li>
+            <li><a href="/html/siklus.html">Penilaian Siklus PPL</a></li>
+            <li><a href="/html/model.html">Model Guru</a></li>
+            <li><a href="/html/filosofi.html">Filosofi Mengajar</a></li>
+            <li><a href="/html/refleksi.html">Refleksi Akhir</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
+    </nav>
+
+ <!-- HERO -->
+    <section class="hero-wrapper">
+
+        <div class="hero-badge">
+            <span class="dot"></span>
+            FILOSOFI MENGAJAR
+        </div>
+
+        <h1 class="hero-name">
+            <span class="line1">Menuntun Murid</span>
+            <span class="line2">Untuk Bertumbuh dan Berkembang</span>
+        </h1>
+
+        <p class="hero-quote">
+            "Mengajar bukan sekadar menyampaikan pengetahuan,
+            tetapi menghadirkan pengalaman belajar yang bermakna,
+            sehingga setiap murid mampu menemukan potensi terbaiknya."
+        </p>
+
+    </section>
+ 
+    <!-- MANIFESTO -->
+  <section class="container reveal">
+
+    <div class="manifesto-wrapper card">
+
+        <div class="manifesto-icon">
+            <i class="fas fa-feather-alt"></i>
+        </div>
+
+        <div class="manifesto-content">
+
+            <span class="manifesto-label">
+                MANIFESTO MENGAJAR
+            </span>
+
+            <h2>
+                Pendidikan adalah proses
+                <span>memanusiakan manusia.</span>
+            </h2>
+
+            <p>
+                Saya memandang setiap murid sebagai individu unik yang
+                memiliki potensi, karakteristik, dan kebutuhan belajar yang
+                berbeda. Oleh karena itu, pembelajaran harus berpihak pada
+                murid, memberikan ruang untuk bereksplorasi, dan mendorong
+                tumbuhnya kompetensi serta karakter secara utuh.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- POHON FILOSOFI -->
+<section class="container reveal">
+
+    <div class="section-label">
+    FILOSOFI MENGAJAR
+</div>
+
+<h2 class="section-title">
+    Pohon <span>Filosofi Mengajar</span>
+</h2>
+
+<p class="section-subtitle">
+    Nilai yang saya yakini menjadi akar,
+    prinsip mengajar menjadi batang,
+    dan praktik pembelajaran menjadi buah
+    yang dihadirkan dalam kelas.
+</p>
+
+<div class="divider"></div>
+
+    <div class="philosophy-tree">
+
+        <!-- DAUN -->
+        <div class="tree-top">
+
+            <div class="tree-node leaf-node">
+                <i class="fas fa-users"></i>
+                <h4>Diferensiasi</h4>
+                <p>
+                    Pembelajaran disesuaikan dengan kebutuhan dan
+                    karakteristik setiap murid.
+                </p>
+            </div>
+
+            <div class="tree-node leaf-node">
+                <i class="fas fa-comments"></i>
+                <h4>Kolaborasi</h4>
+                <p>
+                    Murid belajar melalui diskusi, kerja sama,
+                    dan interaksi sosial.
+                </p>
+            </div>
+
+            <div class="tree-node leaf-node">
+                <i class="fas fa-laptop"></i>
+                <h4>Media Interaktif</h4>
+                <p>
+                    Teknologi dimanfaatkan untuk menciptakan
+                    pengalaman belajar yang menarik.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- BATANG -->
+        <div class="tree-center">
+
+            <div class="tree-line top"></div>
+
+            <div class="tree-trunk card">
+                <i class="fas fa-tree"></i>
+
+                <h3>Prinsip Mengajar</h3>
+
+                <p>
+                    Pembelajaran harus bermakna, berpusat pada murid,
+                    serta memberi ruang bagi setiap individu untuk
+                    tumbuh sesuai potensinya.
+                </p>
+            </div>
+
+            <div class="tree-line bottom"></div>
+
+        </div>
+
+        <!-- AKAR -->
+        <div class="tree-bottom">
+
+            <div class="tree-node root-node">
+                <i class="fas fa-heart"></i>
+                <h4>Berpihak pada Murid</h4>
+            </div>
+
+            <div class="tree-node root-node">
+                <i class="fas fa-hands-helping"></i>
+                <h4>Empati & Keteladanan</h4>
+            </div>
+
+            <div class="tree-node root-node">
+                <i class="fas fa-book-reader"></i>
+                <h4>Pembelajar Sepanjang Hayat</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- FILOSOFI -->
+  <section class="container reveal">
+
+    <div class="section-label">
+        REFLEKSI FILOSOFIS
+    </div>
+
+    <h2 class="section-title">
+        Filosofi <span>Pribadi Saya</span>
+    </h2>
+
+    <div class="divider"></div>
+
+
+    <div class="philosophy-journey">
+
+        <div class="journey-item">
+            <div class="journey-number">01</div>
+
+            <div class="journey-card card">
+                <h3>Pendidikan sebagai Proses Menuntun</h3>
+
+                <p>
+                    Saya meyakini bahwa pendidikan merupakan proses
+                    menuntun setiap murid untuk bertumbuh sesuai kodrat
+                    dan potensinya. Pengalaman selama observasi,
+                    asistensi, dan praktik pembelajaran terbimbing
+                    menunjukkan bahwa setiap murid memiliki karakteristik,
+                    kebutuhan, serta cara belajar yang berbeda.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="journey-item">
+            <div class="journey-number">02</div>
+
+            <div class="journey-card card">
+                <h3>Guru sebagai Pamong dan Teladan</h3>
+
+                <p>
+                    Filosofi ini selaras dengan pemikiran Ki Hadjar
+                    Dewantara yang menempatkan guru sebagai pamong yang
+                    menuntun, bukan memaksa. Guru menciptakan lingkungan
+                    belajar yang aman, menyenangkan, dan memberikan
+                    kesempatan kepada murid untuk aktif membangun
+                    pemahamannya.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="journey-item">
+            <div class="journey-number">03</div>
+
+            <div class="journey-card card">
+                <h3>Pembelajaran Bermakna dan Berkelanjutan</h3>
+
+                <p>
+                    Saya meyakini bahwa pembelajaran yang bermakna terjadi
+                    ketika murid terlibat secara aktif dalam menemukan,
+                    mencoba, dan merefleksikan pengetahuannya sendiri.
+                    Sebagai calon guru profesional, saya berkomitmen untuk
+                    terus belajar dan menghadirkan pembelajaran yang
+                    kontekstual, inklusif, serta mendorong perkembangan
+                    kompetensi dan karakter murid secara utuh.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    
+    <!-- ════════════════════════════════════════
+        FOOTER
+    ═════════════════════════════════════════ -->
+        <footer>
+            <p class="footer-name">
+                &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
+            </p>
+        </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
