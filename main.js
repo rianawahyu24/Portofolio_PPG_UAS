@@ -10,7 +10,7 @@ const ThemeModule = (() => {
     const KEY = 'portfolio-theme';
 
     function init() {
-        const saved = localStorage.getItem(KEY) || 'dark';
+        const saved = localStorage.getItem(KEY) || 'light';
         document.documentElement.dataset.theme = saved;
     }
 
@@ -242,8 +242,8 @@ const ChartsModule = (() => {
     function getColors() {
         const dark = document.documentElement.dataset.theme !== 'light';
         return {
-            text: dark ? '#94a3b8' : '#475569',
-            grid: dark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.06)',
+            text: dark ? '#c3d4c8' : '#4f6b5a',
+            grid: dark ? 'rgba(251,248,238,0.12)' : 'rgba(46,90,62,0.14)',
         };
     }
 
@@ -273,8 +273,8 @@ const ChartsModule = (() => {
                 datasets: [{
                         label: 'Kemandirian (%)',
                         data: [40, 70, 100],
-                        backgroundColor: ['rgba(56,189,248,0.45)', 'rgba(129,140,248,0.45)', 'rgba(52,211,153,0.45)'],
-                        borderColor: ['#38bdf8', '#818cf8', '#34d399'],
+                        backgroundColor: ['rgba(238,154,195,0.45)', 'rgba(46,90,62,0.45)', 'rgba(63,117,82,0.45)'],
+                        borderColor: ['#ee9ac3', '#2e5a3e', '#3f7552'],
                         borderWidth: 2,
                         borderRadius: 8,
                     },
@@ -304,9 +304,9 @@ const ChartsModule = (() => {
             data: {
                 labels: ['Pedagogik', 'Profesional', 'Sosial', 'Kepribadian', 'Komunikasi', 'Inovasi'],
                 datasets: [
-                    { label: 'Siklus 1', data: [65, 70, 72, 75, 68, 60], borderColor: '#38bdf8', backgroundColor: 'rgba(56,189,248,0.1)', borderWidth: 2, pointRadius: 4 },
-                    { label: 'Siklus 2', data: [75, 80, 80, 83, 77, 72], borderColor: '#818cf8', backgroundColor: 'rgba(129,140,248,0.08)', borderWidth: 2, pointRadius: 4 },
-                    { label: 'Siklus 3', data: [85, 88, 87, 90, 85, 82], borderColor: '#34d399', backgroundColor: 'rgba(52,211,153,0.1)', borderWidth: 2, pointRadius: 4 },
+                    { label: 'Siklus 1', data: [65, 70, 72, 75, 68, 60], borderColor: '#ee9ac3', backgroundColor: 'rgba(238,154,195,0.1)', borderWidth: 2, pointRadius: 4 },
+                    { label: 'Siklus 2', data: [75, 80, 80, 83, 77, 72], borderColor: '#2e5a3e', backgroundColor: 'rgba(46,90,62,0.08)', borderWidth: 2, pointRadius: 4 },
+                    { label: 'Siklus 3', data: [85, 88, 87, 90, 85, 82], borderColor: '#3f7552', backgroundColor: 'rgba(63,117,82,0.1)', borderWidth: 2, pointRadius: 4 },
                 ]
             },
             options: {
@@ -322,9 +322,9 @@ const ChartsModule = (() => {
             data: {
                 labels: ['Siklus 1', 'Siklus 2', 'Siklus 3'],
                 datasets: [
-                    { label: 'Partisipasi Aktif (%)', data: [55, 72, 88], borderColor: '#818cf8', backgroundColor: 'rgba(129,140,248,0.1)', fill: true, tension: 0.4, borderWidth: 2, pointRadius: 6 },
-                    { label: 'Pemahaman Materi (%)', data: [60, 75, 85], borderColor: '#fbbf24', backgroundColor: 'rgba(251,191,36,0.05)', fill: false, tension: 0.4, borderWidth: 2, pointRadius: 6 },
-                    { label: 'Motivasi Belajar (%)', data: [50, 68, 82], borderColor: '#34d399', backgroundColor: 'rgba(52,211,153,0.05)', fill: false, tension: 0.4, borderWidth: 2, pointRadius: 6, borderDash: [5, 5] },
+                    { label: 'Partisipasi Aktif (%)', data: [55, 72, 88], borderColor: '#2e5a3e', backgroundColor: 'rgba(46,90,62,0.1)', fill: true, tension: 0.4, borderWidth: 2, pointRadius: 6 },
+                    { label: 'Pemahaman Materi (%)', data: [60, 75, 85], borderColor: '#d6aa3c', backgroundColor: 'rgba(214,170,60,0.05)', fill: false, tension: 0.4, borderWidth: 2, pointRadius: 6 },
+                    { label: 'Motivasi Belajar (%)', data: [50, 68, 82], borderColor: '#3f7552', backgroundColor: 'rgba(63,117,82,0.05)', fill: false, tension: 0.4, borderWidth: 2, pointRadius: 6, borderDash: [5, 5] },
                 ]
             },
             options: {
@@ -344,8 +344,8 @@ const ChartsModule = (() => {
                 labels: ['Pendahuluan (15%)', 'Kegiatan Inti (55%)', 'Diskusi/Latihan (20%)', 'Penutup & Evaluasi (10%)'],
                 datasets: [{
                     data: [15, 55, 20, 10],
-                    backgroundColor: ['rgba(56,189,248,0.7)', 'rgba(129,140,248,0.7)', 'rgba(52,211,153,0.7)', 'rgba(251,191,36,0.7)'],
-                    borderColor: ['#38bdf8', '#818cf8', '#34d399', '#fbbf24'],
+                    backgroundColor: ['rgba(238,154,195,0.7)', 'rgba(46,90,62,0.7)', 'rgba(63,117,82,0.7)', 'rgba(214,170,60,0.7)'],
+                    borderColor: ['#ee9ac3', '#2e5a3e', '#3f7552', '#d6aa3c'],
                     borderWidth: 2,
                     hoverOffset: 10,
                 }]
