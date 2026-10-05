@@ -1,50 +1,48 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="light">
+<html lang="id" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Portfolio | Riana Wahyu Puspitasari</title>
+    <title>E-Portfolio | Riana Wahyu</title>
     <link rel="icon" type="image/x-icon" href="../image/Logo_nobg.png">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-    <!-- ════════════════════════════════════════
-         NAVBAR
-    ═════════════════════════════════════════ -->
+    <!-- ── BACKGROUND FX ── -->
+    <div class="bg-grid"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
 
+<!-- ════════════════════════════════════════
+     NAVBAR
+═════════════════════════════════════════ -->
     <nav>
         <a href="index.html" class="nav-logo">
             <img src="../image/logo2.png" alt="Logo Portfolio">
         </a>
-
+        
         <ul class="nav-links">
             <li><a href="/html/profil.html">Profil</a></li>
             <li><a href="/html/artefak.html">Analisis Artefak</a></li>
-            <li><a href="/html/siklus.html">Praktik Mengajar Mandiri</a></li>
-            <li><a href="/html/nonmengajar.html">Kegiatan NonMengajar</a></li>
-            <li><a href="/html/refleksi.html">Refleksi Perkembangan</a></li>
-            <li><a href="/html/dokumentasi.html">Dokumentasi</a></li>
-            <li><a href="/html/penutup.html">Penutup</a></li>
+            <li><a href="/html/siklus.html">Penilaian Siklus PPL</a></li>
+            <li><a href="/html/model.html">Model Guru</a></li>
+            <li><a href="/html/filosofi.html">Filosofi Mengajar</a></li>
+            <li><a href="/html/refleksi.html">Refleksi Akhir</a></li>
         </ul>
-
         <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle tema"></button>
     </nav>
 
-
-    <!-- ════════════════════════════════════════
-         01 · HERO
-    ═════════════════════════════════════════ -->
-
+<!-- ════════════════════════════════════════
+     01 · HERO
+═════════════════════════════════════════ -->
     <section id="hero">
         <div class="hero-wrapper hero-grid">
 
@@ -52,12 +50,11 @@
             <div class="hero-left">
 
                 <div class="hero-badge">
-                    <span class="dot"></span>
-                    E-Portfolio PPL II — Praktik Mengajar Mandiri
+                    <span class="dot"></span> E-Portfolio PPL I — Pembelajaran Terbimbing
                 </div>
 
                 <p class="hero-typing">
-                    <span class="intro-text">Hi, Saya </span>
+                      <span class="intro-text">Hi, Saya </span> 
                     <span id="typing-text"></span>
                     <span class="cursor">|</span>
                 </p>
@@ -71,46 +68,34 @@
                 </h1>
 
                 <p class="hero-quote">
-                    "Jangan setengah hati menjadi guru, karena anak didik kita telah membuka sepenuh hatinya."
-                    — Ki Hajar Dewantara
+                    "Jangan setengah hati menjadi guru, karena anak didik kita telah membuka sepenuh hatinya." - Ki Hajar Dewantara
                 </p>
 
                 <div class="hero-intro">
-                    E-Portfolio ini merepresentasikan perjalanan saya dalam
-                    <b>praktik mengajar mandiri</b> sebagai calon guru Informatika.
-                    Di dalamnya terdokumentasi proses merancang, melaksanakan, menganalisis,
-                    dan merefleksikan pembelajaran melalui beberapa siklus praktik.
+                    Portfolio ini merepresentasikan perjalanan saya sebagai <b>Calon Guru dalam Program PPL Terbimbing.</b> 
+                    Didalamnya terdapat <b><em>proses belajar, refleksi, dan pengalaman</em></b> yang membentuk saya menjadi pendidik yang lebih baik. 
+                    Saya percaya setiap proses ini adalah langkah menuju guru yang mampu memberi dampak nyata 🙏
                 </div>
 
                 <div class="hero-actions">
-                   <a href="https://wa.me/6282283140164" class="btn-primary">Contact</a>
+                    <a href="https://wa.me/6282283140164" class="btn-primary">Contact</a>
 
                     <div class="social">
                         <a href="https://www.linkedin.com/in/rianawahyupuspitasari/">
                             <i class="fab fa-linkedin"></i>
                         </a>
-
                         <a href="https://www.instagram.com/rianawhyuu/">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-
             </div>
-
 
             <!-- RIGHT -->
             <div class="hero-right">
-
                 <div class="hero-photo-wrap">
-                    <img src="/image/RI2.JPEG"
-                         class="hero-photo"
-                         alt="Foto Riana Wahyu Puspitasari">
-
-                    <span class="sticker s1">Calon Guru</span>
-                    <span class="sticker s2">Informatika</span>
+                    <img src="/image/PAS FOTO_RIANA WAHYU PUSPITASARI.png" class="hero-photo">
                 </div>
-
             </div>
 
         </div>
@@ -118,18 +103,15 @@
 
 
     <!-- ════════════════════════════════════════
-         FOOTER
+        FOOTER
     ═════════════════════════════════════════ -->
-
-    <footer>
-        <p class="footer-name">
-            &copy; 2026 E-Portofolio | PPL PPG Prajabatan |
-            Riana Wahyu Puspitasari | semua hak cipta dilindungi.
-        </p>
-    </footer>
-
+        <footer>
+            <p class="footer-name">
+                &copy; 2026 E-Portofolio | PPL PPG Prajabatan | Riana Wahyu Puspitasari | semua hak cipta dilindungi.
+            </p>
+        </footer>
 
     <script src="../main.js"></script>
-
 </body>
+
 </html>
